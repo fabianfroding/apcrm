@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace APCRM
@@ -26,8 +21,30 @@ namespace APCRM
             {
                 selectedDir = fbd.SelectedPath;
                 TBSelectedDir.Text = selectedDir;
+
+                DirectoryInfo di = new DirectoryInfo(selectedDir);
+
+                List<FileInfo> files = di.GetFiles("*.ini").ToList<FileInfo>();
+
                 
+
+                LBFiles.Items.Clear();
+                LBFiles.BeginUpdate();
+                foreach (FileInfo fi in files)
+                {
+                    LBFiles.Items.Add(fi);
+                }
+                LBFiles.EndUpdate();
+
                 
+
+                StreamReader sr = files[1].OpenText();
+
+                string s = sr.ReadToEnd();
+
+                System.Diagnostics.Debug.WriteLine(s);
+
+                sr.Close();
             }
         }
     }

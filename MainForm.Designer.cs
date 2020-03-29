@@ -29,28 +29,19 @@
         private void InitializeComponent()
         {
             this.BTNRun = new System.Windows.Forms.Button();
-            this.RTBFiles = new System.Windows.Forms.RichTextBox();
             this.BTNSelectDir = new System.Windows.Forms.Button();
             this.TBSelectedDir = new System.Windows.Forms.TextBox();
+            this.LBFiles = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // BTNRun
             // 
-            this.BTNRun.Location = new System.Drawing.Point(27, 152);
+            this.BTNRun.Location = new System.Drawing.Point(92, 97);
             this.BTNRun.Name = "BTNRun";
             this.BTNRun.Size = new System.Drawing.Size(115, 64);
             this.BTNRun.TabIndex = 0;
             this.BTNRun.Text = "Run";
             this.BTNRun.UseVisualStyleBackColor = true;
-            // 
-            // RTBFiles
-            // 
-            this.RTBFiles.Location = new System.Drawing.Point(414, 36);
-            this.RTBFiles.Name = "RTBFiles";
-            this.RTBFiles.ReadOnly = true;
-            this.RTBFiles.Size = new System.Drawing.Size(134, 202);
-            this.RTBFiles.TabIndex = 1;
-            this.RTBFiles.Text = "";
             // 
             // BTNSelectDir
             // 
@@ -64,21 +55,30 @@
             // 
             // TBSelectedDir
             // 
-            this.TBSelectedDir.Location = new System.Drawing.Point(27, 106);
+            this.TBSelectedDir.Location = new System.Drawing.Point(213, 27);
             this.TBSelectedDir.Name = "TBSelectedDir";
             this.TBSelectedDir.ReadOnly = true;
-            this.TBSelectedDir.Size = new System.Drawing.Size(365, 26);
+            this.TBSelectedDir.Size = new System.Drawing.Size(880, 26);
             this.TBSelectedDir.TabIndex = 3;
+            // 
+            // LBFiles
+            // 
+            this.LBFiles.FormattingEnabled = true;
+            this.LBFiles.ItemHeight = 20;
+            this.LBFiles.Location = new System.Drawing.Point(213, 59);
+            this.LBFiles.Name = "LBFiles";
+            this.LBFiles.Size = new System.Drawing.Size(880, 424);
+            this.LBFiles.TabIndex = 4;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.ClientSize = new System.Drawing.Size(581, 310);
+            this.ClientSize = new System.Drawing.Size(1105, 498);
+            this.Controls.Add(this.LBFiles);
             this.Controls.Add(this.TBSelectedDir);
             this.Controls.Add(this.BTNSelectDir);
-            this.Controls.Add(this.RTBFiles);
             this.Controls.Add(this.BTNRun);
             this.Name = "MainForm";
             this.Text = "APCRM";
@@ -90,9 +90,9 @@
         #endregion
 
         private System.Windows.Forms.Button BTNRun;
-        private System.Windows.Forms.RichTextBox RTBFiles;
         private System.Windows.Forms.Button BTNSelectDir;
         private System.Windows.Forms.TextBox TBSelectedDir;
+        private System.Windows.Forms.ListBox LBFiles;
     }
 }
 
