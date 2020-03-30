@@ -33,15 +33,18 @@
             this.TBSelectedDir = new System.Windows.Forms.TextBox();
             this.LBFiles = new System.Windows.Forms.ListBox();
             this.BTNTotals = new System.Windows.Forms.Button();
+            this.CBAntipatterns = new System.Windows.Forms.ComboBox();
+            this.LabelAntipattern = new System.Windows.Forms.Label();
+            this.BTNCreateClasses = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BTNListAntiPatterns
             // 
-            this.BTNListAntiPatterns.Location = new System.Drawing.Point(27, 167);
+            this.BTNListAntiPatterns.Location = new System.Drawing.Point(27, 333);
             this.BTNListAntiPatterns.Name = "BTNListAntiPatterns";
             this.BTNListAntiPatterns.Size = new System.Drawing.Size(180, 64);
             this.BTNListAntiPatterns.TabIndex = 0;
-            this.BTNListAntiPatterns.Text = "List Classes In Each Antipattern";
+            this.BTNListAntiPatterns.Text = "List Classes In Antipattern";
             this.BTNListAntiPatterns.UseVisualStyleBackColor = true;
             // 
             // BTNSelectDir
@@ -73,7 +76,7 @@
             // 
             // BTNTotals
             // 
-            this.BTNTotals.Location = new System.Drawing.Point(27, 97);
+            this.BTNTotals.Location = new System.Drawing.Point(27, 128);
             this.BTNTotals.Name = "BTNTotals";
             this.BTNTotals.Size = new System.Drawing.Size(180, 64);
             this.BTNTotals.TabIndex = 5;
@@ -81,12 +84,42 @@
             this.BTNTotals.UseVisualStyleBackColor = true;
             this.BTNTotals.Click += new System.EventHandler(this.BTNTotals_Click);
             // 
+            // CBAntipatterns
+            // 
+            this.CBAntipatterns.FormattingEnabled = true;
+            this.CBAntipatterns.Location = new System.Drawing.Point(27, 423);
+            this.CBAntipatterns.Name = "CBAntipatterns";
+            this.CBAntipatterns.Size = new System.Drawing.Size(180, 28);
+            this.CBAntipatterns.TabIndex = 6;
+            // 
+            // LabelAntipattern
+            // 
+            this.LabelAntipattern.AutoSize = true;
+            this.LabelAntipattern.Location = new System.Drawing.Point(23, 400);
+            this.LabelAntipattern.Name = "LabelAntipattern";
+            this.LabelAntipattern.Size = new System.Drawing.Size(92, 20);
+            this.LabelAntipattern.TabIndex = 7;
+            this.LabelAntipattern.Text = "Antipattern:";
+            // 
+            // BTNCreateClasses
+            // 
+            this.BTNCreateClasses.Location = new System.Drawing.Point(27, 234);
+            this.BTNCreateClasses.Name = "BTNCreateClasses";
+            this.BTNCreateClasses.Size = new System.Drawing.Size(180, 64);
+            this.BTNCreateClasses.TabIndex = 8;
+            this.BTNCreateClasses.Text = "Create Classes";
+            this.BTNCreateClasses.UseVisualStyleBackColor = true;
+            this.BTNCreateClasses.Click += new System.EventHandler(this.BTNCreateClasses_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(1105, 498);
+            this.Controls.Add(this.BTNCreateClasses);
+            this.Controls.Add(this.LabelAntipattern);
+            this.Controls.Add(this.CBAntipatterns);
             this.Controls.Add(this.BTNTotals);
             this.Controls.Add(this.LBFiles);
             this.Controls.Add(this.TBSelectedDir);
@@ -106,6 +139,9 @@
         private System.Windows.Forms.TextBox TBSelectedDir;
         private System.Windows.Forms.ListBox LBFiles;
         private System.Windows.Forms.Button BTNTotals;
+        private System.Windows.Forms.ComboBox CBAntipatterns;
+        private System.Windows.Forms.Label LabelAntipattern;
+        private System.Windows.Forms.Button BTNCreateClasses;
     }
 }
 

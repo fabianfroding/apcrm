@@ -1,4 +1,5 @@
-﻿using System;
+﻿using APCRM.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -11,6 +12,13 @@ namespace APCRM
         public MainForm()
         {
             InitializeComponent();
+            CBAntipatterns.Items.Clear();
+            CBAntipatterns.BeginUpdate();
+            foreach (var ap in Enum.GetValues(typeof(Enums.Antipattern)))
+            {
+                CBAntipatterns.Items.Add(ap);
+            }
+            CBAntipatterns.EndUpdate();
         }
 
         private void BTNSelectDir_Click(object sender, EventArgs e)
@@ -54,9 +62,42 @@ namespace APCRM
                     sr.Close();
                 }
             }
+        }
 
+        private void BTNCreateClasses_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine(TBSelectedDir.Text);
+            // Iterate through project and create list of JavaClass objects based on .java files.
+            CheckDirectory(TBSelectedDir.Text);
+        }
+
+        private void CheckDirectory(string dir)
+        {
+            System.Diagnostics.Debug.WriteLine("1");
+            DirectoryInfo di = new DirectoryInfo(dir);
+            System.Diagnostics.Debug.WriteLine("2");
+            List<DirectoryInfo> dirs = di.GetDirectories().ToList<DirectoryInfo>();
+            System.Diagnostics.Debug.WriteLine("3");
+            if (dirs.Count != 0)
+            {
+                System.Diagnostics.Debug.WriteLine("4");
+                foreach (DirectoryInfo foundDir in dirs)
+                {
+                    CheckDirectory(foundDir.Name);
+                    System.Diagnostics.Debug.WriteLine(foundDir.Name);
+                }
+            }
+        }
+
+        private void BTNListClassesInAntipattern(string dir, Enums.Antipattern antipattern)
+        {
+            // Iterate through dir to find .ini files that contains the name of the antipattern
 
             
+            // Open the found ini file. For each class in the string list:
+            // check if that class's name is in the .ini file. If it is, add that antipattern to the class's list of
+            // antipatterns.
         }
+
     }
 }
