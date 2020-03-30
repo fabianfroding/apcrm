@@ -28,20 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BTNRun = new System.Windows.Forms.Button();
+            this.BTNListAntiPatterns = new System.Windows.Forms.Button();
             this.BTNSelectDir = new System.Windows.Forms.Button();
             this.TBSelectedDir = new System.Windows.Forms.TextBox();
             this.LBFiles = new System.Windows.Forms.ListBox();
+            this.BTNTotals = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // BTNRun
+            // BTNListAntiPatterns
             // 
-            this.BTNRun.Location = new System.Drawing.Point(92, 97);
-            this.BTNRun.Name = "BTNRun";
-            this.BTNRun.Size = new System.Drawing.Size(115, 64);
-            this.BTNRun.TabIndex = 0;
-            this.BTNRun.Text = "Run";
-            this.BTNRun.UseVisualStyleBackColor = true;
+            this.BTNListAntiPatterns.Location = new System.Drawing.Point(27, 167);
+            this.BTNListAntiPatterns.Name = "BTNListAntiPatterns";
+            this.BTNListAntiPatterns.Size = new System.Drawing.Size(180, 64);
+            this.BTNListAntiPatterns.TabIndex = 0;
+            this.BTNListAntiPatterns.Text = "List Classes In Each Antipattern";
+            this.BTNListAntiPatterns.UseVisualStyleBackColor = true;
             // 
             // BTNSelectDir
             // 
@@ -70,16 +71,27 @@
             this.LBFiles.Size = new System.Drawing.Size(880, 424);
             this.LBFiles.TabIndex = 4;
             // 
+            // BTNTotals
+            // 
+            this.BTNTotals.Location = new System.Drawing.Point(27, 97);
+            this.BTNTotals.Name = "BTNTotals";
+            this.BTNTotals.Size = new System.Drawing.Size(180, 64);
+            this.BTNTotals.TabIndex = 5;
+            this.BTNTotals.Text = "Calculate Total Antipatterns";
+            this.BTNTotals.UseVisualStyleBackColor = true;
+            this.BTNTotals.Click += new System.EventHandler(this.BTNTotals_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(1105, 498);
+            this.Controls.Add(this.BTNTotals);
             this.Controls.Add(this.LBFiles);
             this.Controls.Add(this.TBSelectedDir);
             this.Controls.Add(this.BTNSelectDir);
-            this.Controls.Add(this.BTNRun);
+            this.Controls.Add(this.BTNListAntiPatterns);
             this.Name = "MainForm";
             this.Text = "APCRM";
             this.ResumeLayout(false);
@@ -89,10 +101,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button BTNRun;
+        private System.Windows.Forms.Button BTNListAntiPatterns;
         private System.Windows.Forms.Button BTNSelectDir;
         private System.Windows.Forms.TextBox TBSelectedDir;
         private System.Windows.Forms.ListBox LBFiles;
+        private System.Windows.Forms.Button BTNTotals;
     }
 }
 

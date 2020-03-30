@@ -8,6 +8,9 @@ namespace APCRM
 {
     public partial class MainForm : Form
     {
+        private string selectedDir;
+        private List<FileInfo> files;
+
         public MainForm()
         {
             InitializeComponent();
@@ -16,18 +19,13 @@ namespace APCRM
         private void BTNSelectDir_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog fbd = new FolderBrowserDialog();
-            string selectedDir;
+
             if (fbd.ShowDialog() == DialogResult.OK)
             {
                 selectedDir = fbd.SelectedPath;
                 TBSelectedDir.Text = selectedDir;
-
                 DirectoryInfo di = new DirectoryInfo(selectedDir);
-
-                List<FileInfo> files = di.GetFiles("*.ini").ToList<FileInfo>();
-
-                
-
+                files = di.GetFiles("*.ini").ToList<FileInfo>();
                 LBFiles.Items.Clear();
                 LBFiles.BeginUpdate();
                 foreach (FileInfo fi in files)
@@ -35,15 +33,22 @@ namespace APCRM
                     LBFiles.Items.Add(fi);
                 }
                 LBFiles.EndUpdate();
+            }
+        }
 
-                
-
-                StreamReader sr = files[1].OpenText();
-
-                string s = sr.ReadToEnd();
-
-                System.Diagnostics.Debug.WriteLine(s);
-
+        private void BTNTotals_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine(selectedDir);
+            foreach (FileInfo fi in files)
+            {
+                StreamReader sr = fi.OpenText();
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    if (line.Contains("#----> Total:")) {
+                        System.Diagnostics.Debug.WriteLine(line.Substring(13));
+                    }
+                }
                 sr.Close();
             }
         }
