@@ -8,9 +8,6 @@ namespace APCRM
 {
     public partial class MainForm : Form
     {
-        private string selectedDir;
-        private List<FileInfo> files;
-
         public MainForm()
         {
             InitializeComponent();
@@ -22,10 +19,9 @@ namespace APCRM
 
             if (fbd.ShowDialog() == DialogResult.OK)
             {
-                selectedDir = fbd.SelectedPath;
-                TBSelectedDir.Text = selectedDir;
-                DirectoryInfo di = new DirectoryInfo(selectedDir);
-                files = di.GetFiles("*.ini").ToList<FileInfo>();
+                TBSelectedDir.Text = fbd.SelectedPath;
+                DirectoryInfo di = new DirectoryInfo(TBSelectedDir.Text);
+                List<FileInfo> files = di.GetFiles("*.ini").ToList<FileInfo>();
                 LBFiles.Items.Clear();
                 LBFiles.BeginUpdate();
                 foreach (FileInfo fi in files)
@@ -38,19 +34,29 @@ namespace APCRM
 
         private void BTNTotals_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine(selectedDir);
-            foreach (FileInfo fi in files)
+            DirectoryInfo di = new DirectoryInfo(TBSelectedDir.Text);
+            DirectoryInfo[] dirs = di.GetDirectories();
+            for (int i = 0; i < dirs.Length; i++)
             {
-                StreamReader sr = fi.OpenText();
-                string line;
-                while ((line = sr.ReadLine()) != null)
+                List<FileInfo> files = dirs[i].GetFiles("*.ini").ToList<FileInfo>();
+                System.Diagnostics.Debug.WriteLine(dirs[i].Name);
+                foreach (FileInfo fi in files)
                 {
-                    if (line.Contains("#----> Total:")) {
-                        System.Diagnostics.Debug.WriteLine(line.Substring(13));
+                    StreamReader sr = fi.OpenText();
+                    string line;
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        if (line.Contains("#----> Total:"))
+                        {
+                            System.Diagnostics.Debug.WriteLine(line.Substring(13));
+                        }
                     }
+                    sr.Close();
                 }
-                sr.Close();
             }
+
+
+            
         }
     }
 }
