@@ -5,9 +5,9 @@ namespace APCRM.Models
 {
     class JavaClass
     {
-        string name;
-        private List<Antipattern> antipatterns;
-        private ClassRole role;
+        public string name;
+        public List<Antipattern> antipatterns;
+        public ClassRole role;
 
         public JavaClass(string name)
         {

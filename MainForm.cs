@@ -9,16 +9,12 @@ namespace APCRM
 {
     public partial class MainForm : Form
     {
+        private List<JavaClass> classes;
+
         public MainForm()
         {
             InitializeComponent();
-            CBAntipatterns.Items.Clear();
-            CBAntipatterns.BeginUpdate();
-            foreach (var ap in Enum.GetValues(typeof(Enums.Antipattern)))
-            {
-                CBAntipatterns.Items.Add(ap);
-            }
-            CBAntipatterns.EndUpdate();
+            classes = new List<JavaClass>();
         }
 
         private void BTNSelectDir_Click(object sender, EventArgs e)
@@ -73,31 +69,85 @@ namespace APCRM
 
         private void CheckDirectory(string dir)
         {
-            System.Diagnostics.Debug.WriteLine("1");
             DirectoryInfo di = new DirectoryInfo(dir);
-            System.Diagnostics.Debug.WriteLine("2");
+            //System.Diagnostics.Debug.WriteLine("//===== CheckDir: " + dir);
             List<DirectoryInfo> dirs = di.GetDirectories().ToList<DirectoryInfo>();
-            System.Diagnostics.Debug.WriteLine("3");
-            if (dirs.Count != 0)
+            foreach(DirectoryInfo _di in dirs)
             {
-                System.Diagnostics.Debug.WriteLine("4");
-                foreach (DirectoryInfo foundDir in dirs)
+                //System.Diagnostics.Debug.WriteLine("//-----" + _di.Name);
+                CheckDirectory(_di.FullName);
+                FileInfo[] files = _di.GetFiles("*.java");
+                for (int i = 0; i < files.Length; i++)
                 {
-                    CheckDirectory(foundDir.Name);
-                    System.Diagnostics.Debug.WriteLine(foundDir.Name);
+                    string fileName = Path.GetFileNameWithoutExtension(files[i].FullName);
+                    //System.Diagnostics.Debug.WriteLine(Path.GetFileNameWithoutExtension(files[i].FullName));
+                    classes.Add(new JavaClass(fileName));
+                }
+                
+            }
+        }
+
+        private void BTNListAntiPatterns_Click(object sender, EventArgs e)
+        {
+            // Make sure selected dir is the one with the .ini files.
+            DirectoryInfo di = new DirectoryInfo(TBSelectedDir.Text);
+            FileInfo[] files = di.GetFiles("*.ini");
+
+            System.Diagnostics.Debug.WriteLine("Working...");
+            foreach(JavaClass jc in classes)
+            {
+                foreach (FileInfo fi in files)
+                {
+                    StreamReader sr = fi.OpenText();
+                    string text = sr.ReadToEnd();
+                    sr.Close();
+                    if(text.Contains(jc.name))
+                    {
+                        foreach(Enums.Antipattern ap in Enum.GetValues(typeof(Enums.Antipattern)))
+                        {
+                            if (fi.Name.Contains(ap.ToString()))
+                            {
+                                jc.antipatterns.Add(ap);
+                            }
+                        }
+                        
+                    }
+                }
+            }
+            System.Diagnostics.Debug.WriteLine("Done.");
+        }
+
+        private void BTNPrint_Click(object sender, EventArgs e)
+        {
+            foreach(JavaClass jc in classes)
+            {
+                System.Diagnostics.Debug.WriteLine("//=====\nAntipatterns in " + jc.name + ":");
+                foreach(Enums.Antipattern ap in jc.antipatterns)
+                {
+                    System.Diagnostics.Debug.WriteLine(ap.ToString());
                 }
             }
         }
 
-        private void BTNListClassesInAntipattern(string dir, Enums.Antipattern antipattern)
+        private void BTNAddRoles_Click(object sender, EventArgs e)
         {
-            // Iterate through dir to find .ini files that contains the name of the antipattern
-
-            
-            // Open the found ini file. For each class in the string list:
-            // check if that class's name is in the .ini file. If it is, add that antipattern to the class's list of
-            // antipatterns.
+            // Parse role data. Insert the role to each class...
         }
 
+        private void BTNPrintRoles_Click(object sender, EventArgs e)
+        {
+            foreach (JavaClass jc in classes)
+            {
+                //Temp. Remove when we have role data.
+                jc.role = Enums.ClassRole.Controller;
+                
+                System.Diagnostics.Debug.WriteLine("//=====" + jc.role.ToString());
+                foreach (Enums.Antipattern ap in jc.antipatterns)
+                {
+                    System.Diagnostics.Debug.WriteLine(ap.ToString());
+                }
+            }
+        }
     }
+
 }
