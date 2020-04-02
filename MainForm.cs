@@ -9,37 +9,73 @@ namespace APCRM
 {
     public partial class MainForm : Form
     {
-        private List<JavaClass> classes;
+        private static readonly string[] ANTIPATTERNS = new string[18]
+        {
+            "AntiSingleton",
+            "BaseClassKnowsDerivedClass",
+            "BaseClassShouldBeAbstract",
+            "Blob",
+            "ClassDataShouldBePrivate",
+            "ComplexClass",
+            "FunctionalDecomposition",
+            "LargeClass",
+            "LazyClass",
+            "LongMethod",
+            "LongParameterList",
+            "ManyFieldAttributesButNotComplex",
+            "MessageChains",
+            "RefusedParentBequest",
+            "SpaghettiCode",
+            "SpeculativeGenerality",
+            "SwissArmyKnife",
+            "TraditionBreaker"
+        };
+        private static readonly string[] ROLES = new string[6]
+        {
+            "Information Holder",
+            "Structurer",
+            "Service Provider",
+            "Controller",
+            "Coordinator",
+            "Interfacer"
+        };
 
         public MainForm()
         {
             InitializeComponent();
-            classes = new List<JavaClass>();
         }
 
-        private void BTNSelectDir_Click(object sender, EventArgs e)
+        private void BTNSelectIniDir_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog fbd = new FolderBrowserDialog();
             if (fbd.ShowDialog() == DialogResult.OK)
             {
-                TBSelectedDir.Text = fbd.SelectedPath;
+                TBSelectedIniDir.Text = fbd.SelectedPath;
             }
         }
 
-        private void BTNTotals_Click(object sender, EventArgs e)
+        private void BTNSelectClassifiedCSV_Click(object sender, EventArgs e)
         {
-            CheckDirectoriesForIniFiles(TBSelectedDir.Text);
+            OpenFileDialog fd = new OpenFileDialog();
+            fd.Filter = "CSV Files(*.csv)| *.csv";
+            if (fd.ShowDialog() == DialogResult.OK)
+            {
+                TBSelectedClassifiedCSV.Text = fd.FileName;
+            }
         }
 
-        private void CheckDirectoriesForIniFiles(string dir)
+        private void BTNFindTotalAPs_Click(object sender, EventArgs e)
         {
-            DirectoryInfo di = new DirectoryInfo(dir);
-            System.Diagnostics.Debug.WriteLine("\n//===== " + di.Name + " =====/");
+            System.Diagnostics.Debug.WriteLine("//===== In respective order =====//");
+            foreach (string ap in ANTIPATTERNS)
+            {
+                System.Diagnostics.Debug.WriteLine(ap);
+            }
 
+            DirectoryInfo di = new DirectoryInfo(TBSelectedIniDir.Text);
             FileInfo[] files = di.GetFiles("*.ini");
             for (int i = 0; i < files.Length; i++)
             {
-                System.Diagnostics.Debug.WriteLine(files[i].Name);
                 StreamReader sr = files[i].OpenText();
                 string line;
                 while ((line = sr.ReadLine()) != null)
@@ -51,102 +87,137 @@ namespace APCRM
                 }
                 sr.Close();
             }
+        }
 
-            DirectoryInfo[] dirs = di.GetDirectories();
-            for (int i = 0; i < dirs.Length; i++)
+        private void BTNFindRoles_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("//===== In respective order =====//");
+            foreach (string r in ROLES)
             {
-                CheckDirectoriesForIniFiles(dirs[i].FullName);
+                System.Diagnostics.Debug.WriteLine(r);
+            }
+
+            List<string> classes = new List<string>();
+            List<string> roles = new List<string>();
+            using (var sr = new StreamReader(TBSelectedClassifiedCSV.Text))
+            {
+                // For some reason it seems to skip the header line automatically. :)
+                while (!sr.EndOfStream)
+                {
+                    var line = sr.ReadLine();
+                    var values = line.Split(',');
+
+                    classes.Add(values[2]);
+                    roles.Add(values[27]);
+                }
+            }
+
+            int[] numRoles = new int[6];
+            // 0=InformationHolder, 1=Structurer, 2=ServiceProvider,
+            // 3= Controller, 4=Coordinator, 5=Interfacer
+            int index = 0;
+
+            foreach (string s in ROLES)
+            {
+                foreach (string role in roles)
+                {
+                    if (s == role)
+                    {
+                        numRoles[index]++;
+                    }
+                }
+                index++;
+            }
+
+            for (int i = 0; i < numRoles.Length; i++)
+            {
+                System.Diagnostics.Debug.WriteLine(numRoles[0]);
             }
         }
 
-        private void BTNCreateClasses_Click(object sender, EventArgs e)
+        private void BTNFindAPsInRoles_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine(TBSelectedDir.Text);
-            // Iterate through project and create list of JavaClass objects based on .java files.
-            CheckDirectoryForJavaFiles(TBSelectedDir.Text);
-        }
+            System.Diagnostics.Debug.WriteLine("Mapping roles to antipatterns...");
 
-        private void CheckDirectoryForJavaFiles(string dir)
-        {
-            DirectoryInfo di = new DirectoryInfo(dir);
-            System.Diagnostics.Debug.WriteLine("\n//===== " + di.Name + " =====/");
+            List<JavaClass> javaClasses = new List<JavaClass>();
 
-            FileInfo[] files = di.GetFiles("*.java");
-            for (int i = 0; i < files.Length; i++)
+            //===== Attach a role to each class =====//
+            using (var sr = new StreamReader(TBSelectedClassifiedCSV.Text))
             {
-                string fileName = Path.GetFileNameWithoutExtension(files[i].FullName);
-                classes.Add(new JavaClass(fileName));
-                System.Diagnostics.Debug.WriteLine("Added class " + fileName);
+                while (!sr.EndOfStream)
+                {
+                    var line = sr.ReadLine();
+                    var values = line.Split(',');
+
+                    JavaClass jc = new JavaClass(values[2]);
+                    jc.classRole = values[27];
+                    javaClasses.Add(jc);
+                }
             }
 
-            DirectoryInfo[] dirs = di.GetDirectories();
-            for (int i = 0; i < dirs.Length; i++)
-            {
-                CheckDirectoryForJavaFiles(dirs[i].FullName);
-            }
-        }
-
-        private void BTNListAntiPatterns_Click(object sender, EventArgs e)
-        {
-            // Make sure selected dir is the one with the .ini files (for a specific versino).
-            DirectoryInfo di = new DirectoryInfo(TBSelectedDir.Text);
+            //===== Attach antipatterns to each class =====//
+            DirectoryInfo di = new DirectoryInfo(TBSelectedIniDir.Text);
             FileInfo[] files = di.GetFiles("*.ini");
-
-            System.Diagnostics.Debug.WriteLine("Working...");
-            foreach(JavaClass jc in classes)
+            foreach (JavaClass jc in javaClasses)
             {
                 foreach (FileInfo fi in files)
                 {
                     StreamReader sr = fi.OpenText();
                     string text = sr.ReadToEnd();
                     sr.Close();
-                    if(text.Contains(jc.name))
+                    if (text.Contains(jc.name))
                     {
-                        foreach(Enums.Antipattern ap in Enum.GetValues(typeof(Enums.Antipattern)))
+                        foreach (string s in ANTIPATTERNS)
                         {
-                            if (fi.Name.Contains(ap.ToString()))
+                            if (fi.Name.Contains(s))
                             {
-                                jc.antipatterns.Add(ap);
+                                jc.aps.Add(s);
                             }
                         }
-                        
+
                     }
                 }
             }
-            System.Diagnostics.Debug.WriteLine("Done.");
-        }
 
-        private void BTNPrint_Click(object sender, EventArgs e)
-        {
-            foreach(JavaClass jc in classes)
+            // For each role, find classes that has that role, add each antipattern to a counter...
+
+            foreach (string role in ROLES)
             {
-                System.Diagnostics.Debug.WriteLine("//===== Antipatterns in " + jc.name + " =====/");
-                foreach(Enums.Antipattern ap in jc.antipatterns)
+                int[] numAntipatterns = new int[18];
+                // 0=AntiSingleton, 1=BaseClassKnowsDerivedClass, 2=BaseClassShouldBeAbstract,
+                // 3=Blob, 4=ClassDataShouldBePrivate, 5=ComplexClass,
+                // 6=FunctionalDecomposition, 7=LargeClass, 8=LazyClass,
+                // 9=LongMethod, 10=LongParameterList, 11=ManyFieldAttributesButNotComplex,
+                // 12=MessageChains, 13=RefusedParentBequest, 14=SpaghettiCode,
+                // 15=SpeculativeGenerality, 16=SwissArmyKnife, 17=TraditionBreaker
+                int index = 0;
+
+                foreach (JavaClass jc in javaClasses)
                 {
-                    System.Diagnostics.Debug.WriteLine(ap.ToString());
+                    index = 0;
+                    if (jc.classRole == role)
+                    {
+                        foreach (string ap in ANTIPATTERNS)
+                        {
+                            if (jc.aps.Contains(ap))
+                            {
+                                numAntipatterns[index]++;
+                            }
+                            index++;
+                        }
+                    }
+                }
+
+                System.Diagnostics.Debug.WriteLine("Done.\n");
+                System.Diagnostics.Debug.WriteLine("//===== In respective order =====//");
+                for (int i = 0; i < numAntipatterns.Length; i++)
+                {
+                    System.Diagnostics.Debug.WriteLine(numAntipatterns[i]);
                 }
             }
+            
         }
 
-        private void BTNAddRoles_Click(object sender, EventArgs e)
-        {
-            // Parse role data. Insert the role to each class...
-
-        }
-
-        private void BTNPrintRoles_Click(object sender, EventArgs e)
-        {
-            foreach (JavaClass jc in classes)
-            {
-                jc.role = Enums.ClassRole.Controller; //Temp. Remove when we have role data.
-
-                System.Diagnostics.Debug.WriteLine("//=====" + jc.role.ToString());
-                foreach (Enums.Antipattern ap in jc.antipatterns)
-                {
-                    System.Diagnostics.Debug.WriteLine(ap.ToString());
-                }
-            }
-        }
     }
 
 }
