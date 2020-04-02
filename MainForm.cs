@@ -20,43 +20,42 @@ namespace APCRM
         private void BTNSelectDir_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog fbd = new FolderBrowserDialog();
-
             if (fbd.ShowDialog() == DialogResult.OK)
             {
                 TBSelectedDir.Text = fbd.SelectedPath;
-                DirectoryInfo di = new DirectoryInfo(TBSelectedDir.Text);
-                List<FileInfo> files = di.GetFiles("*.ini").ToList<FileInfo>();
-                LBFiles.Items.Clear();
-                LBFiles.BeginUpdate();
-                foreach (FileInfo fi in files)
-                {
-                    LBFiles.Items.Add(fi);
-                }
-                LBFiles.EndUpdate();
             }
         }
 
         private void BTNTotals_Click(object sender, EventArgs e)
         {
-            DirectoryInfo di = new DirectoryInfo(TBSelectedDir.Text);
+            CheckDirectoriesForIniFiles(TBSelectedDir.Text);
+        }
+
+        private void CheckDirectoriesForIniFiles(string dir)
+        {
+            DirectoryInfo di = new DirectoryInfo(dir);
+            System.Diagnostics.Debug.WriteLine("\n//===== " + di.Name + " =====/");
+
+            FileInfo[] files = di.GetFiles("*.ini");
+            for (int i = 0; i < files.Length; i++)
+            {
+                System.Diagnostics.Debug.WriteLine(files[i].Name);
+                StreamReader sr = files[i].OpenText();
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    if (line.Contains("#----> Total:"))
+                    {
+                        System.Diagnostics.Debug.WriteLine(line.Substring(13));
+                    }
+                }
+                sr.Close();
+            }
+
             DirectoryInfo[] dirs = di.GetDirectories();
             for (int i = 0; i < dirs.Length; i++)
             {
-                List<FileInfo> files = dirs[i].GetFiles("*.ini").ToList<FileInfo>();
-                System.Diagnostics.Debug.WriteLine(dirs[i].Name);
-                foreach (FileInfo fi in files)
-                {
-                    StreamReader sr = fi.OpenText();
-                    string line;
-                    while ((line = sr.ReadLine()) != null)
-                    {
-                        if (line.Contains("#----> Total:"))
-                        {
-                            System.Diagnostics.Debug.WriteLine(line.Substring(13));
-                        }
-                    }
-                    sr.Close();
-                }
+                CheckDirectoriesForIniFiles(dirs[i].FullName);
             }
         }
 
@@ -64,32 +63,32 @@ namespace APCRM
         {
             System.Diagnostics.Debug.WriteLine(TBSelectedDir.Text);
             // Iterate through project and create list of JavaClass objects based on .java files.
-            CheckDirectory(TBSelectedDir.Text);
+            CheckDirectoryForJavaFiles(TBSelectedDir.Text);
         }
 
-        private void CheckDirectory(string dir)
+        private void CheckDirectoryForJavaFiles(string dir)
         {
             DirectoryInfo di = new DirectoryInfo(dir);
-            //System.Diagnostics.Debug.WriteLine("//===== CheckDir: " + dir);
-            List<DirectoryInfo> dirs = di.GetDirectories().ToList<DirectoryInfo>();
-            foreach(DirectoryInfo _di in dirs)
+            System.Diagnostics.Debug.WriteLine("\n//===== " + di.Name + " =====/");
+
+            FileInfo[] files = di.GetFiles("*.java");
+            for (int i = 0; i < files.Length; i++)
             {
-                //System.Diagnostics.Debug.WriteLine("//-----" + _di.Name);
-                CheckDirectory(_di.FullName);
-                FileInfo[] files = _di.GetFiles("*.java");
-                for (int i = 0; i < files.Length; i++)
-                {
-                    string fileName = Path.GetFileNameWithoutExtension(files[i].FullName);
-                    //System.Diagnostics.Debug.WriteLine(Path.GetFileNameWithoutExtension(files[i].FullName));
-                    classes.Add(new JavaClass(fileName));
-                }
-                
+                string fileName = Path.GetFileNameWithoutExtension(files[i].FullName);
+                classes.Add(new JavaClass(fileName));
+                System.Diagnostics.Debug.WriteLine("Added class " + fileName);
+            }
+
+            DirectoryInfo[] dirs = di.GetDirectories();
+            for (int i = 0; i < dirs.Length; i++)
+            {
+                CheckDirectoryForJavaFiles(dirs[i].FullName);
             }
         }
 
         private void BTNListAntiPatterns_Click(object sender, EventArgs e)
         {
-            // Make sure selected dir is the one with the .ini files.
+            // Make sure selected dir is the one with the .ini files (for a specific versino).
             DirectoryInfo di = new DirectoryInfo(TBSelectedDir.Text);
             FileInfo[] files = di.GetFiles("*.ini");
 
@@ -121,7 +120,7 @@ namespace APCRM
         {
             foreach(JavaClass jc in classes)
             {
-                System.Diagnostics.Debug.WriteLine("//=====\nAntipatterns in " + jc.name + ":");
+                System.Diagnostics.Debug.WriteLine("//===== Antipatterns in " + jc.name + " =====/");
                 foreach(Enums.Antipattern ap in jc.antipatterns)
                 {
                     System.Diagnostics.Debug.WriteLine(ap.ToString());
@@ -132,15 +131,15 @@ namespace APCRM
         private void BTNAddRoles_Click(object sender, EventArgs e)
         {
             // Parse role data. Insert the role to each class...
+
         }
 
         private void BTNPrintRoles_Click(object sender, EventArgs e)
         {
             foreach (JavaClass jc in classes)
             {
-                //Temp. Remove when we have role data.
-                jc.role = Enums.ClassRole.Controller;
-                
+                jc.role = Enums.ClassRole.Controller; //Temp. Remove when we have role data.
+
                 System.Diagnostics.Debug.WriteLine("//=====" + jc.role.ToString());
                 foreach (Enums.Antipattern ap in jc.antipatterns)
                 {
