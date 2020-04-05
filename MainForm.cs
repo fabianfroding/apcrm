@@ -121,6 +121,7 @@ namespace APCRM
             {
                 foreach (string role in roles)
                 {
+                    
                     if (s == role)
                     {
                         numRoles[index]++;
@@ -131,7 +132,7 @@ namespace APCRM
 
             for (int i = 0; i < numRoles.Length; i++)
             {
-                System.Diagnostics.Debug.WriteLine(numRoles[0]);
+                System.Diagnostics.Debug.WriteLine(numRoles[i]);
             }
         }
 
@@ -167,11 +168,11 @@ namespace APCRM
                     sr.Close();
                     if (text.Contains(jc.name))
                     {
-                        foreach (string s in ANTIPATTERNS)
+                        foreach (string ap in ANTIPATTERNS)
                         {
-                            if (fi.Name.Contains(s))
+                            if (fi.Name.Contains(ap))
                             {
-                                jc.aps.Add(s);
+                                jc.aps.Add(ap);
                             }
                         }
 
@@ -183,6 +184,8 @@ namespace APCRM
 
             foreach (string role in ROLES)
             {
+                System.Diagnostics.Debug.WriteLine("//========== " + role + " ==========//");
+
                 int[] numAntipatterns = new int[18];
                 // 0=AntiSingleton, 1=BaseClassKnowsDerivedClass, 2=BaseClassShouldBeAbstract,
                 // 3=Blob, 4=ClassDataShouldBePrivate, 5=ComplexClass,
@@ -197,10 +200,13 @@ namespace APCRM
                     index = 0;
                     if (jc.classRole == role)
                     {
+                        System.Diagnostics.Debug.WriteLine(jc.classRole + " == " + role);
                         foreach (string ap in ANTIPATTERNS)
                         {
                             if (jc.aps.Contains(ap))
                             {
+                                System.Diagnostics.Debug.WriteLine(jc.name + " contains " + ap);
+                                System.Diagnostics.Debug.WriteLine("Adding 1 to " + ANTIPATTERNS[index]);
                                 numAntipatterns[index]++;
                             }
                             index++;
@@ -209,7 +215,7 @@ namespace APCRM
                 }
 
                 System.Diagnostics.Debug.WriteLine("Done.\n");
-                System.Diagnostics.Debug.WriteLine("//===== In respective order =====//");
+                System.Diagnostics.Debug.WriteLine("//---------- In respective order ----------//");
                 for (int i = 0; i < numAntipatterns.Length; i++)
                 {
                     System.Diagnostics.Debug.WriteLine(numAntipatterns[i]);
