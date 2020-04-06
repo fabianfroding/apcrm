@@ -89,6 +89,40 @@ namespace APCRM
             }
         }
 
+        // Link this method to Find Total Antipatterns button if you want to find .ini in sub directories
+        // instead. Useful to get all data from the entire history of a project instead of doing it
+        // manually for each version.
+        private void BTNFindTotalAPsInSubDirs_Click(object sender, EventArgs e)
+        {
+            DirectoryInfo selectedDir = new DirectoryInfo(TBSelectedIniDir.Text);
+            DirectoryInfo[] subDirs = selectedDir.GetDirectories();
+
+            System.Diagnostics.Debug.WriteLine("//===== In respective order =====//");
+            foreach (string ap in ANTIPATTERNS)
+            {
+                System.Diagnostics.Debug.WriteLine(ap);
+            }
+
+            for (int i = 0; i < subDirs.Length; i++)
+            {
+                System.Diagnostics.Debug.WriteLine(subDirs[i].Name);
+                FileInfo[] files = subDirs[i].GetFiles("*.ini");
+                for (int j = 0; j < files.Length; j++)
+                {
+                    StreamReader sr = files[j].OpenText();
+                    string line;
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        if (line.Contains("#----> Total:"))
+                        {
+                            System.Diagnostics.Debug.WriteLine(line.Substring(13));
+                        }
+                    }
+                    sr.Close();
+                }
+            }
+        }
+
         private void BTNFindRoles_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Debug.WriteLine("//===== In respective order =====//");
@@ -114,7 +148,7 @@ namespace APCRM
 
             int[] numRoles = new int[6];
             // 0=InformationHolder, 1=Structurer, 2=ServiceProvider,
-            // 3= Controller, 4=Coordinator, 5=Interfacer
+            // 3=Controller, 4=Coordinator, 5=Interfacer
             int index = 0;
 
             foreach (string s in ROLES)

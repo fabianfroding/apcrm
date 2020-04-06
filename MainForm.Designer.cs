@@ -54,7 +54,7 @@
             this.TBSelectedClassifiedCSV.Location = new System.Drawing.Point(237, 47);
             this.TBSelectedClassifiedCSV.Name = "TBSelectedClassifiedCSV";
             this.TBSelectedClassifiedCSV.ReadOnly = true;
-            this.TBSelectedClassifiedCSV.Size = new System.Drawing.Size(340, 26);
+            this.TBSelectedClassifiedCSV.Size = new System.Drawing.Size(879, 26);
             this.TBSelectedClassifiedCSV.TabIndex = 20;
             // 
             // TBSelectedIniDir
@@ -62,7 +62,7 @@
             this.TBSelectedIniDir.Location = new System.Drawing.Point(237, 15);
             this.TBSelectedIniDir.Name = "TBSelectedIniDir";
             this.TBSelectedIniDir.ReadOnly = true;
-            this.TBSelectedIniDir.Size = new System.Drawing.Size(340, 26);
+            this.TBSelectedIniDir.Size = new System.Drawing.Size(879, 26);
             this.TBSelectedIniDir.TabIndex = 21;
             // 
             // BTNSelectIniDir
@@ -144,7 +144,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.ClientSize = new System.Drawing.Size(599, 290);
+            this.ClientSize = new System.Drawing.Size(1128, 290);
             this.Controls.Add(this.LabelTip01);
             this.Controls.Add(this.BTNFindTotalAPs);
             this.Controls.Add(this.LabelTip03);
