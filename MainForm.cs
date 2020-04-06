@@ -198,18 +198,31 @@ namespace APCRM
                 foreach (FileInfo fi in files)
                 {
                     StreamReader sr = fi.OpenText();
-                    string text = sr.ReadToEnd();
-                    sr.Close();
-                    if (text.Contains(jc.name))
+                    List<string> textLines = new List<string>();
+                    using (sr)
                     {
-                        foreach (string ap in ANTIPATTERNS)
+                        while (!sr.EndOfStream)
                         {
-                            if (fi.Name.Contains(ap))
+                            textLines.Add(sr.ReadLine());
+                        }
+                    }
+                    sr.Close();
+                    string lastSubString = "";
+
+                    foreach (string line in textLines.Where(l => l.Contains(jc.name) && l.Contains("-0")))
+                    {
+                        lastSubString = line.Split('.').Last();
+                    }
+
+                    if (lastSubString.Equals(jc.name))
+                    {
+                        foreach (string s in ANTIPATTERNS)
+                        {
+                            if (fi.Name.Contains(s))
                             {
-                                jc.aps.Add(ap);
+                                jc.aps.Add(s);
                             }
                         }
-
                     }
                 }
             }
@@ -229,33 +242,47 @@ namespace APCRM
                 // 15=SpeculativeGenerality, 16=SwissArmyKnife, 17=TraditionBreaker
                 int index = 0;
 
+                foreach (string ap in ANTIPATTERNS)
+                {
+                    foreach (JavaClass jc in javaClasses)
+                    {
+                        if (jc.classRole == role && jc.aps.Contains(ap))
+                        {
+                            System.Diagnostics.Debug.WriteLine(jc.name + " contains " + ap);
+                            System.Diagnostics.Debug.WriteLine("Adding 1 to " + ANTIPATTERNS[index]);
+                            numAntipatterns[index]++;
+                        }
+                    }
+                    index++;
+                }
+
+                /*
                 foreach (JavaClass jc in javaClasses)
                 {
                     index = 0;
                     if (jc.classRole == role)
                     {
-                        System.Diagnostics.Debug.WriteLine(jc.classRole + " == " + role);
                         foreach (string ap in ANTIPATTERNS)
                         {
                             if (jc.aps.Contains(ap))
                             {
-                                System.Diagnostics.Debug.WriteLine(jc.name + " contains " + ap);
-                                System.Diagnostics.Debug.WriteLine("Adding 1 to " + ANTIPATTERNS[index]);
+                                //System.Diagnostics.Debug.WriteLine(jc.name + " contains " + ap);
+                                //System.Diagnostics.Debug.WriteLine("Adding 1 to " + ANTIPATTERNS[index]);
                                 numAntipatterns[index]++;
                             }
                             index++;
                         }
                     }
-                }
+                }*/
 
-                System.Diagnostics.Debug.WriteLine("Done.\n");
                 System.Diagnostics.Debug.WriteLine("//---------- In respective order ----------//");
                 for (int i = 0; i < numAntipatterns.Length; i++)
                 {
                     System.Diagnostics.Debug.WriteLine(numAntipatterns[i]);
                 }
             }
-            
+            System.Diagnostics.Debug.WriteLine("Done.\n");
+
         }
 
     }
