@@ -7,3 +7,13 @@ C:\Users\Fabian\Studier\DIT837-BScThesisInSEM\APCRM\obj\Debug\APCRM.Properties.R
 C:\Users\Fabian\Studier\DIT837-BScThesisInSEM\APCRM\obj\Debug\APCRM.csproj.GenerateResource.cache
 C:\Users\Fabian\Studier\DIT837-BScThesisInSEM\APCRM\obj\Debug\APCRM.exe
 C:\Users\Fabian\Studier\DIT837-BScThesisInSEM\APCRM\obj\Debug\APCRM.pdb
+D:\Thesis Stuff\APCRM\apcrm-master\bin\Debug\APCRM.exe.config
+D:\Thesis Stuff\APCRM\apcrm-master\bin\Debug\APCRM.exe
+D:\Thesis Stuff\APCRM\apcrm-master\bin\Debug\APCRM.pdb
+D:\Thesis Stuff\APCRM\apcrm-master\obj\Debug\APCRM.csprojAssemblyReference.cache
+D:\Thesis Stuff\APCRM\apcrm-master\obj\Debug\APCRM.MainForm.resources
+D:\Thesis Stuff\APCRM\apcrm-master\obj\Debug\APCRM.Properties.Resources.resources
+D:\Thesis Stuff\APCRM\apcrm-master\obj\Debug\APCRM.csproj.GenerateResource.cache
+D:\Thesis Stuff\APCRM\apcrm-master\obj\Debug\APCRM.csproj.CoreCompileInputs.cache
+D:\Thesis Stuff\APCRM\apcrm-master\obj\Debug\APCRM.exe
+D:\Thesis Stuff\APCRM\apcrm-master\obj\Debug\APCRM.pdb

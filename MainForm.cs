@@ -64,6 +64,15 @@ namespace APCRM
             }
         }
 
+        private void BTNSelectCSVDir_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog fbd = new FolderBrowserDialog();
+            if (fbd.ShowDialog() == DialogResult.OK)
+            {
+                TBSelectedCSVDir.Text = fbd.SelectedPath;
+            }
+        }
+
         private void BTNFindTotalAPs_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Debug.WriteLine("//===== In respective order =====//");
@@ -285,6 +294,90 @@ namespace APCRM
 
         }
 
+        private void BTNFindChangesInRole_Click(object sender, EventArgs e)
+        {
+            DirectoryInfo di = new DirectoryInfo(TBSelectedCSVDir.Text);
+            FileInfo[] files = di.GetFiles("*.csv");
+            int[,] array = new int[6, 6];
+            for (int i = 0; i < files.Length - 1; i++)
+            {
+                List<JavaClass> javaClasses1 = new List<JavaClass>();
+                List<JavaClass> javaClasses2 = new List<JavaClass>();
+                StreamReader sr1 = files[i].OpenText();
+                StreamReader sr2 = files[i + 1].OpenText();
+                using (sr1)
+                {
+                    while (!sr1.EndOfStream)
+                    {
+                        var line = sr1.ReadLine();
+                        var values = line.Split(',');
+
+                        JavaClass jc = new JavaClass(values[2]);
+                        jc.classRole = values[27];
+                        javaClasses1.Add(jc);
+                    }
+                }
+                using (sr2)
+                {
+                    while (!sr2.EndOfStream)
+                    {
+                        var line = sr2.ReadLine();
+                        var values = line.Split(',');
+
+                        JavaClass jc = new JavaClass(values[2]);
+                        jc.classRole = values[27];
+                        javaClasses2.Add(jc);
+                    }
+                }
+                foreach (JavaClass jc1 in javaClasses1)
+                {
+                    foreach (JavaClass jc2 in javaClasses2)
+                    {
+                        if (jc1.name.Equals(jc2.name)) {
+                            if (!jc1.classRole.Equals(jc2.classRole))
+                            {
+                                int indexRow = 0;
+                                int indexCol = 0;
+                                foreach (string s in ROLES)
+                                {
+                                    if (jc1.classRole.Equals(s))
+                                    {
+                                        break;
+                                    }
+                                    indexRow++;
+                                        
+                                }
+                                foreach (string s in ROLES)
+                                {
+                                    if (jc2.classRole.Equals(s))
+                                    {
+                                        break;
+                                    }
+                                    indexCol++;
+                                }
+                                array[indexRow, indexCol]++;
+                            }
+                        }
+                    }
+                }
+
+            }
+            string arrayString = "";
+            for (int x = 0; x < array.GetLength(0); x += 1)
+            {
+                for (int y = 0; y < array.GetLength(1); y += 1)
+                {
+                    arrayString += string.Format("{0} ", array[x, y]);
+                }
+                arrayString += System.Environment.NewLine + System.Environment.NewLine;
+            }
+            System.Diagnostics.Debug.Write(arrayString);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }
