@@ -297,7 +297,7 @@ namespace APCRM
         private void BTNFindChangesInRole_Click(object sender, EventArgs e)
         {
             DirectoryInfo di = new DirectoryInfo(TBSelectedCSVDir.Text);
-            FileInfo[] files = di.GetFiles("*.csv");
+            FileInfo[] files = di.GetFiles("*.csv").OrderByDescending(x => x.Name).ToArray();
             int[,] array = new int[6, 6];
             for (int i = 0; i < files.Length - 1; i++)
             {
