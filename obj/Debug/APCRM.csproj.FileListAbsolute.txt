@@ -17,3 +17,13 @@ D:\Thesis Stuff\APCRM\apcrm-master\obj\Debug\APCRM.csproj.GenerateResource.cache
 D:\Thesis Stuff\APCRM\apcrm-master\obj\Debug\APCRM.csproj.CoreCompileInputs.cache
 D:\Thesis Stuff\APCRM\apcrm-master\obj\Debug\APCRM.exe
 D:\Thesis Stuff\APCRM\apcrm-master\obj\Debug\APCRM.pdb
+C:\Users\duyka\Desktop\APCRM\bin\Debug\APCRM.exe.config
+C:\Users\duyka\Desktop\APCRM\bin\Debug\APCRM.exe
+C:\Users\duyka\Desktop\APCRM\bin\Debug\APCRM.pdb
+C:\Users\duyka\Desktop\APCRM\obj\Debug\APCRM.csprojAssemblyReference.cache
+C:\Users\duyka\Desktop\APCRM\obj\Debug\APCRM.MainForm.resources
+C:\Users\duyka\Desktop\APCRM\obj\Debug\APCRM.Properties.Resources.resources
+C:\Users\duyka\Desktop\APCRM\obj\Debug\APCRM.csproj.GenerateResource.cache
+C:\Users\duyka\Desktop\APCRM\obj\Debug\APCRM.csproj.CoreCompileInputs.cache
+C:\Users\duyka\Desktop\APCRM\obj\Debug\APCRM.exe
+C:\Users\duyka\Desktop\APCRM\obj\Debug\APCRM.pdb

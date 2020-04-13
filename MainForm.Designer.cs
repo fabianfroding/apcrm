@@ -42,7 +42,7 @@
             this.BTNSelectCSVDir = new System.Windows.Forms.Button();
             this.TBSelectedCSVDir = new System.Windows.Forms.TextBox();
             this.BTNFindChangesInRole = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.LabelTip04 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LabelTip00
@@ -185,15 +185,14 @@
             this.BTNFindChangesInRole.UseVisualStyleBackColor = true;
             this.BTNFindChangesInRole.Click += new System.EventHandler(this.BTNFindChangesInRole_Click);
             // 
-            // label1
+            // LabelTip04
             // 
-            this.label1.Location = new System.Drawing.Point(158, 160);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(203, 15);
-            this.label1.TabIndex = 33;
-            this.label1.Text = "Requires selected .csv dir.";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.LabelTip04.Location = new System.Drawing.Point(158, 160);
+            this.LabelTip04.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LabelTip04.Name = "LabelTip04";
+            this.LabelTip04.Size = new System.Drawing.Size(203, 15);
+            this.LabelTip04.TabIndex = 33;
+            this.LabelTip04.Text = "Requires selected .csv dir.";
             // 
             // MainForm
             // 
@@ -201,7 +200,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(802, 228);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.LabelTip04);
             this.Controls.Add(this.BTNFindChangesInRole);
             this.Controls.Add(this.TBSelectedCSVDir);
             this.Controls.Add(this.BTNSelectCSVDir);
@@ -239,7 +238,7 @@
         private System.Windows.Forms.Button BTNSelectCSVDir;
         private System.Windows.Forms.TextBox TBSelectedCSVDir;
         private System.Windows.Forms.Button BTNFindChangesInRole;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LabelTip04;
     }
 }
 
