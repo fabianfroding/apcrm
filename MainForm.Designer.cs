@@ -39,6 +39,7 @@
             this.LabelTip03 = new System.Windows.Forms.Label();
             this.BTNFindTotalAPs = new System.Windows.Forms.Button();
             this.LabelTip01 = new System.Windows.Forms.Label();
+            this.BTNClassify = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LabelTip00
@@ -139,12 +140,23 @@
             this.LabelTip01.TabIndex = 29;
             this.LabelTip01.Text = "Requires selected .ini dir.";
             // 
+            // BTNClassify
+            // 
+            this.BTNClassify.Location = new System.Drawing.Point(12, 281);
+            this.BTNClassify.Name = "BTNClassify";
+            this.BTNClassify.Size = new System.Drawing.Size(125, 31);
+            this.BTNClassify.TabIndex = 30;
+            this.BTNClassify.Text = "Classify";
+            this.BTNClassify.UseVisualStyleBackColor = true;
+            this.BTNClassify.Click += new System.EventHandler(this.BTNClassify_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.ClientSize = new System.Drawing.Size(1128, 270);
+            this.ClientSize = new System.Drawing.Size(1198, 677);
+            this.Controls.Add(this.BTNClassify);
             this.Controls.Add(this.LabelTip01);
             this.Controls.Add(this.BTNFindTotalAPs);
             this.Controls.Add(this.LabelTip03);
@@ -175,6 +187,7 @@
         private System.Windows.Forms.Label LabelTip03;
         private System.Windows.Forms.Button BTNFindTotalAPs;
         private System.Windows.Forms.Label LabelTip01;
+        private System.Windows.Forms.Button BTNClassify;
     }
 }
 
