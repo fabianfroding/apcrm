@@ -43,7 +43,7 @@
             // 
             // LabelTip00
             // 
-            this.LabelTip00.Location = new System.Drawing.Point(12, 217);
+            this.LabelTip00.Location = new System.Drawing.Point(25, 204);
             this.LabelTip00.Name = "LabelTip00";
             this.LabelTip00.Size = new System.Drawing.Size(195, 48);
             this.LabelTip00.TabIndex = 14;
@@ -115,7 +115,7 @@
             // 
             // LabelTip03
             // 
-            this.LabelTip03.Location = new System.Drawing.Point(237, 165);
+            this.LabelTip03.Location = new System.Drawing.Point(233, 165);
             this.LabelTip03.Name = "LabelTip03";
             this.LabelTip03.Size = new System.Drawing.Size(304, 23);
             this.LabelTip03.TabIndex = 27;
@@ -144,7 +144,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.ClientSize = new System.Drawing.Size(1128, 290);
+            this.ClientSize = new System.Drawing.Size(1128, 270);
             this.Controls.Add(this.LabelTip01);
             this.Controls.Add(this.BTNFindTotalAPs);
             this.Controls.Add(this.LabelTip03);

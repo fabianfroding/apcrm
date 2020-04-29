@@ -248,32 +248,13 @@ namespace APCRM
                     {
                         if (jc.classRole == role && jc.aps.Contains(ap))
                         {
-                            System.Diagnostics.Debug.WriteLine(jc.name + " contains " + ap);
-                            System.Diagnostics.Debug.WriteLine("Adding 1 to " + ANTIPATTERNS[index]);
+                            //System.Diagnostics.Debug.WriteLine(jc.name + " contains " + ap);
+                            //System.Diagnostics.Debug.WriteLine("Adding 1 to " + ANTIPATTERNS[index]);
                             numAntipatterns[index]++;
                         }
                     }
                     index++;
                 }
-
-                /*
-                foreach (JavaClass jc in javaClasses)
-                {
-                    index = 0;
-                    if (jc.classRole == role)
-                    {
-                        foreach (string ap in ANTIPATTERNS)
-                        {
-                            if (jc.aps.Contains(ap))
-                            {
-                                //System.Diagnostics.Debug.WriteLine(jc.name + " contains " + ap);
-                                //System.Diagnostics.Debug.WriteLine("Adding 1 to " + ANTIPATTERNS[index]);
-                                numAntipatterns[index]++;
-                            }
-                            index++;
-                        }
-                    }
-                }*/
 
                 System.Diagnostics.Debug.WriteLine("//---------- In respective order ----------//");
                 for (int i = 0; i < numAntipatterns.Length; i++)

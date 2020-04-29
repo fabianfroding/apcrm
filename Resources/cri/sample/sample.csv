@@ -1,0 +1,12 @@
+index,fullpathname,classname,loc,numAttr,numMethod,setters,getters,isPersist,isCollection,numWordName,isOrEr,isController,numIfs,numParameters,numImports,numOutboundInvocation,isStaticClass,isInterface,isInnerClass,isClass,isEnum,classPublicity,numPublicMethods,numPrivateMethods,numProtectedMethods,isAbstract
+0,new_version\k9mail-library\src\main\java\com\fsck\k9\mail\AuthType.java,AuthType,33,6,0,0,0,FALSE,FALSE,2,FALSE,FALSE,0,0,0,0,FALSE,FALSE,FALSE,FALSE,TRUE,public,0,0,0,FALSE
+1,new_version\k9mail-library\src\main\java\com\fsck\k9\mailstore\BinaryMemoryBody.java,BinaryMemoryBody,46,2,5,1,3,FALSE,FALSE,3,FALSE,FALSE,0,2,8,0,FALSE,FALSE,FALSE,TRUE,FALSE,public,5,0,0,FALSE
+2,new_version\k9mail-library\src\main\java\com\fsck\k9\mail\Address.java,Address,331,4,17,2,3,FALSE,FALSE,1,FALSE,FALSE,29,11,15,22,FALSE,FALSE,FALSE,TRUE,FALSE,public,16,0,0,FALSE
+3,new_version\k9mail-library\src\main\java\com\fsck\k9\mail\Authentication.java,Authentication,94,2,3,0,0,FALSE,FALSE,1,FALSE,FALSE,1,8,4,3,FALSE,FALSE,FALSE,TRUE,FALSE,public,3,0,0,FALSE
+4,new_version\k9mail-library\src\main\java\com\fsck\k9\mail\AuthenticationFailedException.java,AuthenticationFailedException,12,1,0,0,0,FALSE,FALSE,3,FALSE,FALSE,0,0,0,0,FALSE,FALSE,FALSE,TRUE,FALSE,public,0,0,0,FALSE
+5,new_version\k9mail-library\src\main\java\com\fsck\k9\mail\Body.java,Body,24,0,0,0,0,FALSE,FALSE,1,FALSE,FALSE,0,0,3,0,FALSE,TRUE,FALSE,FALSE,FALSE,public,0,0,0,FALSE
+6,new_version\k9mail-library\src\main\java\com\fsck\k9\mail\BodyFactory.java,BodyFactory,8,0,0,0,0,FALSE,FALSE,2,FALSE,FALSE,0,0,2,0,FALSE,TRUE,FALSE,FALSE,FALSE,public,0,0,0,FALSE
+7,new_version\k9mail-library\src\main\java\com\fsck\k9\mail\BodyPart.java,BodyPart,25,2,4,2,2,FALSE,FALSE,2,FALSE,FALSE,0,2,0,0,FALSE,FALSE,FALSE,TRUE,FALSE,public,4,0,0,TRUE
+8,new_version\k9mail-library\src\main\java\com\fsck\k9\mail\BoundaryGenerator.java,BoundaryGenerator,41,4,2,0,1,FALSE,FALSE,2,TRUE,FALSE,0,0,2,1,FALSE,FALSE,FALSE,TRUE,FALSE,public,2,0,0,FALSE
+9,new_version\k9mail-library\src\main\java\com\fsck\k9\mail\CertificateChainException.java,CertificateChainException,27,2,2,1,1,FALSE,FALSE,3,FALSE,FALSE,0,1,2,0,FALSE,FALSE,FALSE,TRUE,FALSE,public,2,0,0,FALSE
+10,new_version\k9mail-library\src\main\java\com\fsck\k9\mail\CertificateValidationException.Reason.java,Reason,5,5,0,0,0,FALSE,FALSE,1,FALSE,FALSE,0,0,0,0,FALSE,FALSE,TRUE,FALSE,TRUE,public,0,0,0,FALSE

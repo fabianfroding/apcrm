@@ -1,0 +1,14 @@
+@ECHO OFF 
+:: This batch file automates Feature Extraction process.
+TITLE Feature Extraction
+
+set DIR="C:\Users\Fabian\Studier\DIT837-BScThesisInSEM\tools\cri-master\bitcoin\"
+
+for /f %%d in (%DIR%*) do (
+
+ECHO ============================
+ECHO CLASSIFYING
+ECHO ============================
+
+python classifier.py models\rf-smote-k9-model-0202.sav bitcoin-reformatted\%%~nd.csv bitcoin-wallet-classified\%%~nd.csv
+)
