@@ -269,41 +269,34 @@ namespace APCRM
 
         private void BTNClassify_Click(object sender, EventArgs e)
         {
-            FileInfo fi = new FileInfo(@"Resources\cri\sample\sample.csv");
-
-            string command = @"python classifier.py models\rf-smote-k9-model-0202.sav sample\sample.csv sample\sample-classified.csv";
-
-            DirectoryInfo di = new DirectoryInfo(@"..\..\Resources\cri");
+            string[] commands = new string[2]
+            {
+                "conda activate base",
+                @"python classifier.py models\rf-smote-k9-model-0202.sav sample\sample.csv sample\sample-classified.csv"
+            };
 
             Process process = new Process();
             ProcessStartInfo processStartInfo = new ProcessStartInfo
             {
-                WorkingDirectory = di.FullName,
+                WorkingDirectory = new DirectoryInfo(@"..\..\Resources\cri").FullName,
                 WindowStyle = ProcessWindowStyle.Normal,
                 FileName = "cmd.exe",
                 RedirectStandardInput = true,
                 UseShellExecute = false
             };
 
-            string conda = @"3\Scripts\activate.bat C:\Users\Fabian\Anaconda3";
-            // Vital to activate Anaconda
-            // sw.WriteLine("C:\\PathToAnaconda\\anaconda3\\Scripts\\activate.bat");
-            // Activate your environment
-            // sw.WriteLine("activate your-environment");
-            // Any other commands you want to run
-            // sw.WriteLine("set KERAS_BACKEND=tensorflow");
-            // run your script. You can also pass in arguments
-            // sw.WriteLine("python YourScript.py");
-
             process.StartInfo = processStartInfo;
             process.Start();
             StreamWriter sw = process.StandardInput;
 
-            sw.WriteLine(command);
+            sw.WriteLine(commands[0]);
+            sw.WriteLine(commands[1]);
 
-            sw.Close();process.WaitForExit();
+            process.WaitForExit();
+            sw.Close();
 
         }
+
     }
 
 }
