@@ -269,34 +269,61 @@ namespace APCRM
 
         private void BTNClassify_Click(object sender, EventArgs e)
         {
-            string[] commands = new string[2]
+            if (ClassRoleIdentifier.Classify())
             {
-                "conda activate base",
-                @"python classifier.py models\rf-smote-k9-model-0202.sav sample\sample.csv sample\sample-classified.csv"
-            };
-
-            Process process = new Process();
-            ProcessStartInfo processStartInfo = new ProcessStartInfo
+                MessageBox.Show("Classification successful.");
+            }
+            else
             {
-                WorkingDirectory = new DirectoryInfo(@"..\..\Resources\cri").FullName,
-                WindowStyle = ProcessWindowStyle.Normal,
-                FileName = "cmd.exe",
-                RedirectStandardInput = true,
-                UseShellExecute = false
-            };
-
-            process.StartInfo = processStartInfo;
-            process.Start();
-            StreamWriter sw = process.StandardInput;
-
-            sw.WriteLine(commands[0]);
-            sw.WriteLine(commands[1]);
-
-            process.WaitForExit();
-            sw.Close();
-
+                MessageBox.Show("There was a problem classifying the roles.");
+            }
         }
 
+        private void BTNSelectClassifyFile_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "CSV Files(*.csv)| *.csv";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                TextBoxClassifyFile.Text = ofd.FileName;
+            }
+            File.Copy(new FileInfo(TextBoxClassifyFile.Text).FullName, @"..\..\Resources\cri\sample\temp.csv", true);
+        }
+
+        private void BTNVisualize_Click(object sender, EventArgs e)
+        {
+            List<JavaClass> javaClasses = new List<JavaClass>();
+            using (var sr = new StreamReader(@"..\..\Resources\cri\sample\temp-classified.csv"))
+            {
+                while (!sr.EndOfStream)
+                {
+                    var values = sr.ReadLine().Split(',');
+                    JavaClass javaClass = new JavaClass(values[2]);
+                    javaClass.classRole = values[27];
+                    javaClasses.Add(javaClass);
+                }
+            }
+
+            int[] numRoles = new int[6];
+            // 0=InformationHolder, 1=Structurer, 2=ServiceProvider,
+            // 3=Controller, 4=Coordinator, 5=Interfacer
+            int index = 0;
+
+            foreach (string s in ROLES)
+            {
+                foreach (JavaClass javaClass in javaClasses)
+                {
+                    if (javaClass.classRole == s)
+                    {
+                        numRoles[index]++;
+                    }
+                }
+                index++;
+            }
+
+            GraphForm gf = new GraphForm(numRoles);
+            gf.Show();
+        }
     }
 
 }

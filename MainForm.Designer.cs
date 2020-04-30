@@ -40,6 +40,9 @@
             this.BTNFindTotalAPs = new System.Windows.Forms.Button();
             this.LabelTip01 = new System.Windows.Forms.Label();
             this.BTNClassify = new System.Windows.Forms.Button();
+            this.BTNSelectClassifyFile = new System.Windows.Forms.Button();
+            this.TextBoxClassifyFile = new System.Windows.Forms.TextBox();
+            this.BTNVisualize = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LabelTip00
@@ -142,7 +145,7 @@
             // 
             // BTNClassify
             // 
-            this.BTNClassify.Location = new System.Drawing.Point(12, 281);
+            this.BTNClassify.Location = new System.Drawing.Point(12, 408);
             this.BTNClassify.Name = "BTNClassify";
             this.BTNClassify.Size = new System.Drawing.Size(125, 31);
             this.BTNClassify.TabIndex = 30;
@@ -150,12 +153,43 @@
             this.BTNClassify.UseVisualStyleBackColor = true;
             this.BTNClassify.Click += new System.EventHandler(this.BTNClassify_Click);
             // 
+            // BTNSelectClassifyFile
+            // 
+            this.BTNSelectClassifyFile.Location = new System.Drawing.Point(12, 370);
+            this.BTNSelectClassifyFile.Name = "BTNSelectClassifyFile";
+            this.BTNSelectClassifyFile.Size = new System.Drawing.Size(41, 32);
+            this.BTNSelectClassifyFile.TabIndex = 32;
+            this.BTNSelectClassifyFile.Text = "...";
+            this.BTNSelectClassifyFile.UseVisualStyleBackColor = true;
+            this.BTNSelectClassifyFile.Click += new System.EventHandler(this.BTNSelectClassifyFile_Click);
+            // 
+            // TextBoxClassifyFile
+            // 
+            this.TextBoxClassifyFile.Location = new System.Drawing.Point(59, 373);
+            this.TextBoxClassifyFile.Name = "TextBoxClassifyFile";
+            this.TextBoxClassifyFile.ReadOnly = true;
+            this.TextBoxClassifyFile.Size = new System.Drawing.Size(879, 26);
+            this.TextBoxClassifyFile.TabIndex = 31;
+            // 
+            // BTNVisualize
+            // 
+            this.BTNVisualize.Location = new System.Drawing.Point(12, 445);
+            this.BTNVisualize.Name = "BTNVisualize";
+            this.BTNVisualize.Size = new System.Drawing.Size(125, 32);
+            this.BTNVisualize.TabIndex = 33;
+            this.BTNVisualize.Text = "Visualize";
+            this.BTNVisualize.UseVisualStyleBackColor = true;
+            this.BTNVisualize.Click += new System.EventHandler(this.BTNVisualize_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.ClientSize = new System.Drawing.Size(1198, 677);
+            this.Controls.Add(this.BTNVisualize);
+            this.Controls.Add(this.BTNSelectClassifyFile);
+            this.Controls.Add(this.TextBoxClassifyFile);
             this.Controls.Add(this.BTNClassify);
             this.Controls.Add(this.LabelTip01);
             this.Controls.Add(this.BTNFindTotalAPs);
@@ -188,6 +222,9 @@
         private System.Windows.Forms.Button BTNFindTotalAPs;
         private System.Windows.Forms.Label LabelTip01;
         private System.Windows.Forms.Button BTNClassify;
+        private System.Windows.Forms.Button BTNSelectClassifyFile;
+        private System.Windows.Forms.TextBox TextBoxClassifyFile;
+        private System.Windows.Forms.Button BTNVisualize;
     }
 }
 
