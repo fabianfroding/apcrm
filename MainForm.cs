@@ -1,36 +1,13 @@
 ﻿using APCRM.Models;
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace APCRM
 {
     public partial class MainForm : Form
     {
-        private static readonly string[] ANTIPATTERNS = new string[18]
-        {
-            "AntiSingleton",
-            "BaseClassKnowsDerivedClass",
-            "BaseClassShouldBeAbstract",
-            "Blob",
-            "ClassDataShouldBePrivate",
-            "ComplexClass",
-            "FunctionalDecomposition",
-            "LargeClass",
-            "LazyClass",
-            "LongMethod",
-            "LongParameterList",
-            "ManyFieldAttributesButNotComplex",
-            "MessageChains",
-            "RefusedParentBequest",
-            "SpaghettiCode",
-            "SpeculativeGenerality",
-            "SwissArmyKnife",
-            "TraditionBreaker"
-        };
-
         public MainForm()
         {
             InitializeComponent();
@@ -41,10 +18,11 @@ namespace APCRM
             if (ClassRoleIdentifier.Classify(TextBoxClassifyFile.Text))
             {
                 MessageBox.Show("Classification successful.");
+                BTNVisualize.Enabled = true;
             }
             else
             {
-                MessageBox.Show("There was a problem classifying the roles.");
+                MessageBox.Show("There was a problem running the class role identification.");
             }
         }
 
@@ -55,6 +33,7 @@ namespace APCRM
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 TextBoxClassifyFile.Text = ofd.FileName;
+                BTNClassify.Enabled = true;
             }
         }
 
@@ -62,6 +41,10 @@ namespace APCRM
         {
             new GraphForm(ClassRoleIdentifier.GetNumberOfRoles(@"..\..\Resources\cri\sample\temp-classified.csv")).Show();
         }
+
+
+
+
 
         //=============== Old Stuff ===============//
         private void BTNSelectIniDir_Click(object sender, EventArgs e)
@@ -85,27 +68,7 @@ namespace APCRM
 
         private void BTNFindTotalAPs_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine("//===== In respective order =====//");
-            foreach (string ap in ANTIPATTERNS)
-            {
-                System.Diagnostics.Debug.WriteLine(ap);
-            }
-
-            DirectoryInfo di = new DirectoryInfo(TBSelectedIniDir.Text);
-            FileInfo[] files = di.GetFiles("*.ini");
-            for (int i = 0; i < files.Length; i++)
-            {
-                StreamReader sr = files[i].OpenText();
-                string line;
-                while ((line = sr.ReadLine()) != null)
-                {
-                    if (line.Contains("#----> Total:"))
-                    {
-                        System.Diagnostics.Debug.WriteLine(line.Substring(13));
-                    }
-                }
-                sr.Close();
-            }
+            AntiPatternDetector.FindTotalAntipatterns(TBSelectedIniDir.Text);
         }
 
         // Link this method to Find Total Antipatterns button if you want to find .ini in sub directories
@@ -113,144 +76,34 @@ namespace APCRM
         // manually for each version.
         private void BTNFindTotalAPsInSubDirs_Click(object sender, EventArgs e)
         {
-            DirectoryInfo selectedDir = new DirectoryInfo(TBSelectedIniDir.Text);
-            DirectoryInfo[] subDirs = selectedDir.GetDirectories();
-
-            System.Diagnostics.Debug.WriteLine("//===== In respective order =====//");
-            foreach (string ap in ANTIPATTERNS)
-            {
-                System.Diagnostics.Debug.WriteLine(ap);
-            }
-
-            for (int i = 0; i < subDirs.Length; i++)
-            {
-                System.Diagnostics.Debug.WriteLine(subDirs[i].Name);
-                FileInfo[] files = subDirs[i].GetFiles("*.ini");
-                for (int j = 0; j < files.Length; j++)
-                {
-                    StreamReader sr = files[j].OpenText();
-                    string line;
-                    while ((line = sr.ReadLine()) != null)
-                    {
-                        if (line.Contains("#----> Total:"))
-                        {
-                            System.Diagnostics.Debug.WriteLine(line.Substring(13));
-                        }
-                    }
-                    sr.Close();
-                }
-            }
+            AntiPatternDetector.FindTotalAntipatternsInSubDirectories(TBSelectedIniDir.Text);
         }
 
         private void BTNFindRoles_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine("//===== In respective order =====//");
+            Debug.WriteLine("//===== In respective order =====//");
             foreach (string r in ClassRoleIdentifier.ROLES)
             {
-                System.Diagnostics.Debug.WriteLine(r);
+                Debug.WriteLine(r);
             }
-
-            List<string> classes = new List<string>();
-            List<string> roles = new List<string>();
-            using (var sr = new StreamReader(TBSelectedClassifiedCSV.Text))
-            {
-                // For some reason it seems to skip the header line automatically. :)
-                while (!sr.EndOfStream)
-                {
-                    var line = sr.ReadLine();
-                    var values = line.Split(',');
-
-                    classes.Add(values[2]);
-                    roles.Add(values[27]);
-                }
-            }
-
-            int[] numRoles = new int[6];
-            // 0=InformationHolder, 1=Structurer, 2=ServiceProvider,
-            // 3=Controller, 4=Coordinator, 5=Interfacer
-            int index = 0;
-
-            foreach (string s in ClassRoleIdentifier.ROLES)
-            {
-                foreach (string role in roles)
-                {
-                    
-                    if (s == role)
-                    {
-                        numRoles[index]++;
-                    }
-                }
-                index++;
-            }
-
+            int[] numRoles = ClassRoleIdentifier.GetNumberOfRoles(TBSelectedClassifiedCSV.Text);
             for (int i = 0; i < numRoles.Length; i++)
             {
-                System.Diagnostics.Debug.WriteLine(numRoles[i]);
+                Debug.WriteLine(numRoles[i]);
             }
         }
 
         private void BTNFindAPsInRoles_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine("Mapping roles to antipatterns...");
+            Debug.WriteLine("Mapping roles to antipatterns...");
 
-            List<JavaClass> javaClasses = new List<JavaClass>();
-
-            //===== Attach a role to each class =====//
-            using (var sr = new StreamReader(TBSelectedClassifiedCSV.Text))
-            {
-                while (!sr.EndOfStream)
-                {
-                    var line = sr.ReadLine();
-                    var values = line.Split(',');
-
-                    JavaClass jc = new JavaClass(values[2]);
-                    jc.classRole = values[27];
-                    javaClasses.Add(jc);
-                }
-            }
-
-            //===== Attach antipatterns to each class =====//
-            DirectoryInfo di = new DirectoryInfo(TBSelectedIniDir.Text);
-            FileInfo[] files = di.GetFiles("*.ini");
-            foreach (JavaClass jc in javaClasses)
-            {
-                foreach (FileInfo fi in files)
-                {
-                    StreamReader sr = fi.OpenText();
-                    List<string> textLines = new List<string>();
-                    using (sr)
-                    {
-                        while (!sr.EndOfStream)
-                        {
-                            textLines.Add(sr.ReadLine());
-                        }
-                    }
-                    sr.Close();
-                    string lastSubString = "";
-
-                    foreach (string line in textLines.Where(l => l.Contains(jc.name) && l.Contains("-0")))
-                    {
-                        lastSubString = line.Split('.').Last();
-                    }
-
-                    if (lastSubString.Equals(jc.name))
-                    {
-                        foreach (string s in ANTIPATTERNS)
-                        {
-                            if (fi.Name.Contains(s))
-                            {
-                                jc.aps.Add(s);
-                            }
-                        }
-                    }
-                }
-            }
+            List<JavaClass> javaClasses = ClassRoleIdentifier.AttachRolesToJavaClasses(TBSelectedClassifiedCSV.Text);
+            javaClasses = AntiPatternDetector.AttachAntipatternsToJavaClasses(TBSelectedIniDir.Text, javaClasses);
 
             // For each role, find classes that has that role, add each antipattern to a counter...
-
             foreach (string role in ClassRoleIdentifier.ROLES)
             {
-                System.Diagnostics.Debug.WriteLine("//========== " + role + " ==========//");
+                Debug.WriteLine("//========== " + role + " ==========//");
 
                 int[] numAntipatterns = new int[18];
                 // 0=AntiSingleton, 1=BaseClassKnowsDerivedClass, 2=BaseClassShouldBeAbstract,
@@ -261,27 +114,27 @@ namespace APCRM
                 // 15=SpeculativeGenerality, 16=SwissArmyKnife, 17=TraditionBreaker
                 int index = 0;
 
-                foreach (string ap in ANTIPATTERNS)
+                foreach (string ap in AntiPatternDetector.ANTIPATTERNS)
                 {
                     foreach (JavaClass jc in javaClasses)
                     {
                         if (jc.classRole == role && jc.aps.Contains(ap))
                         {
-                            //System.Diagnostics.Debug.WriteLine(jc.name + " contains " + ap);
-                            //System.Diagnostics.Debug.WriteLine("Adding 1 to " + ANTIPATTERNS[index]);
+                            //Debug.WriteLine(jc.name + " contains " + ap);
+                            //Debug.WriteLine("Adding 1 to " + AntiPatternDetector.ANTIPATTERNS[index]);
                             numAntipatterns[index]++;
                         }
                     }
                     index++;
                 }
 
-                System.Diagnostics.Debug.WriteLine("//---------- In respective order ----------//");
+                Debug.WriteLine("//---------- In respective order ----------//");
                 for (int i = 0; i < numAntipatterns.Length; i++)
                 {
-                    System.Diagnostics.Debug.WriteLine(numAntipatterns[i]);
+                    Debug.WriteLine(numAntipatterns[i]);
                 }
             }
-            System.Diagnostics.Debug.WriteLine("Done.\n");
+            Debug.WriteLine("Done.\n");
 
         }
 

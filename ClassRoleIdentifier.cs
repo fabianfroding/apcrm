@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using APCRM.Models;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 
@@ -77,6 +78,25 @@ namespace APCRM
             }
 
             return numRoles;
+        }
+
+
+
+        //=============== Old ===============//
+        public static List<JavaClass> AttachRolesToJavaClasses(string filePath)
+        {
+            List<JavaClass> javaClasses = new List<JavaClass>();
+            using (var sr = new StreamReader(filePath))
+            {
+                while (!sr.EndOfStream)
+                {
+                    var values = sr.ReadLine().Split(',');
+                    JavaClass jc = new JavaClass(values[2]);
+                    jc.classRole = values[27];
+                    javaClasses.Add(jc);
+                }
+            }
+            return javaClasses;
         }
     }
 }

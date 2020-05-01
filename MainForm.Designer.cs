@@ -47,7 +47,7 @@
             // 
             // LabelTip00
             // 
-            this.LabelTip00.Location = new System.Drawing.Point(25, 204);
+            this.LabelTip00.Location = new System.Drawing.Point(23, 611);
             this.LabelTip00.Name = "LabelTip00";
             this.LabelTip00.Size = new System.Drawing.Size(195, 48);
             this.LabelTip00.TabIndex = 14;
@@ -55,7 +55,7 @@
             // 
             // TBSelectedClassifiedCSV
             // 
-            this.TBSelectedClassifiedCSV.Location = new System.Drawing.Point(237, 47);
+            this.TBSelectedClassifiedCSV.Location = new System.Drawing.Point(235, 454);
             this.TBSelectedClassifiedCSV.Name = "TBSelectedClassifiedCSV";
             this.TBSelectedClassifiedCSV.ReadOnly = true;
             this.TBSelectedClassifiedCSV.Size = new System.Drawing.Size(879, 26);
@@ -63,7 +63,7 @@
             // 
             // TBSelectedIniDir
             // 
-            this.TBSelectedIniDir.Location = new System.Drawing.Point(237, 15);
+            this.TBSelectedIniDir.Location = new System.Drawing.Point(235, 422);
             this.TBSelectedIniDir.Name = "TBSelectedIniDir";
             this.TBSelectedIniDir.ReadOnly = true;
             this.TBSelectedIniDir.Size = new System.Drawing.Size(879, 26);
@@ -71,7 +71,7 @@
             // 
             // BTNSelectIniDir
             // 
-            this.BTNSelectIniDir.Location = new System.Drawing.Point(12, 12);
+            this.BTNSelectIniDir.Location = new System.Drawing.Point(10, 419);
             this.BTNSelectIniDir.Name = "BTNSelectIniDir";
             this.BTNSelectIniDir.Size = new System.Drawing.Size(219, 32);
             this.BTNSelectIniDir.TabIndex = 22;
@@ -81,7 +81,7 @@
             // 
             // BTNSelectClassifiedCSV
             // 
-            this.BTNSelectClassifiedCSV.Location = new System.Drawing.Point(12, 47);
+            this.BTNSelectClassifiedCSV.Location = new System.Drawing.Point(10, 454);
             this.BTNSelectClassifiedCSV.Name = "BTNSelectClassifiedCSV";
             this.BTNSelectClassifiedCSV.Size = new System.Drawing.Size(219, 32);
             this.BTNSelectClassifiedCSV.TabIndex = 23;
@@ -91,7 +91,7 @@
             // 
             // BTNFindAPsInRoles
             // 
-            this.BTNFindAPsInRoles.Location = new System.Drawing.Point(12, 159);
+            this.BTNFindAPsInRoles.Location = new System.Drawing.Point(10, 566);
             this.BTNFindAPsInRoles.Name = "BTNFindAPsInRoles";
             this.BTNFindAPsInRoles.Size = new System.Drawing.Size(219, 32);
             this.BTNFindAPsInRoles.TabIndex = 24;
@@ -101,7 +101,7 @@
             // 
             // BTNFindRoles
             // 
-            this.BTNFindRoles.Location = new System.Drawing.Point(12, 121);
+            this.BTNFindRoles.Location = new System.Drawing.Point(10, 528);
             this.BTNFindRoles.Name = "BTNFindRoles";
             this.BTNFindRoles.Size = new System.Drawing.Size(219, 32);
             this.BTNFindRoles.TabIndex = 25;
@@ -111,7 +111,7 @@
             // 
             // LabelTip02
             // 
-            this.LabelTip02.Location = new System.Drawing.Point(237, 127);
+            this.LabelTip02.Location = new System.Drawing.Point(235, 534);
             this.LabelTip02.Name = "LabelTip02";
             this.LabelTip02.Size = new System.Drawing.Size(304, 23);
             this.LabelTip02.TabIndex = 26;
@@ -119,7 +119,7 @@
             // 
             // LabelTip03
             // 
-            this.LabelTip03.Location = new System.Drawing.Point(233, 165);
+            this.LabelTip03.Location = new System.Drawing.Point(231, 572);
             this.LabelTip03.Name = "LabelTip03";
             this.LabelTip03.Size = new System.Drawing.Size(304, 23);
             this.LabelTip03.TabIndex = 27;
@@ -127,7 +127,7 @@
             // 
             // BTNFindTotalAPs
             // 
-            this.BTNFindTotalAPs.Location = new System.Drawing.Point(12, 85);
+            this.BTNFindTotalAPs.Location = new System.Drawing.Point(10, 492);
             this.BTNFindTotalAPs.Name = "BTNFindTotalAPs";
             this.BTNFindTotalAPs.Size = new System.Drawing.Size(219, 32);
             this.BTNFindTotalAPs.TabIndex = 28;
@@ -137,7 +137,7 @@
             // 
             // LabelTip01
             // 
-            this.LabelTip01.Location = new System.Drawing.Point(237, 89);
+            this.LabelTip01.Location = new System.Drawing.Point(235, 496);
             this.LabelTip01.Name = "LabelTip01";
             this.LabelTip01.Size = new System.Drawing.Size(304, 23);
             this.LabelTip01.TabIndex = 29;
@@ -145,7 +145,8 @@
             // 
             // BTNClassify
             // 
-            this.BTNClassify.Location = new System.Drawing.Point(12, 408);
+            this.BTNClassify.Enabled = false;
+            this.BTNClassify.Location = new System.Drawing.Point(8, 47);
             this.BTNClassify.Name = "BTNClassify";
             this.BTNClassify.Size = new System.Drawing.Size(125, 31);
             this.BTNClassify.TabIndex = 30;
@@ -155,9 +156,9 @@
             // 
             // BTNSelectClassifyFile
             // 
-            this.BTNSelectClassifyFile.Location = new System.Drawing.Point(12, 370);
+            this.BTNSelectClassifyFile.Location = new System.Drawing.Point(8, 12);
             this.BTNSelectClassifyFile.Name = "BTNSelectClassifyFile";
-            this.BTNSelectClassifyFile.Size = new System.Drawing.Size(41, 32);
+            this.BTNSelectClassifyFile.Size = new System.Drawing.Size(41, 29);
             this.BTNSelectClassifyFile.TabIndex = 32;
             this.BTNSelectClassifyFile.Text = "...";
             this.BTNSelectClassifyFile.UseVisualStyleBackColor = true;
@@ -165,7 +166,7 @@
             // 
             // TextBoxClassifyFile
             // 
-            this.TextBoxClassifyFile.Location = new System.Drawing.Point(59, 373);
+            this.TextBoxClassifyFile.Location = new System.Drawing.Point(55, 12);
             this.TextBoxClassifyFile.Name = "TextBoxClassifyFile";
             this.TextBoxClassifyFile.ReadOnly = true;
             this.TextBoxClassifyFile.Size = new System.Drawing.Size(879, 26);
@@ -173,7 +174,8 @@
             // 
             // BTNVisualize
             // 
-            this.BTNVisualize.Location = new System.Drawing.Point(12, 445);
+            this.BTNVisualize.Enabled = false;
+            this.BTNVisualize.Location = new System.Drawing.Point(8, 84);
             this.BTNVisualize.Name = "BTNVisualize";
             this.BTNVisualize.Size = new System.Drawing.Size(125, 32);
             this.BTNVisualize.TabIndex = 33;
