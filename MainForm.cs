@@ -30,21 +30,40 @@ namespace APCRM
             "SwissArmyKnife",
             "TraditionBreaker"
         };
-        private static readonly string[] ROLES = new string[6]
-        {
-            "Information Holder",
-            "Structurer",
-            "Service Provider",
-            "Controller",
-            "Coordinator",
-            "Interfacer"
-        };
 
         public MainForm()
         {
             InitializeComponent();
         }
 
+        private void BTNClassify_Click(object sender, EventArgs e)
+        {
+            if (ClassRoleIdentifier.Classify(TextBoxClassifyFile.Text))
+            {
+                MessageBox.Show("Classification successful.");
+            }
+            else
+            {
+                MessageBox.Show("There was a problem classifying the roles.");
+            }
+        }
+
+        private void BTNSelectClassifyFile_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "CSV Files(*.csv)| *.csv";
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                TextBoxClassifyFile.Text = ofd.FileName;
+            }
+        }
+
+        private void BTNVisualize_Click(object sender, EventArgs e)
+        {
+            new GraphForm(ClassRoleIdentifier.GetNumberOfRoles(@"..\..\Resources\cri\sample\temp-classified.csv")).Show();
+        }
+
+        //=============== Old Stuff ===============//
         private void BTNSelectIniDir_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog fbd = new FolderBrowserDialog();
@@ -126,7 +145,7 @@ namespace APCRM
         private void BTNFindRoles_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Debug.WriteLine("//===== In respective order =====//");
-            foreach (string r in ROLES)
+            foreach (string r in ClassRoleIdentifier.ROLES)
             {
                 System.Diagnostics.Debug.WriteLine(r);
             }
@@ -151,7 +170,7 @@ namespace APCRM
             // 3=Controller, 4=Coordinator, 5=Interfacer
             int index = 0;
 
-            foreach (string s in ROLES)
+            foreach (string s in ClassRoleIdentifier.ROLES)
             {
                 foreach (string role in roles)
                 {
@@ -229,7 +248,7 @@ namespace APCRM
 
             // For each role, find classes that has that role, add each antipattern to a counter...
 
-            foreach (string role in ROLES)
+            foreach (string role in ClassRoleIdentifier.ROLES)
             {
                 System.Diagnostics.Debug.WriteLine("//========== " + role + " ==========//");
 
@@ -266,63 +285,7 @@ namespace APCRM
 
         }
 
-        private void BTNClassify_Click(object sender, EventArgs e)
-        {
-            if (ClassRoleIdentifier.Classify())
-            {
-                MessageBox.Show("Classification successful.");
-            }
-            else
-            {
-                MessageBox.Show("There was a problem classifying the roles.");
-            }
-        }
-
-        private void BTNSelectClassifyFile_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "CSV Files(*.csv)| *.csv";
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                TextBoxClassifyFile.Text = ofd.FileName;
-            }
-            File.Copy(new FileInfo(TextBoxClassifyFile.Text).FullName, @"..\..\Resources\cri\sample\temp.csv", true);
-        }
-
-        private void BTNVisualize_Click(object sender, EventArgs e)
-        {
-            List<JavaClass> javaClasses = new List<JavaClass>();
-            using (var sr = new StreamReader(@"..\..\Resources\cri\sample\temp-classified.csv"))
-            {
-                while (!sr.EndOfStream)
-                {
-                    var values = sr.ReadLine().Split(',');
-                    JavaClass javaClass = new JavaClass(values[2]);
-                    javaClass.classRole = values[27];
-                    javaClasses.Add(javaClass);
-                }
-            }
-
-            int[] numRoles = new int[6];
-            // 0=InformationHolder, 1=Structurer, 2=ServiceProvider,
-            // 3=Controller, 4=Coordinator, 5=Interfacer
-            int index = 0;
-
-            foreach (string s in ROLES)
-            {
-                foreach (JavaClass javaClass in javaClasses)
-                {
-                    if (javaClass.classRole == s)
-                    {
-                        numRoles[index]++;
-                    }
-                }
-                index++;
-            }
-
-            GraphForm gf = new GraphForm(numRoles);
-            gf.Show();
-        }
+        
     }
 
 }
