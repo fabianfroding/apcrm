@@ -16,10 +16,7 @@ namespace APCRM
             Histogram.Series[0].Name = "";
             Histogram.ChartAreas[0].AxisX.Title = "Role";
             Histogram.ChartAreas[0].AxisX.LabelStyle.Angle = -45;
-            Histogram.ChartAreas[0].AxisX.Interval = 1;
             Histogram.ChartAreas[0].AxisY.Title = "Frequency";
-            Histogram.ChartAreas[0].AxisY.Interval = 1;
-            Histogram.ChartAreas[0].AxisY.IntervalOffset = 1;
 
             string[] roles = new string[6]
             {
