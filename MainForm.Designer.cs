@@ -43,6 +43,9 @@
             this.BTNSelectClassifyFile = new System.Windows.Forms.Button();
             this.TextBoxClassifyFile = new System.Windows.Forms.TextBox();
             this.BTNVisualize = new System.Windows.Forms.Button();
+            this.BTNFeatExtract = new System.Windows.Forms.Button();
+            this.BTNSelectFeatExtractDir = new System.Windows.Forms.Button();
+            this.TextBoxFeatExtractDir = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // LabelTip00
@@ -183,12 +186,44 @@
             this.BTNVisualize.UseVisualStyleBackColor = true;
             this.BTNVisualize.Click += new System.EventHandler(this.BTNVisualize_Click);
             // 
+            // BTNFeatExtract
+            // 
+            this.BTNFeatExtract.Enabled = false;
+            this.BTNFeatExtract.Location = new System.Drawing.Point(509, 137);
+            this.BTNFeatExtract.Name = "BTNFeatExtract";
+            this.BTNFeatExtract.Size = new System.Drawing.Size(203, 31);
+            this.BTNFeatExtract.TabIndex = 34;
+            this.BTNFeatExtract.Text = "Test Feature Extraction";
+            this.BTNFeatExtract.UseVisualStyleBackColor = true;
+            this.BTNFeatExtract.Click += new System.EventHandler(this.BTNFeatExtract_Click);
+            // 
+            // BTNSelectFeatExtractDir
+            // 
+            this.BTNSelectFeatExtractDir.Location = new System.Drawing.Point(508, 105);
+            this.BTNSelectFeatExtractDir.Name = "BTNSelectFeatExtractDir";
+            this.BTNSelectFeatExtractDir.Size = new System.Drawing.Size(41, 29);
+            this.BTNSelectFeatExtractDir.TabIndex = 36;
+            this.BTNSelectFeatExtractDir.Text = "...";
+            this.BTNSelectFeatExtractDir.UseVisualStyleBackColor = true;
+            this.BTNSelectFeatExtractDir.Click += new System.EventHandler(this.BTNSelectFeatExtractDir_Click);
+            // 
+            // TextBoxFeatExtractDir
+            // 
+            this.TextBoxFeatExtractDir.Location = new System.Drawing.Point(555, 105);
+            this.TextBoxFeatExtractDir.Name = "TextBoxFeatExtractDir";
+            this.TextBoxFeatExtractDir.ReadOnly = true;
+            this.TextBoxFeatExtractDir.Size = new System.Drawing.Size(540, 26);
+            this.TextBoxFeatExtractDir.TabIndex = 35;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1198, 677);
+            this.Controls.Add(this.BTNSelectFeatExtractDir);
+            this.Controls.Add(this.TextBoxFeatExtractDir);
+            this.Controls.Add(this.BTNFeatExtract);
             this.Controls.Add(this.BTNVisualize);
             this.Controls.Add(this.BTNSelectClassifyFile);
             this.Controls.Add(this.TextBoxClassifyFile);
@@ -227,6 +262,9 @@
         private System.Windows.Forms.Button BTNSelectClassifyFile;
         private System.Windows.Forms.TextBox TextBoxClassifyFile;
         private System.Windows.Forms.Button BTNVisualize;
+        private System.Windows.Forms.Button BTNFeatExtract;
+        private System.Windows.Forms.Button BTNSelectFeatExtractDir;
+        private System.Windows.Forms.TextBox TextBoxFeatExtractDir;
     }
 }
 

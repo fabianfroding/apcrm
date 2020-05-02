@@ -138,7 +138,30 @@ namespace APCRM
 
         }
 
-        
+
+
+        //=============== Temp Test Feature Extraction ===============//
+        private void BTNSelectFeatExtractDir_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog fbd = new FolderBrowserDialog();
+            if (fbd.ShowDialog() == DialogResult.OK)
+            {
+                TextBoxFeatExtractDir.Text = fbd.SelectedPath;
+                BTNFeatExtract.Enabled = true;
+            }
+        }
+
+        private void BTNFeatExtract_Click(object sender, EventArgs e)
+        {
+            if (FeatureExtractor.FilterJavaFiles(TextBoxFeatExtractDir.Text))
+            {
+                MessageBox.Show("Filtering of java files done.");
+            }
+            else
+            {
+                MessageBox.Show("There was a problem filtering the java files during the feature extraction process.");
+            }
+        }
     }
 
 }
