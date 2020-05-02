@@ -146,7 +146,7 @@
             // BTNClassify
             // 
             this.BTNClassify.Enabled = false;
-            this.BTNClassify.Location = new System.Drawing.Point(8, 47);
+            this.BTNClassify.Location = new System.Drawing.Point(8, 90);
             this.BTNClassify.Name = "BTNClassify";
             this.BTNClassify.Size = new System.Drawing.Size(125, 31);
             this.BTNClassify.TabIndex = 30;
@@ -175,7 +175,7 @@
             // BTNVisualize
             // 
             this.BTNVisualize.Enabled = false;
-            this.BTNVisualize.Location = new System.Drawing.Point(8, 84);
+            this.BTNVisualize.Location = new System.Drawing.Point(8, 127);
             this.BTNVisualize.Name = "BTNVisualize";
             this.BTNVisualize.Size = new System.Drawing.Size(125, 32);
             this.BTNVisualize.TabIndex = 33;
