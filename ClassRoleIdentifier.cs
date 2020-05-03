@@ -38,14 +38,13 @@ namespace APCRM
                 }
             };
             process.Start();
-            StreamWriter sw = process.StandardInput;
 
+            StreamWriter sw = process.StandardInput;
             sw.WriteLine("conda activate base");
             sw.WriteLine(@"python classifier.py models\rf-smote-k9-model-0202.sav sample\" + inputFileName + @" sample\" + outputFileName);
-
             sw.Close();
-            process.WaitForExit();
 
+            process.WaitForExit();
             return true;
         }
 

@@ -155,7 +155,14 @@ namespace APCRM
         {
             if (FeatureExtractor.FilterJavaFiles(TextBoxFeatExtractDir.Text))
             {
-                MessageBox.Show("Filtering of java files done.");
+                if (FeatureExtractor.CreateSrcMLRepresentationOfJavaFiles())
+                {
+                    MessageBox.Show("Feature Extraction done.");
+                }
+                else
+                {
+                    MessageBox.Show("There was a problem creating a srcML-representation of the copied java files.");
+                }
             }
             else
             {
