@@ -11,3 +11,4 @@
 	- numpy
 	- categorical_util
 	- sys
+	- sklearn (0.20.2)
