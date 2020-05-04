@@ -20,31 +20,35 @@ namespace APCRM
             "Interfacer"
         };
 
-        public static bool Classify(string inputFilePath)
+        public static bool Classify(string[] inputFilePaths)
         {
-            File.Copy(new FileInfo(inputFilePath).FullName, @"..\..\Resources\cri\sample\temp.csv", true);
-            string inputFileName = "temp.csv";
-            string outputFileName = "temp-classified.csv";
-
             Process process = new Process
             {
                 StartInfo = new ProcessStartInfo
                 {
                     WorkingDirectory = new DirectoryInfo(@"..\..\Resources\cri").FullName,
-                    WindowStyle = ProcessWindowStyle.Normal,
+                    CreateNoWindow = true,
                     FileName = "cmd.exe",
                     RedirectStandardInput = true,
                     UseShellExecute = false
                 }
             };
-            process.Start();
 
-            StreamWriter sw = process.StandardInput;
-            sw.WriteLine("conda activate base");
-            sw.WriteLine(@"python classifier.py models\rf-smote-k9-model-0202.sav sample\" + inputFileName + @" sample\" + outputFileName);
-            sw.Close();
+            for (int i = 0; i < inputFilePaths.Length; i++)
+            {
+                process.Start();
+                StreamWriter sw = process.StandardInput;
+                sw.WriteLine("conda activate base");
 
-            process.WaitForExit();
+                string inputFileName = new FileInfo(inputFilePaths[i]).Name;
+                File.Copy(new FileInfo(inputFilePaths[i]).FullName, @"..\..\Resources\cri\sample\" + inputFileName, true);
+                sw.WriteLine(@"python classifier.py models\rf-smote-three-cases-model-0202.sav sample\" + inputFileName + @" sample\" + inputFileName + "-classified.csv");
+                
+                sw.Close();
+                process.WaitForExit();
+                File.Delete(@"..\..\Resources\cri\sample\" + inputFileName);
+            }
+
             return true;
         }
 

@@ -40,8 +40,6 @@
             this.BTNFindTotalAPs = new System.Windows.Forms.Button();
             this.LabelTip01 = new System.Windows.Forms.Label();
             this.BTNClassify = new System.Windows.Forms.Button();
-            this.BTNSelectClassifyFile = new System.Windows.Forms.Button();
-            this.TextBoxClassifyFile = new System.Windows.Forms.TextBox();
             this.BTNVisualize = new System.Windows.Forms.Button();
             this.BTNFeatExtract = new System.Windows.Forms.Button();
             this.BTNSelectFeatExtractDir = new System.Windows.Forms.Button();
@@ -148,8 +146,7 @@
             // 
             // BTNClassify
             // 
-            this.BTNClassify.Enabled = false;
-            this.BTNClassify.Location = new System.Drawing.Point(8, 90);
+            this.BTNClassify.Location = new System.Drawing.Point(8, 12);
             this.BTNClassify.Name = "BTNClassify";
             this.BTNClassify.Size = new System.Drawing.Size(125, 31);
             this.BTNClassify.TabIndex = 30;
@@ -157,28 +154,10 @@
             this.BTNClassify.UseVisualStyleBackColor = true;
             this.BTNClassify.Click += new System.EventHandler(this.BTNClassify_Click);
             // 
-            // BTNSelectClassifyFile
-            // 
-            this.BTNSelectClassifyFile.Location = new System.Drawing.Point(8, 12);
-            this.BTNSelectClassifyFile.Name = "BTNSelectClassifyFile";
-            this.BTNSelectClassifyFile.Size = new System.Drawing.Size(41, 29);
-            this.BTNSelectClassifyFile.TabIndex = 32;
-            this.BTNSelectClassifyFile.Text = "...";
-            this.BTNSelectClassifyFile.UseVisualStyleBackColor = true;
-            this.BTNSelectClassifyFile.Click += new System.EventHandler(this.BTNSelectClassifyFile_Click);
-            // 
-            // TextBoxClassifyFile
-            // 
-            this.TextBoxClassifyFile.Location = new System.Drawing.Point(55, 12);
-            this.TextBoxClassifyFile.Name = "TextBoxClassifyFile";
-            this.TextBoxClassifyFile.ReadOnly = true;
-            this.TextBoxClassifyFile.Size = new System.Drawing.Size(879, 26);
-            this.TextBoxClassifyFile.TabIndex = 31;
-            // 
             // BTNVisualize
             // 
             this.BTNVisualize.Enabled = false;
-            this.BTNVisualize.Location = new System.Drawing.Point(8, 127);
+            this.BTNVisualize.Location = new System.Drawing.Point(8, 49);
             this.BTNVisualize.Name = "BTNVisualize";
             this.BTNVisualize.Size = new System.Drawing.Size(125, 32);
             this.BTNVisualize.TabIndex = 33;
@@ -189,7 +168,7 @@
             // BTNFeatExtract
             // 
             this.BTNFeatExtract.Enabled = false;
-            this.BTNFeatExtract.Location = new System.Drawing.Point(509, 137);
+            this.BTNFeatExtract.Location = new System.Drawing.Point(239, 49);
             this.BTNFeatExtract.Name = "BTNFeatExtract";
             this.BTNFeatExtract.Size = new System.Drawing.Size(203, 31);
             this.BTNFeatExtract.TabIndex = 34;
@@ -199,7 +178,7 @@
             // 
             // BTNSelectFeatExtractDir
             // 
-            this.BTNSelectFeatExtractDir.Location = new System.Drawing.Point(508, 105);
+            this.BTNSelectFeatExtractDir.Location = new System.Drawing.Point(238, 17);
             this.BTNSelectFeatExtractDir.Name = "BTNSelectFeatExtractDir";
             this.BTNSelectFeatExtractDir.Size = new System.Drawing.Size(41, 29);
             this.BTNSelectFeatExtractDir.TabIndex = 36;
@@ -209,7 +188,7 @@
             // 
             // TextBoxFeatExtractDir
             // 
-            this.TextBoxFeatExtractDir.Location = new System.Drawing.Point(555, 105);
+            this.TextBoxFeatExtractDir.Location = new System.Drawing.Point(285, 17);
             this.TextBoxFeatExtractDir.Name = "TextBoxFeatExtractDir";
             this.TextBoxFeatExtractDir.ReadOnly = true;
             this.TextBoxFeatExtractDir.Size = new System.Drawing.Size(540, 26);
@@ -225,8 +204,6 @@
             this.Controls.Add(this.TextBoxFeatExtractDir);
             this.Controls.Add(this.BTNFeatExtract);
             this.Controls.Add(this.BTNVisualize);
-            this.Controls.Add(this.BTNSelectClassifyFile);
-            this.Controls.Add(this.TextBoxClassifyFile);
             this.Controls.Add(this.BTNClassify);
             this.Controls.Add(this.LabelTip01);
             this.Controls.Add(this.BTNFindTotalAPs);
@@ -259,8 +236,6 @@
         private System.Windows.Forms.Button BTNFindTotalAPs;
         private System.Windows.Forms.Label LabelTip01;
         private System.Windows.Forms.Button BTNClassify;
-        private System.Windows.Forms.Button BTNSelectClassifyFile;
-        private System.Windows.Forms.TextBox TextBoxClassifyFile;
         private System.Windows.Forms.Button BTNVisualize;
         private System.Windows.Forms.Button BTNFeatExtract;
         private System.Windows.Forms.Button BTNSelectFeatExtractDir;

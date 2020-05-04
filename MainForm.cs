@@ -12,28 +12,25 @@ namespace APCRM
         {
             InitializeComponent();
         }
-
         private void BTNClassify_Click(object sender, EventArgs e)
         {
-            if (ClassRoleIdentifier.Classify(TextBoxClassifyFile.Text))
+            OpenFileDialog ofd = new OpenFileDialog
             {
-                MessageBox.Show("Classification successful.");
-                BTNVisualize.Enabled = true;
-            }
-            else
-            {
-                MessageBox.Show("There was a problem running the class role identification.");
-            }
-        }
-
-        private void BTNSelectClassifyFile_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "CSV Files(*.csv)| *.csv";
+                Title = "Select files to classify",
+                Filter = "CSV Files(*.csv)| *.csv",
+                Multiselect = true
+            };
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                TextBoxClassifyFile.Text = ofd.FileName;
-                BTNClassify.Enabled = true;
+                
+                if (ClassRoleIdentifier.Classify(ofd.FileNames))
+                {
+                    MessageBox.Show("Classification done.");
+                }
+                else
+                {
+                    MessageBox.Show("There was a problem with the class role identification.");
+                }
             }
         }
 
