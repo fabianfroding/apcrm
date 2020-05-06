@@ -135,8 +135,6 @@ namespace APCRM
 
         }
 
-
-
         //=============== Temp Test Feature Extraction ===============//
         private void BTNSelectFeatExtractDir_Click(object sender, EventArgs e)
         {

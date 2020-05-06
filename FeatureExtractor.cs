@@ -25,7 +25,7 @@ namespace APCRM
                 StartInfo = new ProcessStartInfo
                 {
                     WorkingDirectory = new DirectoryInfo(@"..\..\Resources\srcML0.9.5\bin").FullName,
-                    WindowStyle = ProcessWindowStyle.Normal,
+                    CreateNoWindow = true,
                     FileName = "cmd.exe",
                     RedirectStandardInput = true,
                     UseShellExecute = false
@@ -38,6 +38,12 @@ namespace APCRM
             sw.Close();
 
             process.WaitForExit();
+            return true;
+        }
+
+        public static bool ExtractInnerClasses()
+        {
+
             return true;
         }
 
