@@ -5,6 +5,7 @@ namespace APCRM.Models
     class JavaClass
     {
         public string name;
+        public string shortName;
         public List<string> aps;
         public string classRole;
 

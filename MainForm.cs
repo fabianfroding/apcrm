@@ -192,9 +192,21 @@ namespace APCRM
                 {
                     var line = sr.ReadLine();
                     var values = line.Split(',');
-
-                    JavaClass jc = new JavaClass(values[2]);
+                    string javaName = values[1];
+                    const string removeString = ".java";
+                    if (!javaName.Equals("fullpathname"))
+                    {
+                        int index = javaName.IndexOf(removeString);
+                        int length = removeString.Length;
+                        String startOfString = javaName.Substring(0, index);
+                        String endOfString = javaName.Substring(index + length);
+                        javaName = startOfString + endOfString;
+                    }
+                    javaName = javaName.Replace('\\', '.');
+                    //JavaClass jc = new JavaClass(values[1]);
+                    JavaClass jc = new JavaClass(javaName);
                     jc.classRole = values[27];
+                    jc.shortName = values[2];
                     javaClasses.Add(jc);
                 }
             }
@@ -202,8 +214,10 @@ namespace APCRM
             //===== Attach antipatterns to each class =====//
             DirectoryInfo di = new DirectoryInfo(TBSelectedIniDir.Text);
             FileInfo[] files = di.GetFiles("*.ini");
+            int counter = 0;
             foreach (JavaClass jc in javaClasses)
             {
+                counter++;
                 foreach (FileInfo fi in files)
                 {
                     StreamReader sr = fi.OpenText();
@@ -216,14 +230,17 @@ namespace APCRM
                         }
                     }
                     sr.Close();
-                    string lastSubString = "";
-
-                    foreach (string line in textLines.Where(l => l.Contains(jc.name) && l.Contains("-0")))
+                    List<string> lastSubStrings = new List<string>();
+                    foreach (string line in textLines.Where(l => l.Contains(jc.shortName) && l.Contains("-0")))
                     {
-                        lastSubString = line.Split('.').Last();
+                        if (!line.Contains("MultipleInterface-0."))
+                        {
+                            string foundString = line.Split('=').Last();
+                            foundString = foundString.Trim();
+                            lastSubStrings.Add(foundString);
+                        }
                     }
-
-                    if (lastSubString.Equals(jc.name))
+                    foreach (string lastSubString in lastSubStrings.Where(s => jc.name.EndsWith(s)))
                     {
                         foreach (string s in ANTIPATTERNS)
                         {
@@ -312,7 +329,7 @@ namespace APCRM
                         var line = sr1.ReadLine();
                         var values = line.Split(',');
 
-                        JavaClass jc = new JavaClass(values[2]);
+                        JavaClass jc = new JavaClass(values[1]);
                         jc.classRole = values[27];
                         javaClasses1.Add(jc);
                     }
@@ -324,7 +341,7 @@ namespace APCRM
                         var line = sr2.ReadLine();
                         var values = line.Split(',');
 
-                        JavaClass jc = new JavaClass(values[2]);
+                        JavaClass jc = new JavaClass(values[1]);
                         jc.classRole = values[27];
                         javaClasses2.Add(jc);
                     }
