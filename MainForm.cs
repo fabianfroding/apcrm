@@ -22,7 +22,7 @@ namespace APCRM
             };
             if (ofd.ShowDialog() == DialogResult.OK)
             {
-                
+                BTNClassify.Enabled = false;
                 if (ClassRoleIdentifier.Classify(ofd.FileNames))
                 {
                     MessageBox.Show("Classification done.");
@@ -31,6 +31,7 @@ namespace APCRM
                 {
                     MessageBox.Show("There was a problem with the class role identification.");
                 }
+                BTNClassify.Enabled = true;
             }
         }
 
