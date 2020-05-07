@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace APCRM
@@ -133,6 +135,138 @@ namespace APCRM
                 }
             }
             Debug.WriteLine("Done.\n");
+
+        }
+
+        private void BTNFindAPsInRolesFixed_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("Mapping roles to antipatterns...");
+
+            List<JavaClass> javaClasses = new List<JavaClass>();
+
+            //===== Attach a role to each class =====//
+            using (var sr = new StreamReader(TBSelectedClassifiedCSV.Text))
+            {
+                while (!sr.EndOfStream)
+                {
+                    var line = sr.ReadLine();
+                    var values = line.Split(',');
+                    string javaName = values[1];
+                    const string removeString = ".java";
+                    if (!javaName.Equals("fullpathname"))
+                    {
+                        int index = javaName.IndexOf(removeString);
+                        int length = removeString.Length;
+                        String startOfString = javaName.Substring(0, index);
+                        String endOfString = javaName.Substring(index + length);
+                        javaName = startOfString + endOfString;
+                    }
+                    javaName = javaName.Replace('\\', '.');
+                    //JavaClass jc = new JavaClass(values[1]);
+                    JavaClass jc = new JavaClass(javaName);
+                    jc.classRole = values[27];
+                    jc.shortName = values[2];
+                    javaClasses.Add(jc);
+                }
+            }
+
+            //===== Attach antipatterns to each class =====//
+            DirectoryInfo di = new DirectoryInfo(TBSelectedIniDir.Text);
+            FileInfo[] files = di.GetFiles("*.ini");
+            int counter = 0;
+            foreach (JavaClass jc in javaClasses)
+            {
+                counter++;
+                foreach (FileInfo fi in files)
+                {
+                    StreamReader sr = fi.OpenText();
+                    List<string> textLines = new List<string>();
+                    using (sr)
+                    {
+                        while (!sr.EndOfStream)
+                        {
+                            textLines.Add(sr.ReadLine());
+                        }
+                    }
+                    sr.Close();
+                    List<string> lastSubStrings = new List<string>();
+                    foreach (string line in textLines.Where(l => l.Contains(jc.shortName) && l.Contains("-0")))
+                    {
+                        if (!line.Contains("MultipleInterface-0."))
+                        {
+                            string foundString = line.Split('=').Last();
+                            foundString = foundString.Trim();
+                            lastSubStrings.Add(foundString);
+                        }
+                    }
+                    foreach (string lastSubString in lastSubStrings.Where(s => jc.name.EndsWith(s)))
+                    {
+                        foreach (string s in AntiPatternDetector.ANTIPATTERNS)
+                        {
+                            if (fi.Name.Contains(s))
+                            {
+                                jc.aps.Add(s);
+                            }
+                        }
+                    }
+                }
+            }
+
+            // For each role, find classes that has that role, add each antipattern to a counter...
+
+            foreach (string role in ClassRoleIdentifier.ROLES)
+            {
+                System.Diagnostics.Debug.WriteLine("//========== " + role + " ==========//");
+
+                int[] numAntipatterns = new int[18];
+                // 0=AntiSingleton, 1=BaseClassKnowsDerivedClass, 2=BaseClassShouldBeAbstract,
+                // 3=Blob, 4=ClassDataShouldBePrivate, 5=ComplexClass,
+                // 6=FunctionalDecomposition, 7=LargeClass, 8=LazyClass,
+                // 9=LongMethod, 10=LongParameterList, 11=ManyFieldAttributesButNotComplex,
+                // 12=MessageChains, 13=RefusedParentBequest, 14=SpaghettiCode,
+                // 15=SpeculativeGenerality, 16=SwissArmyKnife, 17=TraditionBreaker
+                int index = 0;
+
+                foreach (string ap in AntiPatternDetector.ANTIPATTERNS)
+                {
+                    foreach (JavaClass jc in javaClasses)
+                    {
+                        if (jc.classRole == role && jc.aps.Contains(ap))
+                        {
+                            System.Diagnostics.Debug.WriteLine(jc.name + " contains " + ap);
+                            System.Diagnostics.Debug.WriteLine("Adding 1 to " + AntiPatternDetector.ANTIPATTERNS[index]);
+                            numAntipatterns[index]++;
+                        }
+                    }
+                    index++;
+                }
+
+                /*
+                foreach (JavaClass jc in javaClasses)
+                {
+                    index = 0;
+                    if (jc.classRole == role)
+                    {
+                        foreach (string ap in ANTIPATTERNS)
+                        {
+                            if (jc.aps.Contains(ap))
+                            {
+                                //System.Diagnostics.Debug.WriteLine(jc.name + " contains " + ap);
+                                //System.Diagnostics.Debug.WriteLine("Adding 1 to " + ANTIPATTERNS[index]);
+                                numAntipatterns[index]++;
+                            }
+                            index++;
+                        }
+                    }
+                }*/
+
+                System.Diagnostics.Debug.WriteLine("//---------- In respective order ----------//");
+                for (int i = 0; i < numAntipatterns.Length; i++)
+                {
+                    System.Diagnostics.Debug.WriteLine(numAntipatterns[i]);
+                }
+            }
+            System.Diagnostics.Debug.WriteLine("Done.\n");
 
         }
 

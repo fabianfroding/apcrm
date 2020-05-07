@@ -8,6 +8,8 @@ namespace APCRM.Models
         public List<string> aps;
         public string classRole;
 
+        public string shortName;
+
         public JavaClass(string name)
         {
             this.name = name;
