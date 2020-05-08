@@ -20,8 +20,9 @@ namespace APCRM
             "Interfacer"
         };
 
-        public static bool Classify(string[] inputFilePaths)
+        public static bool Classify(string[] inputFilePaths, string classifierName)
         {
+            Debug.WriteLine("Using " + classifierName);
             Process process = new Process
             {
                 StartInfo = new ProcessStartInfo
@@ -42,7 +43,7 @@ namespace APCRM
 
                 string inputFileName = new FileInfo(inputFilePaths[i]).Name;
                 File.Copy(new FileInfo(inputFilePaths[i]).FullName, @"..\..\Resources\cri\sample\" + inputFileName, true);
-                sw.WriteLine(@"python classifier.py models\rf-smote-three-cases-model-0202.sav sample\" + inputFileName + @" sample\" + inputFileName + "-classified.csv");
+                sw.WriteLine(@"python classifier.py models\" + classifierName + @" sample\" + inputFileName + @" sample\" + inputFileName + "-classified.csv");
                 
                 sw.Close();
                 process.WaitForExit();
@@ -83,7 +84,20 @@ namespace APCRM
             return numRoles;
         }
 
-
+        public static List<string> GetClassifiersNames()
+        {
+            DirectoryInfo di = new DirectoryInfo(@"..\..\Resources\cri\models\");
+            FileInfo[] classifierFiles = di.GetFiles();
+            List<string> classifierNames = new List<string>();
+            for (int i = 0; i < classifierFiles.Length; i++)
+            {
+                if (classifierFiles[i].Extension == ".sav")
+                {
+                    classifierNames.Add(classifierFiles[i].Name);
+                }
+            }
+            return classifierNames;
+        }
 
         //=============== Old ===============//
         public static List<JavaClass> AttachRolesToJavaClasses(string filePath)

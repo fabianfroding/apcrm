@@ -44,6 +44,7 @@
             this.BTNFeatExtract = new System.Windows.Forms.Button();
             this.BTNSelectFeatExtractDir = new System.Windows.Forms.Button();
             this.TextBoxFeatExtractDir = new System.Windows.Forms.TextBox();
+            this.ComboBoxClassifier = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // LabelTip00
@@ -168,7 +169,7 @@
             // BTNFeatExtract
             // 
             this.BTNFeatExtract.Enabled = false;
-            this.BTNFeatExtract.Location = new System.Drawing.Point(239, 49);
+            this.BTNFeatExtract.Location = new System.Drawing.Point(574, 49);
             this.BTNFeatExtract.Name = "BTNFeatExtract";
             this.BTNFeatExtract.Size = new System.Drawing.Size(203, 31);
             this.BTNFeatExtract.TabIndex = 34;
@@ -178,7 +179,7 @@
             // 
             // BTNSelectFeatExtractDir
             // 
-            this.BTNSelectFeatExtractDir.Location = new System.Drawing.Point(238, 17);
+            this.BTNSelectFeatExtractDir.Location = new System.Drawing.Point(573, 17);
             this.BTNSelectFeatExtractDir.Name = "BTNSelectFeatExtractDir";
             this.BTNSelectFeatExtractDir.Size = new System.Drawing.Size(41, 29);
             this.BTNSelectFeatExtractDir.TabIndex = 36;
@@ -188,11 +189,20 @@
             // 
             // TextBoxFeatExtractDir
             // 
-            this.TextBoxFeatExtractDir.Location = new System.Drawing.Point(285, 17);
+            this.TextBoxFeatExtractDir.Location = new System.Drawing.Point(620, 17);
             this.TextBoxFeatExtractDir.Name = "TextBoxFeatExtractDir";
             this.TextBoxFeatExtractDir.ReadOnly = true;
             this.TextBoxFeatExtractDir.Size = new System.Drawing.Size(540, 26);
             this.TextBoxFeatExtractDir.TabIndex = 35;
+            // 
+            // ComboBoxClassifier
+            // 
+            this.ComboBoxClassifier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxClassifier.FormattingEnabled = true;
+            this.ComboBoxClassifier.Location = new System.Drawing.Point(139, 14);
+            this.ComboBoxClassifier.Name = "ComboBoxClassifier";
+            this.ComboBoxClassifier.Size = new System.Drawing.Size(330, 28);
+            this.ComboBoxClassifier.TabIndex = 37;
             // 
             // MainForm
             // 
@@ -200,6 +210,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1198, 677);
+            this.Controls.Add(this.ComboBoxClassifier);
             this.Controls.Add(this.BTNSelectFeatExtractDir);
             this.Controls.Add(this.TextBoxFeatExtractDir);
             this.Controls.Add(this.BTNFeatExtract);
@@ -240,6 +251,7 @@
         private System.Windows.Forms.Button BTNFeatExtract;
         private System.Windows.Forms.Button BTNSelectFeatExtractDir;
         private System.Windows.Forms.TextBox TextBoxFeatExtractDir;
+        private System.Windows.Forms.ComboBox ComboBoxClassifier;
     }
 }
 

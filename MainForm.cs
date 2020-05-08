@@ -13,7 +13,9 @@ namespace APCRM
         public MainForm()
         {
             InitializeComponent();
+            ListClassifiers();
         }
+
         private void BTNClassify_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog
@@ -25,7 +27,7 @@ namespace APCRM
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 BTNClassify.Enabled = false;
-                if (ClassRoleIdentifier.Classify(ofd.FileNames))
+                if (ClassRoleIdentifier.Classify(ofd.FileNames, GetSelectedClassifier()))
                 {
                     MessageBox.Show("Classification done.");
                 }
@@ -42,7 +44,19 @@ namespace APCRM
             new GraphForm(ClassRoleIdentifier.GetNumberOfRoles(@"..\..\Resources\cri\sample\temp-classified.csv")).Show();
         }
 
+        private void ListClassifiers()
+        {
+            foreach (string classifierName in ClassRoleIdentifier.GetClassifiersNames())
+            {
+                ComboBoxClassifier.Items.Add(classifierName);
+            }
+            ComboBoxClassifier.SelectedIndex = 0;
+        }
 
+        private string GetSelectedClassifier()
+        {
+            return ComboBoxClassifier.SelectedItem.ToString();
+        }
 
 
 
@@ -138,6 +152,7 @@ namespace APCRM
 
         }
 
+        //Causes conflict with import packages. This class should not use system packages.
         private void BTNFindAPsInRolesFixed_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Debug.WriteLine("Mapping roles to antipatterns...");
@@ -233,8 +248,8 @@ namespace APCRM
                     {
                         if (jc.classRole == role && jc.aps.Contains(ap))
                         {
-                            System.Diagnostics.Debug.WriteLine(jc.name + " contains " + ap);
-                            System.Diagnostics.Debug.WriteLine("Adding 1 to " + AntiPatternDetector.ANTIPATTERNS[index]);
+                            //System.Diagnostics.Debug.WriteLine(jc.name + " contains " + ap);
+                            //System.Diagnostics.Debug.WriteLine("Adding 1 to " + AntiPatternDetector.ANTIPATTERNS[index]);
                             numAntipatterns[index]++;
                         }
                     }
