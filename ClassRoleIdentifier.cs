@@ -22,7 +22,6 @@ namespace APCRM
 
         public static bool Classify(string[] inputFilePaths, string classifierName)
         {
-            Debug.WriteLine("Using " + classifierName);
             Process process = new Process
             {
                 StartInfo = new ProcessStartInfo
@@ -43,7 +42,7 @@ namespace APCRM
 
                 string inputFileName = new FileInfo(inputFilePaths[i]).Name;
                 File.Copy(new FileInfo(inputFilePaths[i]).FullName, @"..\..\Resources\cri\sample\" + inputFileName, true);
-                sw.WriteLine(@"python classifier.py models\" + classifierName + @" sample\" + inputFileName + @" sample\" + inputFileName + "-classified.csv");
+                sw.WriteLine(@"python classifier.py models\" + classifierName + @" sample\" + inputFileName + @" sample\" + inputFileName.Replace(".csv", "") + "-classified.csv");
                 
                 sw.Close();
                 process.WaitForExit();
