@@ -114,5 +114,33 @@ namespace APCRM
             }
             return javaClasses;
         }
+
+        public static List<JavaClass> AttachRolesToJavaClassesFullPath(string filePath)
+        {
+            List<JavaClass> javaClasses = new List<JavaClass>();
+            using (var sr = new StreamReader(filePath))
+            {
+                while (!sr.EndOfStream)
+                {
+                    var values = sr.ReadLine().Split(',');
+                    string javaName = values[1];
+                    const string removeString = ".java";
+                    if (!javaName.Equals("fullpathname"))
+                    {
+                        int index = javaName.IndexOf(removeString);
+                        int length = removeString.Length;
+                        string startOfString = javaName.Substring(0, index);
+                        string endOfString = javaName.Substring(index + length);
+                        javaName = startOfString + endOfString;
+                    }
+                    javaName = javaName.Replace('\\', '.');
+                    JavaClass jc = new JavaClass(javaName);
+                    jc.classRole = values[27];
+                    jc.shortName = values[2];
+                    javaClasses.Add(jc);
+                }
+            }
+            return javaClasses;
+        }
     }
 }

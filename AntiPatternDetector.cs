@@ -132,5 +132,51 @@ namespace APCRM
             }
             return javaClasses;
         }
+    
+        public static List<JavaClass> AttachAntipatternsToJavaClassesFullPath(string dir, List<JavaClass> javaClasses)
+        {
+            //===== Attach antipatterns to each class =====//
+            DirectoryInfo di = new DirectoryInfo(dir);
+            FileInfo[] files = di.GetFiles("*.ini");
+            int counter = 0;
+            foreach (JavaClass jc in javaClasses)
+            {
+                counter++;
+                foreach (FileInfo fi in files)
+                {
+                    StreamReader sr = fi.OpenText();
+                    List<string> textLines = new List<string>();
+                    using (sr)
+                    {
+                        while (!sr.EndOfStream)
+                        {
+                            textLines.Add(sr.ReadLine());
+                        }
+                    }
+                    sr.Close();
+                    List<string> lastSubStrings = new List<string>();
+                    foreach (string line in textLines.Where(l => l.Contains(jc.shortName) && l.Contains("-0")))
+                    {
+                        if (!line.Contains("MultipleInterface-0."))
+                        {
+                            string foundString = line.Split('=').Last();
+                            foundString = foundString.Trim();
+                            lastSubStrings.Add(foundString);
+                        }
+                    }
+                    foreach (string lastSubString in lastSubStrings.Where(s => jc.name.EndsWith(s)))
+                    {
+                        foreach (string s in AntiPatternDetector.ANTIPATTERNS)
+                        {
+                            if (fi.Name.Contains(s))
+                            {
+                                jc.aps.Add(s);
+                            }
+                        }
+                    }
+                }
+            }
+            return javaClasses;
+        }
     }
 }
