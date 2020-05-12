@@ -43,7 +43,24 @@ namespace APCRM
 
         public static bool ExtractInnerClasses()
         {
+            Process process = new Process
+            {
+                StartInfo = new ProcessStartInfo
+                {
+                    WorkingDirectory = new DirectoryInfo(@"..\..\Resources\cri\").FullName,
+                    CreateNoWindow = true,
+                    FileName = "cmd.exe",
+                    RedirectStandardInput = true,
+                    UseShellExecute = false
+                }
+            };
+            process.Start();
 
+            StreamWriter sw = process.StandardInput;
+            sw.WriteLine(@"java -jar lib\Parser.jar inner sample\srcml-out\temp.xml sample\srcml-out\inner");
+            sw.Close();
+
+            process.WaitForExit();
             return true;
         }
 

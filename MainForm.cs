@@ -58,6 +58,45 @@ namespace APCRM
 
 
 
+        //=============== Temp Test Feature Extraction ===============//
+        private void BTNSelectFeatExtractDir_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog fbd = new FolderBrowserDialog();
+            if (fbd.ShowDialog() == DialogResult.OK)
+            {
+                TextBoxFeatExtractDir.Text = fbd.SelectedPath;
+                BTNFeatExtract.Enabled = true;
+            }
+        }
+
+        private void BTNFeatExtract_Click(object sender, EventArgs e)
+        {
+            if (FeatureExtractor.FilterJavaFiles(TextBoxFeatExtractDir.Text))
+            {
+                if (FeatureExtractor.CreateSrcMLRepresentationOfJavaFiles())
+                {
+                    if (FeatureExtractor.ExtractInnerClasses())
+                    {
+                        MessageBox.Show("Feature Extraction done.");
+                    }
+                    else
+                    {
+                        MessageBox.Show("There was a problem extracting inner classes during the feature extraction process.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("There was a problem creating a srcML-representation of the copied java files.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("There was a problem filtering the java files during the feature extraction process.");
+            }
+        }
+
+
+
         //=============== Old Stuff ===============//
         private void BTNSelectIniDir_Click(object sender, EventArgs e)
         {
@@ -216,35 +255,6 @@ namespace APCRM
 
         }
 
-        //=============== Temp Test Feature Extraction ===============//
-        private void BTNSelectFeatExtractDir_Click(object sender, EventArgs e)
-        {
-            FolderBrowserDialog fbd = new FolderBrowserDialog();
-            if (fbd.ShowDialog() == DialogResult.OK)
-            {
-                TextBoxFeatExtractDir.Text = fbd.SelectedPath;
-                BTNFeatExtract.Enabled = true;
-            }
-        }
-
-        private void BTNFeatExtract_Click(object sender, EventArgs e)
-        {
-            if (FeatureExtractor.FilterJavaFiles(TextBoxFeatExtractDir.Text))
-            {
-                if (FeatureExtractor.CreateSrcMLRepresentationOfJavaFiles())
-                {
-                    MessageBox.Show("Feature Extraction done.");
-                }
-                else
-                {
-                    MessageBox.Show("There was a problem creating a srcML-representation of the copied java files.");
-                }
-            }
-            else
-            {
-                MessageBox.Show("There was a problem filtering the java files during the feature extraction process.");
-            }
-        }
     }
 
 }
