@@ -10,7 +10,7 @@ namespace APCRM
 
         public static bool FilterJavaFiles(string inputPath)
         {
-            List<FileInfo> javaFiles = GetAllJavaFilesInDirectory(inputPath);
+            List<FileInfo> javaFiles = GetJavaFilesInDirectory(inputPath);
             foreach (FileInfo fi in javaFiles)
             {
                 File.Copy(fi.FullName, PATH_TO_COPIED_JAVA_FILES + fi.Name, true);
@@ -38,6 +38,8 @@ namespace APCRM
             sw.Close();
 
             process.WaitForExit();
+
+            DeleteJavaFilesInDirectory(new DirectoryInfo(PATH_TO_COPIED_JAVA_FILES).FullName);
             return true;
         }
 
@@ -65,7 +67,7 @@ namespace APCRM
         }
 
         //=============== Private Methods ===============//
-        private static List<FileInfo> GetAllJavaFilesInDirectory(string directoryPath)
+        private static List<FileInfo> GetJavaFilesInDirectory(string directoryPath)
         {
             DirectoryInfo di = new DirectoryInfo(directoryPath);
             List<FileInfo> javaFiles = new List<FileInfo>();
@@ -79,11 +81,23 @@ namespace APCRM
             }
             foreach (DirectoryInfo _di in di.GetDirectories())
             {
-                javaFiles.AddRange(GetAllJavaFilesInDirectory(_di.FullName));
+                javaFiles.AddRange(GetJavaFilesInDirectory(_di.FullName));
             }
 
             return javaFiles;
             
+        }
+
+        private static void DeleteJavaFilesInDirectory(string dirPath)
+        {
+            FileInfo[] files = new DirectoryInfo(dirPath).GetFiles();
+            for (int i = 0; i < files.Length; i++)
+            {
+                if (files[i].Name.EndsWith(".java"))
+                {
+                    files[i].Delete();
+                }
+            }
         }
     }
 
