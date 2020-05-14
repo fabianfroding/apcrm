@@ -157,7 +157,6 @@
             // 
             // BTNVisualize
             // 
-            this.BTNVisualize.Enabled = false;
             this.BTNVisualize.Location = new System.Drawing.Point(8, 49);
             this.BTNVisualize.Name = "BTNVisualize";
             this.BTNVisualize.Size = new System.Drawing.Size(125, 32);

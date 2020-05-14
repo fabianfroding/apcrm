@@ -51,7 +51,11 @@ namespace APCRM
             for (int i = 0; i < rolesData.Length; i++)
             {
                 RadarChart.Series[0].Points.AddXY(roles[i], 0.5 + rolesData[i]);
+                RadarChart.ChartAreas[0].AxisX.LabelStyle.Font = new System.Drawing.Font("Verdana", rolesData[i] * 0.3f);
+                System.Diagnostics.Debug.WriteLine(roles[i] + " " + rolesData[i] * 0.3f);
             }
+
+
         }
     }
 }

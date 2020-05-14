@@ -8,3 +8,13 @@ C:\Users\Fabian\Studier\DIT837-BScThesisInSEM\APCRM\obj\Debug\APCRM.csproj.Gener
 C:\Users\Fabian\Studier\DIT837-BScThesisInSEM\APCRM\obj\Debug\APCRM.exe
 C:\Users\Fabian\Studier\DIT837-BScThesisInSEM\APCRM\obj\Debug\APCRM.pdb
 C:\Users\Fabian\Studier\DIT837-BScThesisInSEM\APCRM\obj\Debug\APCRM.GraphForm.resources
+C:\Users\Fabian\Studier\DIT837BScThesisInSEM\APCRM\bin\Debug\APCRM.exe.config
+C:\Users\Fabian\Studier\DIT837BScThesisInSEM\APCRM\bin\Debug\APCRM.exe
+C:\Users\Fabian\Studier\DIT837BScThesisInSEM\APCRM\bin\Debug\APCRM.pdb
+C:\Users\Fabian\Studier\DIT837BScThesisInSEM\APCRM\obj\Debug\APCRM.csprojAssemblyReference.cache
+C:\Users\Fabian\Studier\DIT837BScThesisInSEM\APCRM\obj\Debug\APCRM.MainForm.resources
+C:\Users\Fabian\Studier\DIT837BScThesisInSEM\APCRM\obj\Debug\APCRM.GraphForm.resources
+C:\Users\Fabian\Studier\DIT837BScThesisInSEM\APCRM\obj\Debug\APCRM.Properties.Resources.resources
+C:\Users\Fabian\Studier\DIT837BScThesisInSEM\APCRM\obj\Debug\APCRM.csproj.GenerateResource.cache
+C:\Users\Fabian\Studier\DIT837BScThesisInSEM\APCRM\obj\Debug\APCRM.exe
+C:\Users\Fabian\Studier\DIT837BScThesisInSEM\APCRM\obj\Debug\APCRM.pdb

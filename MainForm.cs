@@ -71,6 +71,7 @@ namespace APCRM
 
         private void BTNFeatExtract_Click(object sender, EventArgs e)
         {
+
             if (FeatureExtractor.FilterJavaFiles(TextBoxFeatExtractDir.Text))
             {
                 if (FeatureExtractor.CreateSrcMLRepresentationOfJavaFiles())
