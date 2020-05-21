@@ -193,66 +193,6 @@ namespace APCRM
         //Causes conflict with import packages. This class should not use system packages.
         private void BTNFindAPsInRolesFixed_Click(object sender, EventArgs e)
         {
-            Debug.WriteLine("Mapping roles to antipatterns...");
-
-            //List<JavaClass> javaClasses = new List<JavaClass>();
-            List<JavaClass> javaClasses = ClassRoleIdentifier.AttachRolesToJavaClassesFullPath(TBSelectedClassifiedCSV.Text);
-            javaClasses = AntiPatternDetector.AttachAntipatternsToJavaClassesFullPath(TBSelectedIniDir.Text, javaClasses);
-
-            // For each role, find classes that has that role, add each antipattern to a counter...
-            foreach (string role in ClassRoleIdentifier.ROLES)
-            {
-                System.Diagnostics.Debug.WriteLine("//========== " + role + " ==========//");
-
-                int[] numAntipatterns = new int[18];
-                // 0=AntiSingleton, 1=BaseClassKnowsDerivedClass, 2=BaseClassShouldBeAbstract,
-                // 3=Blob, 4=ClassDataShouldBePrivate, 5=ComplexClass,
-                // 6=FunctionalDecomposition, 7=LargeClass, 8=LazyClass,
-                // 9=LongMethod, 10=LongParameterList, 11=ManyFieldAttributesButNotComplex,
-                // 12=MessageChains, 13=RefusedParentBequest, 14=SpaghettiCode,
-                // 15=SpeculativeGenerality, 16=SwissArmyKnife, 17=TraditionBreaker
-                int index = 0;
-
-                foreach (string ap in AntiPatternDetector.ANTIPATTERNS)
-                {
-                    foreach (JavaClass jc in javaClasses)
-                    {
-                        if (jc.classRole == role && jc.aps.Contains(ap))
-                        {
-                            //System.Diagnostics.Debug.WriteLine(jc.name + " contains " + ap);
-                            //System.Diagnostics.Debug.WriteLine("Adding 1 to " + AntiPatternDetector.ANTIPATTERNS[index]);
-                            numAntipatterns[index]++;
-                        }
-                    }
-                    index++;
-                }
-
-                /*
-                foreach (JavaClass jc in javaClasses)
-                {
-                    index = 0;
-                    if (jc.classRole == role)
-                    {
-                        foreach (string ap in ANTIPATTERNS)
-                        {
-                            if (jc.aps.Contains(ap))
-                            {
-                                //System.Diagnostics.Debug.WriteLine(jc.name + " contains " + ap);
-                                //System.Diagnostics.Debug.WriteLine("Adding 1 to " + ANTIPATTERNS[index]);
-                                numAntipatterns[index]++;
-                            }
-                            index++;
-                        }
-                    }
-                }*/
-
-                System.Diagnostics.Debug.WriteLine("//---------- In respective order ----------//");
-                for (int i = 0; i < numAntipatterns.Length; i++)
-                {
-                    System.Diagnostics.Debug.WriteLine(numAntipatterns[i]);
-                }
-            }
-            System.Diagnostics.Debug.WriteLine("Done.\n");
 
         }
 

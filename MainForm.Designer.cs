@@ -99,7 +99,7 @@
             this.BTNFindAPsInRoles.TabIndex = 24;
             this.BTNFindAPsInRoles.Text = "Find Antipatterns in Roles";
             this.BTNFindAPsInRoles.UseVisualStyleBackColor = true;
-            this.BTNFindAPsInRoles.Click += new System.EventHandler(this.BTNFindAPsInRolesFixed_Click);
+            this.BTNFindAPsInRoles.Click += new System.EventHandler(this.BTNFindAPsInRoles_Click);
             // 
             // BTNFindRoles
             // 
