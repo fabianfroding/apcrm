@@ -1,0 +1,336 @@
+index,fullpathname,classname,loc,numAttr,numMethod,setters,getters,isPersist,isCollection,numWordName,isOrEr,isController,numIfs,numParameters,numImports,numOutboundInvocation,isStaticClass,isInterface,isInnerClass,isClass,isEnum,classPublicity,numPublicMethods,numPrivateMethods,numProtectedMethods,isAbstract,pred_label
+3,\src\com\fsck\k9\Account.FolderMode.java,FolderMode,8,5,0,0,0,False,False,2,False,False,0,0,0,0,False,False,True,False,True,public,0,0,0,False,Information Holder
+4,\src\com\fsck\k9\Account.MessageFormat.java,MessageFormat,8,2,0,0,0,False,False,2,False,False,0,0,0,0,False,False,True,False,True,public,0,0,0,False,Information Holder
+5,\src\com\fsck\k9\Account.QuoteStyle.java,QuoteStyle,8,2,0,0,0,False,False,2,False,False,0,0,0,0,False,False,True,False,True,public,0,0,0,False,Information Holder
+6,\src\com\fsck\k9\Account.ScrollButtons.java,ScrollButtons,8,3,0,0,0,False,False,2,False,False,0,0,0,0,False,False,True,False,True,public,0,0,0,False,Information Holder
+7,\src\com\fsck\k9\Account.Searchable.java,Searchable,8,3,0,0,0,False,False,1,False,False,0,0,0,0,False,False,True,False,True,public,0,0,0,False,Information Holder
+8,\src\com\fsck\k9\Account.ShowPictures.java,ShowPictures,8,3,0,0,0,False,False,2,False,False,0,0,0,0,False,False,True,False,True,public,0,0,0,False,Information Holder
+9,\src\com\fsck\k9\AccountStats.java,AccountStats,12,5,0,0,0,False,False,2,False,False,0,0,1,0,False,False,False,True,False,public,0,0,0,False,Information Holder
+10,\src\com\fsck\k9\BaseAccount.java,BaseAccount,8,0,0,0,0,False,False,2,False,False,0,0,0,0,False,True,False,False,False,public,0,0,0,False,Information Holder
+11,\src\com\fsck\k9\EmailAddressAdapter.java,EmailAddressAdapter,54,2,4,0,1,False,False,3,True,False,1,6,7,1,False,False,False,True,False,public,4,0,0,False,Coordinator
+12,\src\com\fsck\k9\EmailAddressValidator.java,EmailAddressValidator,14,0,3,0,0,False,False,3,True,False,0,3,2,1,False,False,False,True,False,public,3,0,0,False,Service Provider
+13,\src\com\fsck\k9\EmailReceivedIntent.java,EmailReceivedIntent,12,9,0,0,0,False,False,3,False,False,0,0,0,0,False,False,False,True,False,public,0,0,0,False,Information Holder
+14,\src\com\fsck\k9\Identity.java,Identity,51,7,13,6,6,False,False,1,False,False,0,6,1,0,False,False,False,True,False,public,13,0,0,False,Information Holder
+15,\src\com\fsck\k9\K9.ApplicationAware.java,ApplicationAware,11,0,0,0,0,False,False,2,False,False,0,0,0,0,True,True,True,False,False,public,0,0,0,False,Service Provider
+16,\src\com\fsck\k9\FontSizes.java,FontSizes,297,39,35,16,17,False,False,2,False,False,2,18,2,1,False,False,False,True,False,public,35,0,0,False,Information Holder
+17,\src\com\fsck\k9\K9.BACKGROUND_OPS.java,OPS,4,4,0,0,0,False,False,3,False,False,0,0,0,0,False,False,False,False,True,public,0,0,0,False,Information Holder
+18,\src\com\fsck\k9\Account.java,Account,1137,75,143,55,55,False,False,1,False,False,31,78,26,77,False,False,False,True,False,public,138,4,1,False,Information Holder
+19,\src\com\fsck\k9\K9.Intents.java,Intents,25,0,0,0,0,False,False,1,False,False,0,0,0,0,True,False,True,True,False,public,0,0,0,False,Information Holder
+20,\src\com\fsck\k9\NotificationSetting.java,NotificationSetting,121,7,16,7,6,False,False,2,False,False,1,9,0,0,False,False,False,True,False,public,16,0,0,False,Information Holder
+21,\src\com\fsck\k9\Preferences.java,Preferences,136,7,11,1,6,False,False,1,False,False,11,4,12,14,False,False,False,True,False,public,11,0,0,False,Structurer
+22,\src\com\fsck\k9\SearchAccount.java,SearchAccount,92,11,20,8,8,False,False,2,False,False,1,10,4,1,False,False,False,True,False,public,19,0,1,False,Information Holder
+23,\src\com\fsck\k9\SearchSpecification.java,SearchSpecification,10,0,0,0,0,False,False,2,False,False,0,0,1,0,False,True,False,False,False,public,0,0,0,False,Service Provider
+24,\src\com\fsck\k9\K9.java,K9,719,74,75,33,9,False,False,1,False,False,12,40,31,29,False,False,False,True,False,public,70,3,2,False,Coordinator
+25,\src\com\fsck\k9\view\AccessibleWebView.java,AccessibleWebView,82,3,7,0,1,False,False,3,False,False,2,9,9,1,False,False,False,True,False,public,5,2,0,False,Coordinator
+26,\src\com\fsck\k9\view\ColorChip.java,ColorChip,23,2,1,0,0,False,False,2,False,False,0,0,3,2,False,False,False,True,False,public,1,0,0,False,Information Holder
+27,\src\com\fsck\k9\view\AttachmentView.java,AttachmentView,225,12,10,0,1,False,False,2,False,False,13,6,25,24,False,False,False,True,False,public,7,3,0,False,Interfacer
+28,\src\com\fsck\k9\view\ColorPickerBox.java,ColorPickerBox,54,8,2,1,0,False,False,3,False,False,1,2,6,1,False,False,False,True,False,public,1,0,1,False,Interfacer
+29,\src\com\fsck\k9\view\MessageHeader.HeaderEntry.java,HeaderEntry,9,2,0,0,0,False,False,2,False,False,0,0,0,0,True,False,True,True,False,private,0,0,0,False,Information Holder
+30,\src\com\fsck\k9\view\MessageCryptoView.java,MessageCryptoView,124,7,4,2,0,False,False,3,False,False,11,4,15,10,False,False,False,True,False,public,4,0,0,False,Interfacer
+31,\src\com\fsck\k9\view\MessageWebView.java,MessageWebView,97,1,3,0,0,False,False,3,False,False,4,1,11,9,False,False,False,True,False,public,3,0,0,False,Interfacer
+32,\src\com\fsck\k9\view\MessageHeader.java,MessageHeader,263,21,9,1,1,False,False,2,True,False,10,5,31,31,False,False,False,True,False,public,4,5,0,False,Interfacer
+33,\src\com\fsck\k9\view\ToggleScrollView.YScrollDetector.java,YScrollDetector,18,0,1,0,0,False,True,3,True,False,1,4,2,0,False,False,True,True,False,default,1,0,0,False,Service Provider
+34,\src\com\fsck\k9\view\ToggleScrollView.java,ToggleScrollView,38,2,3,1,0,False,False,3,False,False,2,3,5,1,False,False,False,True,False,public,3,0,0,False,Interfacer
+35,\src\com\fsck\k9\view\SingleMessageView.java,SingleMessageView,258,11,23,6,0,False,False,3,False,False,15,32,27,30,False,False,False,True,False,public,22,1,0,False,Interfacer
+36,\src\com\fsck\k9\service\BootReceiver.java,BootReceiver,119,5,5,0,0,False,False,2,True,False,9,11,10,8,False,False,False,True,False,public,4,1,0,False,Service Provider
+37,\src\com\fsck\k9\service\CoreReceiver.java,CoreReceiver,72,4,5,0,1,False,False,2,True,False,9,9,10,3,False,False,False,True,False,public,3,2,0,False,Service Provider
+38,\src\com\fsck\k9\service\CoreService.java,CoreService,137,6,8,0,0,False,False,2,False,False,16,11,15,22,False,False,False,True,False,public,6,0,2,True,Interfacer
+39,\src\com\fsck\k9\service\PollService.Listener.java,Listener,77,3,9,1,1,False,False,1,True,False,6,12,9,8,False,False,True,True,False,default,8,1,0,False,Service Provider
+40,\src\com\fsck\k9\service\PollService.java,PollService,56,3,4,0,0,False,False,2,False,False,6,5,6,6,False,False,False,True,False,public,4,0,0,False,Service Provider
+41,\src\com\fsck\k9\service\PushService.java,PushService,40,2,4,0,0,False,False,2,False,False,3,5,5,2,False,False,False,True,False,public,4,0,0,False,Service Provider
+42,\src\com\fsck\k9\service\MailService.java,MailService,388,14,20,1,1,False,False,2,False,False,45,28,17,55,False,False,False,True,False,public,12,8,0,False,Controller
+43,\src\com\fsck\k9\service\RemoteControlReceiver.java,RemoteControlReceiver,40,0,1,0,0,False,False,3,True,False,2,3,9,5,False,False,False,True,False,public,1,0,0,False,Service Provider
+44,\src\com\fsck\k9\service\ShutdownReceiver.java,ShutdownReceiver,34,0,1,0,0,False,False,2,True,False,1,2,5,1,False,False,False,True,False,public,1,0,0,False,Service Provider
+45,\src\com\fsck\k9\service\RemoteControlService.java,RemoteControlService,145,4,2,1,0,False,False,3,False,False,23,5,14,17,False,False,False,True,False,public,2,0,0,False,Controller
+46,\src\com\fsck\k9\service\SleepService.SleepDatum.java,SleepDatum,9,4,0,0,0,False,False,2,False,False,0,0,2,0,True,False,True,True,False,private,0,0,0,False,Information Holder
+47,\src\com\fsck\k9\service\SleepService.java,SleepService,109,4,4,0,0,False,False,2,False,False,17,8,9,13,False,False,False,True,False,public,2,2,0,False,Service Provider
+48,\src\com\fsck\k9\service\StorageGoneReceiver.java,StorageGoneReceiver,35,0,1,0,0,False,False,3,True,False,3,2,7,5,False,False,False,True,False,public,1,0,0,False,Service Provider
+49,\src\com\fsck\k9\service\StorageReceiver.java,StorageReceiver,29,0,1,0,0,False,False,2,True,False,3,2,7,5,False,False,False,True,False,public,1,0,0,False,Service Provider
+50,\src\com\fsck\k9\remotecontrol\AccountReceiver.java,AccountReceiver,23,1,1,0,0,False,False,2,True,False,2,2,5,1,False,False,False,True,False,default,1,0,0,False,Service Provider
+51,\src\com\fsck\k9\remotecontrol\K9AccountReceptor.java,K9AccountReceptor,10,0,0,0,0,False,False,3,True,False,0,0,0,0,False,True,False,False,False,public,0,0,0,False,Service Provider
+52,\src\com\fsck\k9\remotecontrol\K9RemoteControl.java,K9RemoteControl,118,30,2,1,0,False,False,3,False,False,0,4,3,0,False,False,False,True,False,public,2,0,0,False,Information Holder
+53,\src\com\fsck\k9\provider\AttachmentProvider.AttachmentProviderColumns.java,AttachmentProviderColumns,12,4,0,0,0,False,False,3,False,False,0,0,1,0,True,False,True,True,False,public,0,0,0,False,Information Holder
+54,\src\com\fsck\k9\provider\MessageProvider.AccountExtractor.java,AccountExtractor,8,0,1,0,1,False,False,2,True,False,0,1,1,1,True,False,True,True,False,public,1,0,0,False,Coordinator
+55,\src\com\fsck\k9\provider\AttachmentProvider.java,AttachmentProvider,234,3,14,0,5,False,False,2,True,False,12,31,20,28,False,False,False,True,False,public,10,4,0,False,Service Provider
+56,\src\com\fsck\k9\provider\MessageProvider.AccountsQueryHandler.java,AccountsQueryHandler,28,0,3,0,2,False,False,3,True,False,0,5,5,3,False,False,True,True,False,protected,3,0,0,False,Service Provider
+57,\src\com\fsck\k9\provider\MessageProvider.CountExtractor.java,CountExtractor,11,1,1,0,1,False,False,2,True,False,0,1,0,0,True,False,True,True,False,public,1,0,0,False,Information Holder
+58,\src\com\fsck\k9\provider\MessageProvider.DeleteUriExtractor.java,DeleteUriExtractor,12,0,1,0,1,False,False,3,True,False,0,1,2,2,True,False,True,True,False,public,1,0,0,False,Coordinator
+59,\src\com\fsck\k9\provider\MessageProvider.FieldExtractor.java,FieldExtractor,4,0,0,0,0,False,False,2,True,False,0,0,0,0,True,True,True,False,False,public,0,0,0,False,Service Provider
+60,\src\com\fsck\k9\provider\MessageProvider.IdExtractor.java,IdExtractor,8,0,1,0,1,False,False,2,True,False,0,1,1,1,True,False,True,True,False,public,1,0,0,False,Coordinator
+61,\src\com\fsck\k9\provider\MessageProvider.IncrementExtractor.java,IncrementExtractor,11,1,1,0,1,False,False,2,True,False,0,1,1,0,True,False,True,True,False,public,1,0,0,False,Coordinator
+62,\src\com\fsck\k9\provider\MessageProvider.MessageColumns.java,MessageColumns,30,8,0,0,0,False,False,2,False,False,0,0,1,0,True,True,True,False,False,public,0,0,0,False,Information Holder
+63,\src\com\fsck\k9\provider\MessageProvider.MessagesQueryHandler.java,MessagesQueryHandler,95,0,4,0,2,False,False,3,True,False,3,8,13,15,False,False,True,True,False,protected,2,0,2,False,Structurer
+64,\src\com\fsck\k9\provider\MessageProvider.MesssageInfoHolderRetrieverListener.java,MesssageInfoHolderRetrieverListener,51,2,2,0,0,False,False,5,True,False,0,4,14,2,False,False,True,True,False,protected,2,0,0,False,Structurer
+65,\src\com\fsck\k9\provider\MessageProvider.PreviewExtractor.java,PreviewExtractor,8,0,1,0,1,False,False,2,True,False,0,1,1,1,True,False,True,True,False,public,1,0,0,False,Coordinator
+66,\src\com\fsck\k9\provider\MessageProvider.MonitoredCursor.java,MonitoredCursor,265,3,43,1,17,False,False,2,True,False,2,26,12,24,True,False,True,True,False,protected,41,0,2,False,Service Provider
+67,\src\com\fsck\k9\provider\MessageProvider.QueryHandler.java,QueryHandler,23,0,0,0,0,False,False,2,True,False,0,0,2,0,True,True,True,False,False,protected,0,0,0,False,Service Provider
+68,\src\com\fsck\k9\provider\MessageProvider.SendDateExtractor.java,SendDateExtractor,8,0,1,0,1,False,False,3,True,False,0,1,1,1,True,False,True,True,False,public,1,0,0,False,Coordinator
+69,\src\com\fsck\k9\provider\MessageProvider.SenderExtractor.java,SenderExtractor,8,0,1,0,1,False,False,2,True,False,0,1,1,0,True,False,True,True,False,public,1,0,0,False,Coordinator
+70,\src\com\fsck\k9\provider\MessageProvider.SubjectExtractor.java,SubjectExtractor,8,0,1,0,1,False,False,2,True,False,0,1,1,1,True,False,True,True,False,public,1,0,0,False,Coordinator
+71,\src\com\fsck\k9\provider\MessageProvider.ThrottlingQueryHandler.java,ThrottlingQueryHandler,49,1,2,0,1,False,False,3,True,False,2,5,7,6,False,False,True,True,False,protected,2,0,0,False,Service Provider
+72,\src\com\fsck\k9\provider\MessageProvider.UnreadQueryHandler.java,UnreadQueryHandler,53,0,3,0,2,False,False,3,True,False,2,6,10,6,False,False,True,True,False,protected,3,0,0,False,Service Provider
+73,\src\com\fsck\k9\provider\MessageProvider.UriExtractor.java,UriExtractor,8,0,1,0,1,False,False,2,True,False,0,1,1,0,True,False,True,True,False,public,1,0,0,False,Coordinator
+74,\src\com\fsck\k9\preferences\AccountSettings.RingtoneValidator.java,RingtoneValidator,10,0,1,0,0,False,False,2,True,False,0,3,2,0,True,False,True,True,False,public,1,0,0,False,Service Provider
+75,\src\com\fsck\k9\provider\MessageProvider.java,MessageProvider,227,8,7,0,1,False,False,2,True,False,16,16,22,11,False,False,False,True,False,public,6,0,1,False,Coordinator
+76,\src\com\fsck\k9\preferences\AccountSettings.StorageProviderDefaultValue.java,StorageProviderDefaultValue,11,0,1,0,0,False,False,4,False,False,0,2,4,1,True,False,True,True,False,public,1,0,0,False,Service Provider
+77,\src\com\fsck\k9\preferences\AccountSettings.StorageProviderValidator.java,StorageProviderValidator,17,0,1,0,0,False,False,3,True,False,1,3,4,2,True,False,True,True,False,public,1,0,0,False,Service Provider
+78,\src\com\fsck\k9\preferences\AccountSettings.StoreUriValidator.java,StoreUriValidator,33,0,1,0,0,False,False,3,True,False,3,3,6,3,True,False,True,True,False,public,1,0,0,False,Service Provider
+79,\src\com\fsck\k9\preferences\AccountSettings.TransportUriValidator.java,TransportUriValidator,32,0,1,0,0,False,False,3,True,False,3,3,6,3,True,False,True,True,False,public,1,0,0,False,Service Provider
+80,\src\com\fsck\k9\preferences\CheckBoxListPreference.java,CheckBoxListPreference,58,3,5,2,1,False,False,4,False,False,1,4,5,1,False,False,False,True,False,public,3,0,2,False,Service Provider
+81,\src\com\fsck\k9\preferences\AccountSettings.java,AccountSettings,154,1,2,0,0,False,False,2,False,False,0,5,9,2,False,False,False,True,False,public,1,1,0,False,Interfacer
+82,\src\com\fsck\k9\preferences\GlobalSettings.DateFormatValidator.java,DateFormatValidator,15,0,1,0,0,False,False,3,True,False,0,3,3,0,True,False,True,True,False,public,1,0,0,False,Service Provider
+83,\src\com\fsck\k9\preferences\Editor.java,Editor,119,5,11,0,0,False,False,1,True,False,6,12,6,12,False,False,False,True,False,public,11,0,0,False,Service Provider
+84,\src\com\fsck\k9\preferences\GlobalSettings.DipFontSizeValidator.java,DipFontSizeValidator,22,0,1,0,0,False,False,4,True,False,1,3,3,0,True,False,True,True,False,public,1,0,0,False,Service Provider
+85,\src\com\fsck\k9\preferences\GlobalSettings.GalleryBugWorkaroundDefaultValue.java,GalleryBugWorkaroundDefaultValue,10,0,1,0,0,False,False,5,False,False,0,2,3,1,True,False,True,True,False,public,1,0,0,False,Service Provider
+86,\src\com\fsck\k9\preferences\GlobalSettings.ThemeValidator.java,ThemeValidator,10,0,1,0,0,False,False,2,True,False,0,3,2,0,True,False,True,True,False,public,1,0,0,False,Service Provider
+87,\src\com\fsck\k9\preferences\GlobalSettings.TimeValidator.java,TimeValidator,9,0,1,0,0,False,False,2,True,False,0,3,2,0,True,False,True,True,False,public,1,0,0,False,Service Provider
+88,\src\com\fsck\k9\preferences\GlobalSettings.WebViewFontSizeValidator.java,WebViewFontSizeValidator,10,0,1,0,0,False,False,5,True,False,0,3,2,0,True,False,True,True,False,public,1,0,0,False,Service Provider
+89,\src\com\fsck\k9\preferences\Settings.BooleanValidator.java,BooleanValidator,21,0,1,0,0,False,False,2,True,False,0,3,1,1,True,False,True,True,False,public,1,0,0,False,Service Provider
+90,\src\com\fsck\k9\preferences\GlobalSettings.java,GlobalSettings,137,3,3,0,1,False,False,2,False,False,1,5,8,5,False,False,False,True,False,public,2,1,0,False,Coordinator
+91,\src\com\fsck\k9\preferences\Settings.ExceptionDefaultValue.java,ExceptionDefaultValue,21,0,1,0,0,False,False,3,False,False,0,2,1,0,True,False,True,True,False,public,1,0,0,False,Service Provider
+92,\src\com\fsck\k9\preferences\Settings.IDefaultValue.java,IDefaultValue,18,0,0,0,0,False,False,3,False,False,0,0,1,0,False,True,True,False,False,public,0,0,0,False,Service Provider
+93,\src\com\fsck\k9\preferences\Settings.ISettingValidator.java,ISettingValidator,18,0,0,0,0,False,False,3,True,False,0,0,1,0,False,True,True,False,False,public,0,0,0,False,Service Provider
+94,\src\com\fsck\k9\preferences\Settings.IntegerValidator.java,IntegerValidator,26,0,1,0,0,False,False,2,True,False,0,3,1,0,True,False,True,True,False,public,1,0,0,False,Service Provider
+95,\src\com\fsck\k9\preferences\Settings.PositiveIntegerValidator.java,PositiveIntegerValidator,21,0,1,0,0,False,False,3,True,False,0,3,1,0,True,False,True,True,False,public,1,0,0,False,Service Provider
+96,\src\com\fsck\k9\preferences\Settings.ResourceArrayValidator.java,ResourceArrayValidator,37,1,1,0,0,False,False,3,True,False,1,3,3,1,True,False,True,True,False,public,1,0,0,False,Service Provider
+97,\src\com\fsck\k9\preferences\Settings.SettingType.java,SettingType,20,4,0,0,0,False,False,2,False,False,0,0,0,0,False,False,True,False,True,public,0,0,0,False,Information Holder
+98,\src\com\fsck\k9\preferences\Settings.SettingsDescription.java,SettingsDescription,25,3,0,0,0,False,False,2,False,False,0,0,0,0,True,False,True,True,False,public,0,0,0,False,Information Holder
+99,\src\com\fsck\k9\preferences\Settings.SolidColorValidator.java,SolidColorValidator,22,0,1,0,0,False,False,3,True,False,0,3,1,0,True,False,True,True,False,public,1,0,0,False,Service Provider
+100,\src\com\fsck\k9\preferences\Settings.java,Settings,86,5,2,0,0,False,False,1,False,False,8,7,4,4,False,False,False,True,False,public,2,0,0,False,Service Provider
+101,\src\com\fsck\k9\preferences\StorageImportExportException.java,StorageImportExportException,15,0,0,0,0,False,False,4,False,False,0,0,0,0,False,False,False,True,False,public,0,0,0,False,Information Holder
+102,\src\com\fsck\k9\preferences\Storage.java,Storage,343,9,24,0,7,True,False,1,False,False,31,29,15,43,False,False,False,True,False,public,12,7,5,False,Structurer
+103,\src\com\fsck\k9\preferences\StorageImporter.AccountDescription.java,AccountDescription,15,2,0,0,0,False,False,2,False,False,0,0,0,0,True,False,True,True,False,public,0,0,0,False,Information Holder
+104,\src\com\fsck\k9\preferences\StorageExporter.java,StorageExporter,284,18,7,0,0,False,False,2,True,False,18,26,23,29,False,False,False,True,False,public,3,4,0,False,Service Provider
+105,\src\com\fsck\k9\preferences\StorageImporter.AccountDescriptionPair.java,AccountDescriptionPair,9,2,0,0,0,False,False,3,False,False,0,0,0,0,True,False,True,True,False,public,0,0,0,False,Information Holder
+106,\src\com\fsck\k9\preferences\StorageImporter.ImportContents.java,ImportContents,16,2,0,0,0,False,False,2,False,False,0,0,1,0,True,False,True,True,False,public,0,0,0,False,Information Holder
+107,\src\com\fsck\k9\preferences\StorageImporter.ImportResults.java,ImportResults,14,3,0,0,0,False,False,2,False,False,0,0,1,0,True,False,True,True,False,public,0,0,0,False,Information Holder
+108,\src\com\fsck\k9\preferences\StorageImporter.Imported.java,Imported,6,2,0,0,0,False,False,1,False,False,0,0,1,0,True,False,True,True,False,private,0,0,0,False,Information Holder
+109,\src\com\fsck\k9\preferences\StorageImporter.ImportedAccount.java,ImportedAccount,9,5,0,0,0,False,False,2,False,False,0,0,1,0,True,False,True,True,False,private,0,0,0,False,Information Holder
+110,\src\com\fsck\k9\preferences\StorageImporter.ImportedFolder.java,ImportedFolder,5,2,0,0,0,False,False,2,True,False,0,0,0,0,True,False,True,True,False,private,0,0,0,False,Information Holder
+111,\src\com\fsck\k9\preferences\StorageImporter.ImportedIdentity.java,ImportedIdentity,7,4,0,0,0,False,False,2,False,False,0,0,0,0,True,False,True,True,False,private,0,0,0,False,Information Holder
+112,\src\com\fsck\k9\preferences\StorageImporter.ImportedSettings.java,ImportedSettings,6,1,0,0,0,False,False,2,False,False,0,0,2,0,True,False,True,True,False,private,0,0,0,False,Information Holder
+113,\src\com\fsck\k9\preferences\TimePickerPreference.java,TimePickerPreference,120,2,7,1,3,False,False,3,False,False,5,4,5,1,False,False,False,True,False,public,3,3,1,False,Interfacer
+114,\src\com\fsck\k9\mail\AuthenticationFailedException.java,AuthenticationFailedException,10,1,0,0,0,False,False,3,False,False,0,0,0,0,False,False,False,True,False,public,0,0,0,False,Information Holder
+115,\src\com\fsck\k9\mail\Body.java,Body,8,0,0,0,0,False,False,1,False,False,0,0,3,0,False,True,False,False,False,public,0,0,0,False,Service Provider
+116,\src\com\fsck\k9\mail\BodyPart.java,BodyPart,10,1,2,1,1,False,False,2,False,False,0,1,0,0,False,False,False,True,False,public,2,0,0,True,Information Holder
+117,\src\com\fsck\k9\mail\Address.java,Address,313,4,18,2,2,False,False,1,False,False,28,13,17,28,False,False,False,True,False,public,18,0,0,False,Service Provider
+118,\src\com\fsck\k9\mail\CertificateValidationException.java,CertificateValidationException,10,1,0,0,0,False,False,3,False,False,0,0,0,0,False,False,False,True,False,public,0,0,0,False,Information Holder
+119,\src\com\fsck\k9\preferences\StorageImporter.java,StorageImporter,586,0,20,0,2,False,False,2,True,False,61,53,20,84,False,False,False,True,False,public,3,17,0,False,Service Provider
+120,\src\com\fsck\k9\mail\FetchProfile.Item.java,Item,42,5,0,0,0,False,False,1,False,False,0,0,0,0,False,False,True,False,True,public,0,0,0,False,Information Holder
+121,\src\com\fsck\k9\mail\FetchProfile.java,FetchProfile,22,1,0,0,0,False,True,2,False,False,0,0,1,0,False,False,False,True,False,public,0,0,0,False,Structurer
+122,\src\com\fsck\k9\mail\Flag.java,Flag,48,13,0,0,0,False,False,1,False,False,0,0,0,0,False,False,False,False,True,public,0,0,0,False,Information Holder
+123,\src\com\fsck\k9\mail\Folder.FolderClass.java,FolderClass,4,5,0,0,0,False,False,2,False,False,0,0,0,0,False,False,True,False,True,public,0,0,0,False,Information Holder
+124,\src\com\fsck\k9\mail\Folder.FolderType.java,FolderType,4,2,0,0,0,False,False,2,False,False,0,0,0,0,False,False,True,False,True,public,0,0,0,False,Information Holder
+125,\src\com\fsck\k9\mail\Folder.OpenMode.java,OpenMode,4,2,0,0,0,False,False,2,False,False,0,0,0,0,False,False,True,False,True,public,0,0,0,False,Information Holder
+126,\src\com\fsck\k9\mail\Message.RecipientType.java,RecipientType,4,3,0,0,0,False,False,2,False,False,0,0,0,0,False,False,True,False,True,public,0,0,0,False,Information Holder
+127,\src\com\fsck\k9\mail\Folder.java,Folder,155,4,23,3,10,False,False,1,True,False,1,19,6,3,False,False,False,True,False,public,23,0,0,True,Structurer
+128,\src\com\fsck\k9\mail\MessagingException.java,MessagingException,25,2,2,1,0,False,False,2,False,False,0,1,0,0,False,False,False,True,False,public,2,0,0,False,Information Holder
+129,\src\com\fsck\k9\mail\Message.java,Message,145,6,18,5,4,False,False,1,False,False,6,14,5,8,False,False,False,True,False,public,18,0,0,True,Structurer
+130,\src\com\fsck\k9\mail\Multipart.java,Multipart,64,3,11,3,4,False,False,1,False,False,3,9,4,4,False,False,False,True,False,public,11,0,0,True,Structurer
+131,\src\com\fsck\k9\mail\Part.java,Part,18,0,0,0,0,False,False,1,False,False,0,0,2,0,False,True,False,False,False,public,0,0,0,False,Service Provider
+132,\src\com\fsck\k9\mail\PushReceiver.java,PushReceiver,15,0,0,0,0,False,False,2,True,False,0,0,3,0,False,True,False,False,False,public,0,0,0,False,Service Provider
+133,\src\com\fsck\k9\mail\Pusher.java,Pusher,14,0,0,0,0,False,False,1,True,False,0,0,1,0,False,True,False,False,False,public,0,0,0,False,Service Provider
+134,\src\com\fsck\k9\mail\Store.java,Store,97,5,10,0,4,False,False,1,False,False,6,5,8,3,False,False,False,True,False,public,10,0,0,True,Structurer
+135,\src\com\fsck\k9\mail\Transport.java,Transport,22,2,1,0,1,False,False,1,False,False,1,1,3,1,False,False,False,True,False,public,1,0,0,True,Service Provider
+136,\src\com\fsck\k9\mail\transport\TrustedSocketFactory.java,TrustedSocketFactory,57,2,4,0,0,False,False,3,False,False,0,11,15,3,False,False,False,True,False,public,4,0,0,False,Interfacer
+137,\src\com\fsck\k9\mail\transport\WebDavTransport.java,WebDavTransport,33,1,3,0,0,False,False,3,False,False,3,1,7,3,False,False,False,True,False,public,3,0,0,False,Service Provider
+138,\src\com\fsck\k9\mail\transport\imap\ImapSettings.java,ImapSettings,20,0,0,0,0,False,False,2,False,False,0,0,1,0,False,True,False,False,False,public,0,0,0,False,Service Provider
+139,\src\com\fsck\k9\mail\store\ImapResponseParser.IImapResponseCallback.java,IImapResponseCallback,24,0,0,0,0,False,False,4,False,False,0,0,2,0,False,True,True,False,False,public,0,0,0,False,Service Provider
+140,\src\com\fsck\k9\mail\transport\SmtpTransport.java,SmtpTransport,463,16,12,0,0,False,False,2,False,False,31,15,26,44,False,False,False,True,False,public,3,9,0,False,Interfacer
+141,\src\com\fsck\k9\mail\store\ImapResponseParser.ImapList.java,ImapList,99,1,15,0,13,False,True,2,False,False,5,15,5,0,False,False,True,True,False,public,14,1,0,False,Structurer
+142,\src\com\fsck\k9\mail\store\ImapResponseParser.ImapResponse.java,ImapResponse,35,5,3,0,1,False,False,2,False,False,2,0,1,3,False,False,True,True,False,public,3,0,0,False,Information Holder
+143,\src\com\fsck\k9\mail\store\ImapStore.AuthType.java,AuthType,8,2,0,0,0,False,False,2,False,False,0,0,0,0,False,False,True,False,True,public,0,0,0,False,Information Holder
+144,\src\com\fsck\k9\mail\store\ImapStore.FetchBodyCallback.java,FetchBodyCallback,33,1,1,0,0,False,False,3,False,False,1,2,6,0,True,False,True,True,False,private,1,0,0,False,Service Provider
+145,\src\com\fsck\k9\mail\store\ImapResponseParser.java,ImapResponseParser,312,6,16,0,0,False,False,3,True,False,18,10,5,18,False,False,False,True,False,public,3,13,0,False,Service Provider
+146,\src\com\fsck\k9\mail\store\ImapStore.FetchPartCallback.java,FetchPartCallback,31,1,1,0,0,False,False,3,False,False,1,2,6,0,True,False,True,True,False,private,1,0,0,False,Service Provider
+147,\src\com\fsck\k9\mail\store\ImapStore.ImapBodyPart.java,ImapBodyPart,17,0,1,1,0,False,False,3,False,False,0,1,2,0,True,False,True,True,False,default,1,0,0,False,Service Provider
+148,\src\com\fsck\k9\mail\store\ImapStore.ImapException.java,ImapException,26,2,2,1,1,False,False,2,False,False,0,1,1,0,True,False,True,True,False,default,2,0,0,False,Information Holder
+149,\src\com\fsck\k9\mail\store\ImapStore.ImapMessage.java,ImapMessage,39,0,5,3,0,False,False,2,False,False,0,7,7,0,True,False,True,True,False,default,5,0,0,False,Service Provider
+150,\src\com\fsck\k9\mail\store\ImapStore.ImapConnection.java,ImapConnection,516,7,16,1,1,False,False,2,False,False,68,13,42,84,True,False,True,True,False,public,10,1,5,False,Interfacer
+151,\src\com\fsck\k9\mail\store\ImapStore.ImapPushState.java,ImapPushState,41,1,2,0,0,False,False,3,False,False,3,1,3,6,True,False,True,True,False,protected,1,0,1,False,Service Provider
+152,\src\com\fsck\k9\mail\store\ImapStore.ImapPusher.java,ImapPusher,73,4,6,1,2,False,False,2,True,False,3,2,6,11,False,False,True,True,False,public,6,0,0,False,Service Provider
+153,\src\com\fsck\k9\mail\store\ImapStore.ImapSearcher.java,ImapSearcher,14,0,0,0,0,False,False,2,True,False,0,0,4,0,False,True,True,False,False,private,0,0,0,False,Service Provider
+154,\src\com\fsck\k9\mail\store\ImapStore.ImapFolderPusher.java,ImapFolderPusher,454,10,13,0,0,False,False,3,True,False,72,14,20,76,False,False,True,True,False,public,4,6,3,False,Service Provider
+155,\src\com\fsck\k9\mail\store\ImapStore.StoreImapSettings.java,StoreImapSettings,62,0,13,3,9,False,False,3,False,False,0,4,1,0,False,False,True,True,False,public,13,0,0,False,Information Holder
+156,\src\com\fsck\k9\mail\store\ImapStore.UntaggedHandler.java,UntaggedHandler,11,0,0,0,0,False,False,2,True,False,0,0,1,0,False,True,True,False,False,private,0,0,0,False,Service Provider
+157,\src\com\fsck\k9\mail\store\LockableDatabase.DbCallback.java,DbCallback,13,0,0,0,0,True,False,2,False,False,0,0,1,0,True,True,True,False,False,public,0,0,0,False,Service Provider
+158,\src\com\fsck\k9\mail\store\ImapStore.ImapFolder.java,ImapFolder,1126,8,50,2,20,False,False,2,True,False,119,64,29,90,False,False,True,True,False,default,31,8,11,False,Structurer
+159,\src\com\fsck\k9\mail\store\LockableDatabase.SchemaDefinition.java,SchemaDefinition,9,0,0,0,0,True,False,2,False,False,0,0,1,0,True,True,True,False,False,public,0,0,0,False,Service Provider
+160,\src\com\fsck\k9\mail\store\ImapStore.java,ImapStore,364,34,15,0,5,False,False,2,False,False,22,9,28,30,False,False,False,True,False,public,8,7,0,False,Structurer
+161,\src\com\fsck\k9\mail\store\LockableDatabase.StorageListener.java,StorageListener,38,0,2,0,0,False,False,2,True,False,4,2,2,1,False,False,True,True,False,private,2,0,0,False,Service Provider
+162,\src\com\fsck\k9\mail\store\LockableDatabase.WrappedException.java,WrappedException,10,1,0,0,0,False,False,2,False,False,0,0,0,0,True,False,True,True,False,protected,0,0,0,False,Information Holder
+163,\src\com\fsck\k9\mail\store\Pop3Store.Pop3Capabilities.java,Pop3Capabilities,20,5,1,0,0,False,False,2,False,False,0,0,3,0,True,False,True,True,False,default,1,0,0,False,Service Provider
+164,\src\com\fsck\k9\mail\store\LockableDatabase.java,LockableDatabase,370,9,17,1,2,True,False,2,False,False,16,10,11,37,False,False,False,True,False,public,7,2,8,False,Service Provider
+165,\src\com\fsck\k9\mail\store\Pop3Store.Pop3Message.java,Pop3Message,36,0,4,2,0,False,False,2,False,False,0,5,4,0,True,False,True,True,False,default,3,0,1,False,Service Provider
+166,\src\com\fsck\k9\mail\store\Pop3Store.Pop3ResponseInputStream.java,Pop3ResponseInputStream,29,3,1,0,0,False,False,4,False,False,3,0,3,3,True,False,True,True,False,default,1,0,0,False,Service Provider
+167,\src\com\fsck\k9\mail\store\Pop3Store.java,Pop3Store,110,13,3,0,2,False,False,2,False,False,6,2,10,9,False,False,False,True,False,public,3,0,0,False,Interfacer
+168,\src\com\fsck\k9\mail\store\StorageManager.ExternalStorageProvider.java,ExternalStorageProvider,53,3,8,0,5,False,False,3,True,False,0,9,4,3,True,False,True,True,False,public,8,0,0,False,Information Holder
+169,\src\com\fsck\k9\mail\store\Pop3Store.Pop3Folder.java,Pop3Folder,671,8,36,2,12,False,False,2,True,False,63,37,17,43,False,False,True,True,False,default,25,11,0,False,Controller
+170,\src\com\fsck\k9\mail\store\StorageManager.FixedStorageProviderBase.java,FixedStorageProviderBase,70,2,6,0,3,False,False,4,False,False,0,8,6,3,True,False,True,True,False,public,6,0,0,True,Information Holder
+171,\src\com\fsck\k9\mail\store\StorageManager.HtcIncredibleStorageProvider.java,HtcIncredibleStorageProvider,28,1,4,0,2,False,False,4,True,False,0,2,4,0,True,False,True,True,False,public,2,0,2,False,Information Holder
+172,\src\com\fsck\k9\mail\store\StorageManager.InternalStorageProvider.java,InternalStorageProvider,46,2,8,0,5,False,False,3,True,False,0,9,3,0,True,False,True,True,False,public,8,0,0,False,Information Holder
+173,\src\com\fsck\k9\mail\store\StorageManager.SamsungGalaxySStorageProvider.java,SamsungGalaxySStorageProvider,32,1,4,0,2,False,False,5,True,False,0,2,5,1,True,False,True,True,False,public,2,0,2,False,Information Holder
+174,\src\com\fsck\k9\mail\store\StorageManager.StorageListener.java,StorageListener,23,0,0,0,0,False,False,2,True,False,0,0,0,0,True,True,True,False,False,public,0,0,0,False,Structurer
+175,\src\com\fsck\k9\mail\store\StorageManager.StorageProvider.java,StorageProvider,93,0,0,0,0,False,False,2,True,False,0,0,2,0,True,True,True,False,False,public,0,0,0,False,Information Holder
+176,\src\com\fsck\k9\mail\store\StorageManager.SynchronizationAid.java,SynchronizationAid,22,3,0,0,0,False,False,2,False,False,0,0,3,2,True,False,True,True,False,public,0,0,0,False,Information Holder
+177,\src\com\fsck\k9\mail\store\TrustManagerFactory.SecureX509TrustManager.java,SecureX509TrustManager,54,2,4,0,2,False,False,4,True,False,3,5,7,2,True,False,True,True,False,private,4,0,0,False,Service Provider
+178,\src\com\fsck\k9\mail\store\StorageManager.java,StorageManager,348,5,16,0,6,False,False,2,True,False,13,17,10,19,False,False,False,True,False,public,14,0,2,False,Service Provider
+179,\src\com\fsck\k9\mail\store\TrustManagerFactory.SimpleX509TrustManager.java,SimpleX509TrustManager,15,0,3,0,1,False,False,4,True,False,0,4,3,0,True,False,True,True,False,private,3,0,0,False,Service Provider
+180,\src\com\fsck\k9\mail\store\UnavailableAccountException.java,UnavailableAccountException,34,1,0,0,0,False,False,3,False,False,0,0,0,0,False,False,False,True,False,public,0,0,0,False,Service Provider
+181,\src\com\fsck\k9\mail\store\TrustManagerFactory.java,TrustManagerFactory,126,7,5,1,3,False,False,3,False,False,7,5,14,12,False,False,False,True,False,public,5,0,0,False,Interfacer
+182,\src\com\fsck\k9\mail\store\UnavailableStorageException.java,UnavailableStorageException,19,1,0,0,0,False,False,3,False,False,0,0,1,0,False,False,False,True,False,public,0,0,0,False,Information Holder
+183,\src\com\fsck\k9\mail\store\WebDavStore.ConnectionInfo.java,ConnectionInfo,16,4,0,0,0,False,False,2,False,False,0,0,3,0,True,False,True,True,False,private,0,0,0,False,Information Holder
+184,\src\com\fsck\k9\mail\store\WebDavStore.DataSet.java,DataSet,155,3,8,0,6,False,False,2,False,False,8,2,10,8,False,False,True,True,False,public,8,0,0,False,Structurer
+185,\src\com\fsck\k9\mail\store\WebDavStore.HttpGeneric.java,HttpGeneric,77,1,2,1,1,False,False,2,False,False,5,1,7,2,False,False,True,True,False,public,2,0,0,False,Information Holder
+186,\src\com\fsck\k9\mail\store\WebDavStore.ParsedMessageEnvelope.java,ParsedMessageEnvelope,63,5,7,2,4,False,False,3,False,False,2,4,5,0,True,False,True,True,False,public,7,0,0,False,Information Holder
+187,\src\com\fsck\k9\mail\store\WebDavStore.WebDavHandler.java,WebDavHandler,47,2,6,0,1,False,False,3,True,False,1,10,7,4,False,False,True,True,False,public,6,0,0,False,Service Provider
+188,\src\com\fsck\k9\mail\store\WebDavStore.WebDavHttpClient.java,WebDavHttpClient,56,0,3,0,1,False,False,4,False,False,4,4,9,3,True,False,True,True,False,public,3,0,0,False,Service Provider
+189,\src\com\fsck\k9\mail\store\WebDavStore.WebDavMessage.java,WebDavMessage,98,1,8,5,1,False,False,3,False,False,5,9,7,4,False,False,True,True,False,default,8,0,0,False,Service Provider
+190,\src\com\fsck\k9\mail\internet\BinaryTempFileBody.BinaryTempFileBodyInputStream.java,BinaryTempFileBodyInputStream,18,0,1,0,0,False,False,6,False,False,0,0,1,2,False,False,True,True,False,default,1,0,0,False,Service Provider
+191,\src\com\fsck\k9\mail\store\WebDavStore.WebDavFolder.java,WebDavFolder,614,6,38,3,14,False,False,3,True,False,47,46,16,46,False,False,True,True,False,default,28,9,1,False,Service Provider
+192,\src\com\fsck\k9\mail\internet\BinaryTempFileBody.java,BinaryTempFileBody,44,2,4,1,2,False,False,4,False,False,1,2,5,3,False,False,False,True,False,public,4,0,0,False,Information Holder
+193,\src\com\fsck\k9\mail\internet\EncoderUtil.Encoding.java,Encoding,16,2,0,0,0,False,False,1,False,False,0,0,0,0,False,False,True,False,True,public,0,0,0,False,Information Holder
+194,\src\com\fsck\k9\mail\internet\DecoderUtil.java,DecoderUtil,163,0,4,0,0,False,False,2,False,False,12,10,10,4,False,False,False,True,False,public,1,3,0,False,Service Provider
+195,\src\com\fsck\k9\mail\internet\Iso2022JpToShiftJisInputStream.Charset.java,Charset,4,3,0,0,0,False,False,1,False,False,0,0,0,0,False,False,True,False,True,private,0,0,0,False,Information Holder
+196,\src\com\fsck\k9\mail\internet\EncoderUtil.java,EncoderUtil,148,4,9,0,0,False,False,2,False,False,11,17,4,11,False,False,False,True,False,public,1,8,0,False,Service Provider
+197,\src\com\fsck\k9\mail\internet\Iso2022JpToShiftJisInputStream.java,Iso2022JpToShiftJisInputStream,62,4,1,0,0,False,False,7,False,False,9,0,3,6,False,False,False,True,False,default,1,0,0,False,Service Provider
+198,\src\com\fsck\k9\mail\store\WebDavStore.java,WebDavStore,880,31,31,0,17,False,False,3,False,False,61,29,36,61,False,False,False,True,False,public,15,16,0,False,Interfacer
+199,\src\com\fsck\k9\mail\internet\MimeHeader.Field.java,Field,16,2,1,0,0,False,False,1,False,False,0,0,1,1,True,False,True,True,False,default,1,0,0,False,Information Holder
+200,\src\com\fsck\k9\mail\internet\MimeBodyPart.java,MimeBodyPart,114,3,14,2,8,False,False,3,False,False,8,10,7,5,False,False,False,True,False,public,13,0,1,False,Structurer
+201,\src\com\fsck\k9\mail\internet\MimeHeader.java,MimeHeader,109,9,10,2,3,False,False,2,True,False,9,10,7,4,False,False,False,True,False,public,10,0,0,False,Structurer
+202,\src\com\fsck\k9\mail\internet\MimeMessage.MimeMessageBuilder.java,MimeMessageBuilder,127,1,15,0,0,False,False,3,True,False,2,9,9,19,False,False,True,True,False,default,14,1,0,False,Structurer
+203,\src\com\fsck\k9\mail\internet\MimeMultipart.java,MimeMultipart,72,4,7,2,3,False,False,2,False,False,3,3,4,6,False,False,False,True,False,public,7,0,0,False,Structurer
+204,\src\com\fsck\k9\mail\internet\MimeMessage.java,MimeMessage,368,13,37,13,17,False,False,2,False,False,25,24,11,13,False,False,False,True,False,public,34,1,2,False,Information Holder
+205,\src\com\fsck\k9\mail\internet\TextBody.java,TextBody,75,6,9,4,4,False,False,2,False,False,3,5,4,1,False,False,False,True,False,public,9,0,0,False,Information Holder
+206,\src\com\fsck\k9\mail\filter\CountingOutputStream.java,CountingOutputStream,19,1,2,0,1,False,False,3,False,False,0,1,2,0,False,False,False,True,False,public,2,0,0,False,Information Holder
+207,\src\com\fsck\k9\mail\filter\Base64OutputStream.java,Base64OutputStream,171,3,5,0,0,False,False,3,False,False,6,5,3,3,False,False,False,True,False,public,4,1,0,False,Coordinator
+208,\src\com\fsck\k9\mail\filter\EOLConvertingOutputStream.java,EOLConvertingOutputStream,34,2,2,0,0,False,False,6,False,False,3,1,3,1,False,False,False,True,False,public,2,0,0,False,Service Provider
+209,\src\com\fsck\k9\mail\filter\FixedLengthInputStream.java,FixedLengthInputStream,52,3,5,0,0,False,False,4,False,False,3,4,2,2,False,False,False,True,False,public,5,0,0,False,Service Provider
+210,\src\com\fsck\k9\mail\filter\Base64.java,Base64,693,18,23,1,0,False,False,1,False,False,39,29,6,7,False,False,False,True,False,public,12,3,0,False,Service Provider
+211,\src\com\fsck\k9\mail\filter\LineWrapOutputStream.java,LineWrapOutputStream,73,5,2,0,0,False,False,4,False,False,7,1,3,1,False,False,False,True,False,public,2,0,0,False,Service Provider
+212,\src\com\fsck\k9\mail\filter\PeekableInputStream.java,PeekableInputStream,56,3,5,0,0,False,False,3,False,False,4,4,2,2,False,False,False,True,False,public,5,0,0,False,Service Provider
+213,\src\com\fsck\k9\mail\filter\SmtpDataStuffing.java,SmtpDataStuffing,28,4,1,0,0,False,False,3,False,False,1,1,3,0,False,False,False,True,False,public,1,0,0,False,Service Provider
+214,\src\com\fsck\k9\mail\filter\StatusOutputStream.java,StatusOutputStream,23,1,1,0,0,False,False,3,False,False,2,1,6,0,False,False,False,True,False,public,1,0,0,False,Service Provider
+215,\src\com\fsck\k9\mail\internet\MimeUtility.java,MimeUtility,2282,3,31,1,12,False,False,2,False,False,52,45,12,45,False,False,False,True,False,public,21,8,0,False,Service Provider
+216,\src\com\fsck\k9\helper\AutoSyncHelper.java,AutoSyncHelper,102,3,3,0,1,False,False,3,True,False,5,0,3,2,False,False,False,True,False,public,2,1,0,False,Service Provider
+217,\src\com\fsck\k9\helper\AutoSyncSdk3.java,AutoSyncSdk3,35,2,2,0,1,False,False,3,False,False,0,1,5,2,False,False,False,True,False,public,2,0,0,False,Information Holder
+218,\src\com\fsck\k9\helper\AutoSyncSdk4.java,AutoSyncSdk4,35,2,2,0,1,False,False,3,False,False,0,1,5,1,False,False,False,True,False,public,2,0,0,False,Information Holder
+219,\src\com\fsck\k9\helper\AutoSyncSdk5.java,AutoSyncSdk5,15,0,2,0,1,False,False,3,False,False,0,1,2,1,False,False,False,True,False,public,2,0,0,False,Service Provider
+220,\src\com\fsck\k9\helper\Contacts.java,Contacts,151,3,1,0,1,False,False,1,False,False,2,1,9,1,False,False,False,True,False,public,1,0,0,True,Information Holder
+221,\src\com\fsck\k9\helper\ContactsSdk3_4.java,4,209,5,9,0,5,False,False,1,False,False,12,8,6,17,False,False,False,True,False,public,8,1,0,False,Structurer
+222,\src\com\fsck\k9\helper\ContactsSdk5.java,ContactsSdk5,179,5,9,0,5,False,False,2,False,False,10,8,11,15,False,False,False,True,False,public,8,1,0,False,Structurer
+223,\src\com\fsck\k9\helper\ContactsSdk5p.java,ContactsSdk5p,97,0,1,0,0,False,False,2,False,False,4,1,6,7,False,False,False,True,False,public,1,0,0,False,Service Provider
+224,\src\com\fsck\k9\helper\DateFormatter.java,DateFormatter,70,7,7,1,5,False,False,2,True,False,3,9,9,5,False,False,False,True,False,public,7,0,0,False,Structurer
+225,\src\com\fsck\k9\helper\HtmlConverter.HtmlToTextTagHandler.java,HtmlToTextTagHandler,75,3,3,0,1,False,False,5,True,False,4,7,5,7,True,False,True,True,False,private,1,2,0,False,Service Provider
+226,\src\com\fsck\k9\helper\DomainNameChecker.java,DomainNameChecker,260,3,6,0,0,False,False,3,True,False,33,11,12,24,False,False,False,True,False,public,1,5,0,False,Service Provider
+227,\src\com\fsck\k9\helper\IAutoSync.java,IAutoSync,23,0,0,0,0,False,False,3,False,False,0,0,1,0,False,True,False,False,False,public,0,0,0,False,Service Provider
+228,\src\com\fsck\k9\helper\MediaScannerNotifier.java,MediaScannerNotifier,32,3,2,0,0,False,False,3,True,False,1,2,6,3,False,False,False,True,False,public,2,0,0,False,Service Provider
+229,\src\com\fsck\k9\helper\HtmlConverter.java,HtmlConverter,1013,6,9,0,1,False,False,2,True,False,10,8,6,20,False,False,False,True,False,public,4,5,0,False,Service Provider
+230,\src\com\fsck\k9\helper\MessageHelper.java,MessageHelper,80,4,3,0,1,False,False,2,True,False,5,6,17,10,False,False,False,True,False,public,3,0,0,False,Service Provider
+231,\src\com\fsck\k9\helper\Regex.java,Regex,211,9,2,0,0,False,False,1,False,False,2,2,2,5,False,False,False,True,False,public,2,0,0,False,Information Holder
+232,\src\com\fsck\k9\helper\SizeFormatter.java,SizeFormatter,21,0,1,0,0,False,False,2,True,False,3,2,2,0,False,False,False,True,False,public,1,0,0,False,Service Provider
+233,\src\com\fsck\k9\helper\power\TracingPowerManager.TracingWakeLock.java,TracingWakeLock,101,6,6,1,0,False,False,3,False,False,13,2,4,9,False,False,True,True,False,public,4,2,0,False,Service Provider
+234,\src\com\fsck\k9\helper\power\TracingPowerManager.java,TracingPowerManager,32,5,2,0,1,False,False,3,True,False,3,3,6,0,False,False,False,True,False,public,2,0,0,False,Service Provider
+235,\src\com\fsck\k9\crypto\Apg.Intent.java,Intent,14,8,0,0,0,False,False,1,False,False,0,0,0,0,True,False,True,True,False,public,0,0,0,False,Information Holder
+236,\src\com\fsck\k9\helper\Utility.java,Utility,556,6,21,1,0,False,False,1,False,False,50,33,16,66,False,False,False,True,False,public,21,0,0,False,Service Provider
+237,\src\com\fsck\k9\crypto\CryptoProvider.java,CryptoProvider,32,1,1,0,0,False,False,2,True,False,1,1,4,2,False,False,False,True,False,public,1,0,0,True,Service Provider
+238,\src\com\fsck\k9\crypto\None.java,None,64,2,13,0,3,False,False,1,False,False,0,24,3,0,False,False,False,True,False,public,13,0,0,False,Information Holder
+239,\src\com\fsck\k9\crypto\Apg.java,Apg,427,32,13,0,3,False,False,1,False,False,27,24,19,46,False,False,False,True,False,public,13,0,0,False,Structurer
+240,\src\com\fsck\k9\crypto\PgpData.java,PgpData,60,8,16,7,7,False,False,2,False,False,0,7,1,0,False,False,False,True,False,public,16,0,0,False,Information Holder
+241,\src\com\fsck\k9\controller\MessageDateComparator.java,MessageDateComparator,17,0,1,0,0,False,False,3,True,False,1,2,2,3,False,False,False,True,False,public,1,0,0,False,Service Provider
+242,\src\com\fsck\k9\controller\MessageRemovalListener.java,MessageRemovalListener,5,0,0,0,0,False,False,3,True,False,0,0,1,0,False,True,False,False,False,public,0,0,0,False,Service Provider
+243,\src\com\fsck\k9\controller\MessageRetrievalListener.java,MessageRetrievalListener,12,0,0,0,0,False,False,3,True,False,0,0,1,0,False,True,False,False,False,public,0,0,0,False,Service Provider
+244,\src\com\fsck\k9\controller\MessagingController.Command.java,Command,31,5,1,0,0,False,False,1,False,False,1,1,1,1,True,False,True,True,False,default,1,0,0,False,Service Provider
+245,\src\com\fsck\k9\controller\MessagingController.MemorizingState.java,MemorizingState,15,3,0,0,0,False,False,2,False,False,0,0,1,0,False,False,True,False,True,default,0,0,0,False,Information Holder
+246,\src\com\fsck\k9\controller\MessagingController.Memory.java,Memory,36,12,1,0,1,False,False,1,False,False,0,0,2,0,True,False,True,True,False,default,0,0,0,False,Information Holder
+247,\src\com\fsck\k9\controller\MessagingController.MemorizingListener.java,MemorizingListener,177,1,14,1,1,False,False,2,True,False,15,28,2,2,True,False,True,True,False,default,12,0,0,False,Information Holder
+248,\src\com\fsck\k9\controller\MessagingController.MessageActor.java,MessageActor,20,0,0,0,0,False,False,2,True,False,0,0,4,0,False,True,True,False,False,default,0,0,0,False,Service Provider
+249,\src\com\fsck\k9\controller\MessagingController.SORT_TYPE.java,TYPE,41,9,2,0,1,False,False,4,False,False,1,1,2,0,False,False,False,False,True,public,2,0,0,False,Information Holder
+250,\src\com\fsck\k9\controller\MessagingControllerPushReceiver.java,MessagingControllerPushReceiver,99,3,9,1,2,False,False,4,True,False,5,14,15,13,False,False,False,True,False,public,9,0,0,False,Coordinator
+251,\src\com\fsck\k9\controller\MessagingListener.java,MessagingListener,142,0,50,1,0,False,False,2,True,False,0,129,8,0,False,False,False,True,False,public,50,0,0,False,Service Provider
+252,\src\com\fsck\k9\activity\AccessibleEmailContentActivity.java,AccessibleEmailContentActivity,66,1,2,0,0,False,False,4,False,False,4,3,6,7,False,False,False,True,False,public,1,1,0,False,Service Provider
+253,\src\com\fsck\k9\activity\Accounts.AccountClickListener.java,AccountClickListener,55,2,1,0,0,False,False,3,True,False,1,1,7,5,False,False,True,True,False,private,1,0,0,False,Service Provider
+254,\src\com\fsck\k9\activity\Accounts.AccountsAdapter.java,AccountsAdapter,125,0,1,0,1,False,False,2,True,False,10,3,18,23,False,False,True,True,False,default,1,0,0,False,Interfacer
+255,\src\com\fsck\k9\activity\Accounts.AccountsHandler.java,AccountsHandler,71,0,7,1,0,False,False,2,True,False,3,7,8,12,False,False,True,True,False,default,6,1,0,False,Service Provider
+256,\src\com\fsck\k9\activity\Accounts.ExportAsyncTask.java,ExportAsyncTask,50,4,3,0,0,False,False,3,False,False,1,2,8,1,False,False,True,True,False,private,0,0,3,False,Service Provider
+257,\src\com\fsck\k9\activity\Accounts.ImportAsyncTask.java,ImportAsyncTask,60,6,3,0,0,False,False,3,False,False,1,2,10,2,False,False,True,True,False,private,0,0,3,False,Service Provider
+258,\src\com\fsck\k9\activity\Accounts.ListImportContentsAsyncTask.java,ListImportContentsAsyncTask,119,3,3,0,0,False,False,5,False,False,3,2,22,12,False,False,True,True,False,private,0,0,3,False,Interfacer
+259,\src\com\fsck\k9\activity\ActivityListener.java,ActivityListener,173,9,21,0,2,False,False,2,True,False,5,40,8,6,False,False,False,True,False,public,21,0,0,False,Service Provider
+260,\src\com\fsck\k9\activity\ChooseAccount.IdentitiesAdapter.java,IdentitiesAdapter,113,2,11,0,9,False,False,2,True,False,3,18,12,17,True,False,True,True,False,public,10,1,0,False,Structurer
+261,\src\com\fsck\k9\activity\ChooseAccount.java,ChooseAccount,99,2,2,0,0,False,False,2,False,False,5,1,13,10,False,False,False,True,False,public,0,1,1,False,Interfacer
+262,\src\com\fsck\k9\activity\ChooseFolder.ChooseFolderHandler.java,ChooseFolderHandler,43,3,4,1,0,False,False,3,True,False,1,3,2,3,False,False,True,True,False,default,4,0,0,False,Service Provider
+263,\src\com\fsck\k9\activity\Accounts.java,Accounts,726,22,42,1,1,False,False,1,False,False,38,45,48,86,False,False,False,True,False,public,18,23,1,False,Coordinator
+264,\src\com\fsck\k9\activity\ChooseIdentity.java,ChooseIdentity,71,6,4,1,0,False,False,2,False,False,2,1,13,11,False,False,False,True,False,public,2,0,2,False,Interfacer
+265,\src\com\fsck\k9\activity\ColorPickerDialog.OnColorChangedListener.java,OnColorChangedListener,14,0,0,0,0,False,False,4,True,False,0,0,3,0,False,True,True,False,False,public,0,0,0,False,Service Provider
+266,\src\com\fsck\k9\activity\ChooseFolder.java,ChooseFolder,256,21,4,1,0,False,False,2,True,False,23,4,21,17,False,False,False,True,False,public,3,1,0,False,Interfacer
+267,\src\com\fsck\k9\activity\ColorPickerDialog.java,ColorPickerDialog,148,18,4,0,0,False,False,3,False,False,12,0,8,19,False,False,False,True,False,public,1,1,2,False,Interfacer
+268,\src\com\fsck\k9\activity\EditIdentity.java,EditIdentity,116,13,5,0,0,False,False,2,False,False,7,4,12,21,False,False,False,True,False,public,4,1,0,False,Interfacer
+269,\src\com\fsck\k9\activity\FolderInfoHolder.java,FolderInfoHolder,101,10,6,0,0,False,False,3,True,False,10,10,7,16,False,False,False,True,False,public,5,1,0,False,Service Provider
+270,\src\com\fsck\k9\activity\FolderList.FolderClickListener.java,FolderClickListener,55,4,1,0,0,False,False,3,True,False,0,1,5,2,False,False,True,True,False,private,1,0,0,False,Service Provider
+271,\src\com\fsck\k9\activity\FolderList.FolderListHandler.java,FolderListHandler,74,0,7,0,0,False,False,3,True,False,1,7,7,10,False,False,True,True,False,default,7,0,0,False,Service Provider
+272,\src\com\fsck\k9\activity\FolderList.FolderViewHolder.java,FolderViewHolder,18,8,0,0,0,False,False,3,True,False,0,0,3,0,True,False,True,True,False,default,0,0,0,False,Information Holder
+273,\src\com\fsck\k9\activity\FolderList.FolderListAdapter.java,FolderListAdapter,360,2,12,0,8,False,False,3,True,False,39,13,17,34,False,False,True,True,False,default,12,0,0,False,Service Provider
+274,\src\com\fsck\k9\activity\FolderListFilter.java,FolderListFilter,104,2,3,0,0,False,False,3,True,False,5,3,6,8,False,False,False,True,False,public,1,0,2,False,Service Provider
+275,\src\com\fsck\k9\activity\ImportListener.java,ImportListener,7,0,0,0,0,False,False,2,True,False,0,0,0,0,False,True,False,False,False,public,0,0,0,False,Service Provider
+276,\src\com\fsck\k9\activity\InsertableHtmlContent.InsertionLocation.java,InsertionLocation,14,2,0,0,0,False,False,2,False,False,0,0,0,0,False,False,True,False,True,public,0,0,0,False,Information Holder
+277,\src\com\fsck\k9\activity\FolderList.java,FolderList,515,16,37,1,0,False,False,2,False,False,24,47,29,49,False,False,False,True,False,public,18,19,0,False,Interfacer
+278,\src\com\fsck\k9\activity\InsertableHtmlContent.java,InsertableHtmlContent,135,6,12,5,2,False,False,3,False,False,1,7,1,5,False,False,False,True,False,default,12,0,0,False,Information Holder
+279,\src\com\fsck\k9\activity\K9Activity.MyGestureDetector.java,MyGestureDetector,46,3,2,0,0,False,False,3,True,False,5,5,4,8,False,False,True,True,False,default,2,0,0,False,Service Provider
+280,\src\com\fsck\k9\activity\K9Activity.java,K9Activity,89,4,13,2,2,False,False,2,False,False,2,8,13,10,False,False,False,True,False,public,7,2,4,False,Interfacer
+281,\src\com\fsck\k9\activity\K9ExpandableListActivity.java,K9ExpandableListActivity,14,0,1,0,0,False,False,4,False,False,0,1,3,1,False,False,False,True,False,public,0,0,1,False,Interfacer
+282,\src\com\fsck\k9\controller\MessagingController.java,MessagingController,3700,29,119,8,11,False,False,2,True,True,344,330,61,528,False,False,False,True,False,public,65,53,0,False,Controller
+283,\src\com\fsck\k9\activity\K9ListActivity.java,K9ListActivity,80,2,7,1,2,False,False,3,False,False,10,5,8,15,False,False,False,True,False,public,6,1,0,False,Interfacer
+284,\src\com\fsck\k9\activity\K9PreferenceActivity.PreferenceChangeListener.java,PreferenceChangeListener,20,1,1,0,0,False,False,3,True,False,0,2,2,2,True,False,True,True,False,private,1,0,0,False,Service Provider
+285,\src\com\fsck\k9\activity\K9PreferenceActivity.java,K9PreferenceActivity,57,0,3,1,0,False,False,3,False,False,0,7,4,4,False,False,False,True,False,public,1,0,2,False,Coordinator
+286,\src\com\fsck\k9\activity\LauncherShortcuts.AccountsAdapter.java,AccountsAdapter,53,0,1,0,1,False,False,2,True,False,4,3,7,10,False,False,True,True,False,default,1,0,0,False,Service Provider
+287,\src\com\fsck\k9\activity\LauncherShortcuts.java,LauncherShortcuts,54,2,4,1,0,False,False,2,False,False,2,6,12,6,False,False,False,True,False,public,2,2,0,False,Interfacer
+288,\src\com\fsck\k9\activity\MessageCompose.Attachment.java,Attachment,13,5,0,0,0,False,False,1,False,False,0,0,5,0,True,False,True,True,False,default,0,0,0,False,Information Holder
+289,\src\com\fsck\k9\activity\ManageIdentities.java,ManageIdentities,120,3,9,1,0,False,False,2,False,False,7,9,10,12,False,False,False,True,False,public,6,2,1,False,Interfacer
+290,\src\com\fsck\k9\activity\MessageCompose.IdentityField.java,IdentityField,29,8,2,0,1,False,False,2,False,False,0,0,3,0,False,False,True,False,True,private,2,0,0,False,Information Holder
+291,\src\com\fsck\k9\activity\MessageCompose.Listener.java,Listener,84,0,5,0,0,False,False,1,True,False,10,19,8,3,False,False,True,True,False,default,5,0,0,False,Service Provider
+292,\src\com\fsck\k9\activity\MessageCompose.SaveMessageTask.java,SaveMessageTask,47,0,1,0,0,False,False,3,False,False,3,1,9,3,False,False,True,True,False,private,0,0,1,False,Service Provider
+293,\src\com\fsck\k9\activity\MessageCompose.SendMessageTask.java,SendMessageTask,40,0,1,0,0,False,False,3,False,False,1,1,10,2,False,False,True,True,False,private,0,0,1,False,Service Provider
+294,\src\com\fsck\k9\activity\MessageInfoHolder.java,MessageInfoHolder,47,19,3,0,1,False,False,3,True,False,2,2,3,2,False,False,False,True,False,public,3,0,0,False,Information Holder
+295,\src\com\fsck\k9\activity\MessageList.AttachmentComparator.java,AttachmentComparator,13,0,1,0,0,False,False,2,True,False,0,2,1,1,True,False,True,True,False,public,1,0,0,False,Service Provider
+296,\src\com\fsck\k9\activity\MessageList.ComparatorChain.java,ComparatorChain,29,1,1,0,0,False,False,2,False,False,1,2,2,0,True,False,True,True,False,public,1,0,0,False,Service Provider
+297,\src\com\fsck\k9\activity\MessageList.DateComparator.java,DateComparator,13,0,1,0,0,False,False,2,True,False,0,2,1,0,True,False,True,True,False,public,1,0,0,False,Service Provider
+298,\src\com\fsck\k9\activity\MessageList.FlaggedComparator.java,FlaggedComparator,13,0,1,0,0,False,False,2,True,False,0,2,1,0,True,False,True,True,False,public,1,0,0,False,Service Provider
+299,\src\com\fsck\k9\activity\MessageList.FooterViewHolder.java,FooterViewHolder,12,2,0,0,0,False,False,3,True,False,0,0,2,0,True,False,True,True,False,default,0,0,0,False,Information Holder
+300,\src\com\fsck\k9\activity\MessageList.MessageViewHolder.java,MessageViewHolder,47,9,1,0,0,False,False,3,True,False,5,2,5,0,False,False,True,True,False,default,1,0,0,False,Service Provider
+301,\src\com\fsck\k9\activity\MessageList.MessageListHandler.java,MessageListHandler,180,0,12,2,1,False,False,3,True,False,17,5,8,11,False,False,True,True,False,default,4,7,1,False,Service Provider
+302,\src\com\fsck\k9\activity\MessageList.MyGestureDetector.java,MyGestureDetector,34,0,1,0,0,False,False,3,True,False,4,4,3,4,False,False,True,True,False,default,1,0,0,False,Service Provider
+303,\src\com\fsck\k9\activity\MessageList.ReverseComparator.java,ReverseComparator,22,1,1,0,0,False,False,2,True,False,0,2,1,0,True,False,True,True,False,public,1,0,0,False,Service Provider
+304,\src\com\fsck\k9\activity\MessageList.SenderComparator.java,SenderComparator,13,0,1,0,0,False,False,2,True,False,0,2,1,1,True,False,True,True,False,public,1,0,0,False,Service Provider
+305,\src\com\fsck\k9\activity\MessageList.MessageListAdapter.java,MessageListAdapter,505,5,19,0,8,False,False,3,True,False,46,28,28,53,False,False,True,True,False,default,14,5,0,False,Interfacer
+306,\src\com\fsck\k9\activity\MessageList.StorageListenerImplementation.java,StorageListenerImplementation,24,0,2,0,0,False,False,3,False,False,1,2,1,1,False,False,True,True,False,private,2,0,0,False,Service Provider
+307,\src\com\fsck\k9\activity\MessageList.SubjectComparator.java,SubjectComparator,21,0,1,0,0,False,False,2,True,False,2,2,2,2,True,False,True,True,False,public,1,0,0,False,Service Provider
+308,\src\com\fsck\k9\activity\MessageList.UnreadComparator.java,UnreadComparator,13,0,1,0,0,False,False,2,True,False,0,2,1,0,True,False,True,True,False,public,1,0,0,False,Service Provider
+309,\src\com\fsck\k9\activity\MessageCompose.java,MessageCompose,2125,83,59,1,2,False,False,2,False,False,216,62,62,256,False,False,False,True,False,public,17,39,3,False,Interfacer
+310,\src\com\fsck\k9\activity\MessageReference.java,MessageReference,135,7,6,0,0,False,False,2,False,False,9,3,8,18,False,False,False,True,False,public,6,0,0,False,Interfacer
+311,\src\com\fsck\k9\activity\MessageView.Listener.java,Listener,137,0,8,0,0,False,False,1,True,False,13,33,8,18,False,False,True,True,False,default,8,0,0,False,Service Provider
+312,\src\com\fsck\k9\activity\MessageView.MessageViewHandler.java,MessageViewHandler,47,0,7,1,0,False,False,3,True,False,0,6,6,1,False,False,True,True,False,default,6,1,0,False,Service Provider
+313,\src\com\fsck\k9\activity\MessageView.StorageListenerImplementation.java,StorageListenerImplementation,23,0,2,0,0,False,False,3,False,False,1,2,6,1,False,False,True,True,False,private,2,0,0,False,Service Provider
+314,\src\com\fsck\k9\activity\PasswordEntryDialog.PasswordEntryListener.java,PasswordEntryListener,5,0,0,0,0,False,False,3,True,False,0,0,0,0,False,True,True,False,False,public,0,0,0,False,Service Provider
+315,\src\com\fsck\k9\activity\PasswordEntryDialog.java,PasswordEntryDialog,61,3,1,0,0,False,False,3,False,False,2,0,11,9,False,False,False,True,False,public,1,0,0,False,Service Provider
+316,\src\com\fsck\k9\activity\ProgressListener.java,ProgressListener,31,0,0,0,0,False,False,2,True,False,0,0,1,0,False,True,False,False,False,public,0,0,0,False,Service Provider
+317,\src\com\fsck\k9\activity\Search.java,Search,4,0,0,0,0,False,False,1,False,False,0,0,1,0,False,False,False,True,False,public,0,0,0,False,Information Holder
+318,\src\com\fsck\k9\activity\SearchModifier.java,SearchModifier,17,5,0,0,0,False,False,2,True,False,0,0,2,0,False,False,False,False,True,default,0,0,0,False,Information Holder
+319,\src\com\fsck\k9\activity\MessageList.java,MessageList,1505,56,77,3,1,False,False,2,False,False,130,81,52,131,False,False,False,True,False,public,28,47,2,False,Interfacer
+320,\src\com\fsck\k9\activity\setup\AccountSettings.PopulateFolderPrefsTask.java,PopulateFolderPrefsTask,72,3,3,0,0,False,False,4,False,False,1,2,8,16,False,False,True,True,False,private,0,0,3,False,Service Provider
+321,\src\com\fsck\k9\activity\MessageView.java,MessageView,850,29,50,3,0,False,False,2,False,False,74,34,23,80,False,False,False,True,False,public,14,27,9,False,Interfacer
+322,\src\com\fsck\k9\activity\setup\AccountSetupAccountType.java,AccountSetupAccountType,95,4,7,0,0,False,False,4,False,False,1,6,14,14,False,False,False,True,False,public,3,4,0,False,Interfacer
+323,\src\com\fsck\k9\activity\setup\AccountSetupBasics.Provider.java,Provider,23,9,0,0,0,False,False,1,True,False,0,0,3,0,True,False,True,True,False,default,0,0,0,False,Information Holder
+324,\src\com\fsck\k9\activity\setup\AccountSetupCheckSettings.java,AccountSetupCheckSettings,270,12,9,1,0,False,False,4,False,False,20,14,24,34,False,False,False,True,False,public,5,4,0,False,Interfacer
+325,\src\com\fsck\k9\activity\setup\AccountSetupComposition.java,AccountSetupComposition,116,10,7,0,0,False,False,3,False,False,5,9,14,19,False,False,False,True,False,public,6,1,0,False,Interfacer
+326,\src\com\fsck\k9\activity\setup\AccountSettings.java,AccountSettings,729,107,17,0,0,False,False,2,False,False,17,11,25,215,False,False,False,True,False,public,8,9,0,False,Interfacer
+327,\src\com\fsck\k9\activity\setup\AccountSetupBasics.java,AccountSetupBasics,347,12,19,0,3,False,False,3,False,False,18,21,23,39,False,False,False,True,False,public,10,8,1,False,Structurer
+328,\src\com\fsck\k9\activity\setup\AccountSetupNames.java,AccountSetupNames,81,5,5,0,0,False,False,3,False,False,4,4,14,8,False,False,False,True,False,public,3,1,1,False,Interfacer
+329,\src\com\fsck\k9\activity\setup\AccountSetupOptions.java,AccountSetupOptions,133,8,4,0,0,False,False,3,False,False,4,5,12,15,False,False,False,True,False,public,3,1,0,False,Interfacer
+330,\src\com\fsck\k9\activity\setup\AccountSetupIncoming.java,AccountSetupIncoming,395,28,10,0,0,False,False,3,False,False,24,12,18,54,False,False,False,True,False,public,6,3,1,False,Interfacer
+331,\src\com\fsck\k9\activity\setup\AccountSetupOutgoing.java,AccountSetupOutgoing,286,16,11,0,0,False,False,3,False,False,16,14,20,31,False,False,False,True,False,public,7,3,1,False,Interfacer
+332,\src\com\fsck\k9\activity\setup\FolderSettings.java,FolderSettings,139,14,5,0,0,False,False,2,False,False,2,6,17,33,False,False,False,True,False,public,4,1,0,False,Interfacer
+333,\src\com\fsck\k9\activity\setup\FontSizeSettings.java,FontSizeSettings,150,32,4,0,0,False,False,3,False,False,1,4,9,37,False,False,False,True,False,public,3,1,0,False,Interfacer
+334,\src\com\fsck\k9\activity\setup\SpinnerHelper.EntryValue.java,EntryValue,22,2,3,0,2,False,False,2,False,False,0,0,0,0,True,False,True,True,False,private,3,0,0,False,Information Holder
+335,\src\com\fsck\k9\activity\setup\SpinnerHelper.java,SpinnerHelper,47,0,4,0,2,False,False,2,True,False,4,12,3,6,False,False,False,True,False,public,4,0,0,False,Service Provider
+336,\src\com\fsck\k9\activity\setup\SpinnerOption.java,SpinnerOption,26,2,2,1,0,False,False,2,False,False,1,2,1,1,False,False,False,True,False,public,2,0,0,False,Information Holder
+337,\src\com\fsck\k9\activity\setup\Prefs.java,Prefs,300,64,6,0,0,False,False,1,False,False,8,4,24,78,False,False,False,True,False,public,3,3,0,False,Interfacer

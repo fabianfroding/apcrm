@@ -1,0 +1,131 @@
+index,fullpathname,classname,loc,numAttr,numMethod,setters,getters,isPersist,isCollection,numWordName,isOrEr,isController,numIfs,numParameters,numImports,numOutboundInvocation,isStaticClass,isInterface,isInnerClass,isClass,isEnum,classPublicity,numPublicMethods,numPrivateMethods,numProtectedMethods,isAbstract,pred_label
+0,\src\de\schildbach\wallet\AddressBookActivity.java,AddressBookActivity,43,0,1,0,0,False,False,3,False,False,0,1,5,1,False,False,False,True,False,public,0,0,1,False,Service Provider
+1,\src\de\schildbach\wallet\AbstractWalletActivity.java,AbstractWalletActivity,133,2,12,0,2,False,False,3,False,False,3,18,10,4,False,False,False,True,False,public,0,0,12,True,Structurer
+2,\src\de\schildbach\wallet\AddressBookProvider.Helper.java,Helper,67,3,3,0,0,True,False,1,True,False,1,6,3,3,True,False,True,True,False,private,2,1,0,False,Service Provider
+3,\src\de\schildbach\wallet\AddressBookFragment.java,AddressBookFragment,126,1,10,0,0,False,False,3,False,False,2,18,19,7,False,False,False,True,False,public,8,2,0,False,Interfacer
+4,\src\de\schildbach\wallet\AmountCalculatorFragment.Listener.java,Listener,25,0,0,0,0,False,False,1,True,False,0,0,1,0,True,True,True,False,False,public,0,0,0,False,Service Provider
+5,\src\de\schildbach\wallet\AddressBookProvider.java,AddressBookProvider,119,6,7,0,1,True,False,3,True,False,9,17,7,28,False,False,False,True,False,public,7,0,0,False,Service Provider
+6,\src\de\schildbach\wallet\AmountCalculatorFragment.java,AmountCalculatorFragment,178,7,6,0,0,False,False,3,False,False,7,6,19,17,False,False,False,True,False,public,4,2,0,False,Interfacer
+7,\src\de\schildbach\wallet\BitcoinURI.ParseException.java,ParseException,29,1,0,0,0,False,False,2,False,False,0,0,0,0,True,False,True,True,False,public,0,0,0,False,Information Holder
+8,\src\de\schildbach\wallet\Application.java,Application,333,3,12,0,2,False,False,1,False,False,4,3,28,32,False,False,False,True,False,public,7,5,0,False,Interfacer
+9,\src\de\schildbach\wallet\BitcoinURI.java,BitcoinURI,82,3,3,0,2,False,False,4,False,False,5,0,7,7,False,False,False,True,False,public,3,0,0,False,Information Holder
+10,\src\de\schildbach\wallet\BlockchainStateFragment.java,BlockchainStateFragment,139,6,6,0,0,False,False,3,False,False,3,4,17,5,False,False,False,True,False,public,5,1,0,False,Interfacer
+11,\src\de\schildbach\wallet\Constants.java,Constants,82,54,0,0,0,False,False,1,False,False,0,0,5,2,False,False,False,True,False,public,0,0,0,False,Information Holder
+12,\src\de\schildbach\wallet\CurrencyAmountView.Listener.java,Listener,25,0,0,0,0,False,False,1,True,False,0,0,0,0,True,True,True,False,False,public,0,0,0,False,Service Provider
+13,\src\de\schildbach\wallet\CurrencyAmountView.TextViewListener.java,TextViewListener,71,0,5,0,0,False,False,3,True,False,6,14,8,4,False,False,True,True,False,private,5,0,0,False,Service Provider
+14,\src\de\schildbach\wallet\CurrencyCodeDrawable.java,CurrencyCodeDrawable,61,3,5,2,2,False,False,3,False,False,0,3,4,0,False,False,False,True,False,public,5,0,0,False,Information Holder
+15,\src\de\schildbach\wallet\CurrencyAmountView.java,CurrencyAmountView,210,11,12,6,1,False,False,3,False,False,9,9,20,17,False,False,False,True,False,public,7,4,1,False,Interfacer
+16,\src\de\schildbach\wallet\EditAddressBookEntryFragment.java,EditAddressBookEntryFragment,117,3,3,0,0,False,False,5,False,False,4,4,17,12,False,False,False,True,False,public,2,1,0,False,Interfacer
+17,\src\de\schildbach\wallet\ExchangeRatesFragment.java,ExchangeRatesFragment,138,4,9,0,0,False,False,3,False,False,3,11,21,14,False,False,False,True,False,public,8,1,0,False,Interfacer
+18,\src\de\schildbach\wallet\ExchangeRatesProvider.java,ExchangeRatesProvider,146,4,8,0,2,False,False,3,True,False,7,17,17,12,False,False,False,True,False,public,6,2,0,False,Service Provider
+19,\src\de\schildbach\wallet\PreferencesActivity.java,PreferencesActivity,117,10,3,0,0,False,False,2,False,False,1,3,8,5,False,False,False,True,False,public,1,1,1,False,Coordinator
+20,\src\de\schildbach\wallet\RequestCoinsActivity.java,RequestCoinsActivity,65,1,2,0,0,False,False,3,False,False,0,2,8,3,False,False,False,True,False,public,0,0,2,False,Coordinator
+21,\src\de\schildbach\wallet\RequestCoinsFragment.java,RequestCoinsFragment,150,5,6,0,0,False,False,3,False,False,5,4,21,19,False,False,False,True,False,public,4,2,0,False,Interfacer
+22,\src\de\schildbach\wallet\SendCoinsActivity.java,SendCoinsActivity,166,5,7,0,0,False,False,3,False,False,5,10,15,13,False,False,False,True,False,public,1,3,3,False,Interfacer
+23,\src\de\schildbach\wallet\SendCoinsFragment.AutoCompleteAdapter.java,AutoCompleteAdapter,62,0,4,0,0,False,False,3,True,False,0,8,8,1,False,False,True,True,False,public,4,0,0,False,Service Provider
+24,\src\de\schildbach\wallet\SendCoinsFragment.State.java,State,24,3,0,0,0,False,False,1,False,False,0,0,0,0,False,False,True,False,True,private,0,0,0,False,Information Holder
+25,\src\de\schildbach\wallet\Service.LocalBinder.java,LocalBinder,28,0,1,0,1,False,False,2,True,False,0,0,1,0,False,False,True,True,False,public,1,0,0,False,Information Holder
+26,\src\de\schildbach\wallet\SendCoinsFragment.java,SendCoinsFragment,320,17,10,0,0,False,False,3,False,False,8,7,33,34,False,False,False,True,False,public,6,2,2,False,Interfacer
+27,\src\de\schildbach\wallet\TransactionActivity.java,TransactionActivity,159,5,7,0,0,False,False,2,False,False,6,5,19,14,False,False,False,True,False,public,2,3,2,False,Interfacer
+28,\src\de\schildbach\wallet\Service.java,Service,487,26,11,0,0,False,False,1,False,False,13,7,53,57,False,False,False,True,False,public,5,6,0,False,Interfacer
+29,\src\de\schildbach\wallet\TransactionFragment.java,TransactionFragment,229,4,3,0,0,False,False,2,False,False,10,5,29,35,False,False,False,True,False,public,3,0,0,False,Interfacer
+30,\src\de\schildbach\wallet\WalletActivity.java,WalletActivity,232,3,8,0,0,False,False,2,False,False,9,5,24,26,False,False,False,True,False,public,2,3,3,False,Interfacer
+31,\src\de\schildbach\wallet\WalletAddressFragment.java,WalletAddressFragment,177,8,8,0,0,False,False,3,False,False,5,3,25,21,False,False,False,True,False,public,6,2,0,False,Interfacer
+32,\src\de\schildbach\wallet\WalletAddressesFragment.Adapter.java,Adapter,53,0,4,0,4,False,False,1,True,False,1,5,8,4,False,False,True,True,False,private,4,0,0,False,Service Provider
+33,\src\de\schildbach\wallet\WalletAddressesFragment.java,WalletAddressesFragment,110,4,5,0,0,False,False,3,False,False,3,6,18,14,False,False,False,True,False,public,4,1,0,False,Interfacer
+34,\src\de\schildbach\wallet\WalletBalanceFragment.java,WalletBalanceFragment,171,8,10,0,0,False,False,3,False,False,4,10,28,13,False,False,False,True,False,public,10,0,0,False,Interfacer
+35,\src\de\schildbach\wallet\WalletBalanceWidgetProvider.java,WalletBalanceWidgetProvider,52,0,1,0,0,False,False,4,True,False,0,3,11,3,False,False,False,True,False,public,1,0,0,False,Service Provider
+36,\src\de\schildbach\wallet\WalletTransactionsFragment.PagerAdapter.java,PagerAdapter,40,0,2,0,2,False,False,2,True,False,0,1,3,0,True,False,True,True,False,private,2,0,0,False,Information Holder
+37,\src\de\schildbach\wallet\WalletTransactionsFragment.java,WalletTransactionsFragment,46,0,1,0,0,False,False,3,False,False,0,3,8,0,False,False,False,True,False,public,1,0,0,False,Service Provider
+38,\src\de\schildbach\wallet\WalletTransactionsFragment.ListFragment.java,ListFragment,266,8,12,0,0,False,True,2,False,False,7,15,31,29,True,False,True,True,False,public,11,1,0,False,Interfacer
+39,\src\de\schildbach\wallet\util\ActionBarFragment.java,ActionBarFragment,108,6,8,5,0,False,False,3,False,False,1,10,16,2,False,False,False,True,False,public,8,0,0,False,Interfacer
+40,\src\de\schildbach\wallet\util\Base43.java,Base43,106,2,4,0,0,False,False,1,False,False,4,4,3,7,False,False,False,True,False,public,4,0,0,False,Service Provider
+41,\src\de\schildbach\wallet\util\NfcTools.java,NfcTools,105,3,9,0,0,False,False,2,False,False,5,19,8,6,False,False,False,True,False,public,4,5,0,False,Coordinator
+42,\src\de\schildbach\wallet\util\QrDialog.java,QrDialog,46,0,0,0,0,False,False,2,False,False,0,0,7,1,False,False,False,True,False,public,0,0,0,False,Service Provider
+43,\src\de\schildbach\wallet\util\ErrorReporter.java,ErrorReporter,272,10,12,0,3,False,False,2,True,False,3,14,26,49,False,False,False,True,False,public,5,7,0,False,Service Provider
+44,\src\de\schildbach\wallet\util\StrictModeWrapper.java,StrictModeWrapper,28,0,1,0,0,False,False,3,True,False,0,0,1,1,False,False,False,True,False,public,1,0,0,False,Service Provider
+45,\src\de\schildbach\wallet\util\ViewPagerTabs.java,ViewPagerTabs,138,5,7,0,1,False,False,3,False,False,3,9,12,8,False,False,False,True,False,public,4,0,3,False,Interfacer
+46,\src\de\schildbach\wallet\util\WalletUtils.java,WalletUtils,71,1,2,0,1,False,False,2,False,False,1,4,9,5,False,False,False,True,False,public,2,0,0,False,Coordinator
+47,\src\de\schildbach\wallet\store\SQLiteBlockStore.Helper.java,Helper,41,0,2,0,0,True,False,1,True,False,0,4,3,0,False,False,True,True,False,private,2,0,0,False,Service Provider
+48,\src\de\schildbach\wallet\store\SQLiteBlockStore.java,SQLiteBlockStore,204,17,6,1,2,True,False,5,False,False,5,3,21,23,False,False,False,True,False,public,5,1,0,False,Interfacer
+49,\src\com\google\zxing\BarcodeFormat.java,BarcodeFormat,79,18,3,0,1,False,False,2,False,False,2,1,1,1,False,False,False,True,False,public,3,0,0,False,Information Holder
+50,\src\com\google\zxing\Binarizer.java,Binarizer,70,1,1,0,1,False,False,1,True,False,1,0,2,2,False,False,False,True,False,public,1,0,0,True,Service Provider
+51,\src\com\google\zxing\BinaryBitmap.java,BinaryBitmap,114,2,8,0,4,False,False,2,False,False,2,6,2,10,False,False,False,True,False,public,8,0,0,False,Structurer
+52,\src\com\google\zxing\ChecksumException.java,ChecksumException,31,1,1,0,1,False,False,2,False,False,0,0,0,0,False,False,False,True,False,public,1,0,0,False,Information Holder
+53,\src\com\google\zxing\DecodeHintType.java,DecodeHintType,66,8,0,0,0,False,False,3,False,False,0,0,0,0,False,False,False,True,False,public,0,0,0,False,Information Holder
+54,\src\com\google\zxing\EncodeHintType.java,EncodeHintType,33,2,0,0,0,False,False,3,False,False,0,0,0,0,False,False,False,True,False,public,0,0,0,False,Information Holder
+55,\src\com\google\zxing\FormatException.java,FormatException,32,1,1,0,1,False,False,2,False,False,0,0,0,0,False,False,False,True,False,public,1,0,0,False,Information Holder
+56,\src\com\google\zxing\LuminanceSource.java,LuminanceSource,100,2,6,0,2,False,False,2,False,False,0,4,0,2,False,False,False,True,False,public,6,0,0,True,Information Holder
+57,\src\com\google\zxing\NotFoundException.java,NotFoundException,31,1,1,0,1,False,False,3,False,False,0,0,0,0,False,False,False,True,False,public,1,0,0,False,Information Holder
+58,\src\com\google\zxing\Reader.java,Reader,57,0,0,0,0,False,False,1,True,False,0,0,1,0,False,True,False,False,False,public,0,0,0,False,Service Provider
+59,\src\com\google\zxing\ReaderException.java,ReaderException,87,0,1,0,0,False,False,2,False,False,1,0,0,7,False,False,False,True,False,public,1,0,0,True,Service Provider
+60,\src\com\google\zxing\ResultPointCallback.java,ResultPointCallback,25,0,0,0,0,False,False,3,False,False,0,0,0,0,False,True,False,False,False,public,0,0,0,False,Service Provider
+61,\src\com\google\zxing\ResultMetadataType.java,ResultMetadataType,90,9,3,0,1,False,False,3,False,False,2,1,1,1,False,False,False,True,False,public,3,0,0,False,Information Holder
+62,\src\com\google\zxing\Result.java,Result,126,6,10,0,6,False,False,1,False,False,6,4,2,4,False,False,False,True,False,public,10,0,0,False,Information Holder
+63,\src\com\google\zxing\ResultPoint.java,ResultPoint,110,2,8,0,2,False,False,2,False,False,3,7,0,3,False,False,False,True,False,public,7,1,0,False,Information Holder
+64,\src\com\google\zxing\Writer.java,Writer,47,0,0,0,0,False,False,1,True,False,0,0,2,0,False,True,False,False,False,public,0,0,0,False,Service Provider
+65,\src\com\google\zxing\WriterException.java,WriterException,30,0,0,0,0,False,False,2,False,False,0,0,0,0,False,False,False,True,False,public,0,0,0,False,Information Holder
+66,\src\com\google\zxing\qrcode\encoder\BlockPair.java,BlockPair,30,2,2,0,2,False,False,2,False,False,0,0,0,0,False,False,False,True,False,default,2,0,0,False,Information Holder
+67,\src\com\google\zxing\qrcode\QRCodeWriter.java,QRCodeWriter,89,1,3,0,0,False,False,4,True,False,6,12,10,4,False,False,False,True,False,public,2,1,0,False,Service Provider
+68,\src\com\google\zxing\qrcode\QRCodeReader.java,QRCodeReader,145,2,6,0,1,False,False,4,True,False,9,6,16,18,False,False,False,True,False,public,3,2,1,False,Service Provider
+69,\src\com\google\zxing\qrcode\encoder\ByteMatrix.java,ByteMatrix,83,3,9,3,4,False,False,2,False,False,1,12,0,1,False,False,False,True,False,public,9,0,0,False,Information Holder
+70,\src\com\google\zxing\qrcode\encoder\MaskUtil.java,MaskUtil,208,0,6,0,1,False,False,2,False,False,8,9,0,17,False,False,False,True,False,public,5,1,0,False,Service Provider
+71,\src\com\google\zxing\qrcode\detector\AlignmentPattern.java,AlignmentPattern,41,1,1,0,0,False,False,2,False,False,1,3,1,1,False,False,False,True,False,public,0,0,0,False,Service Provider
+72,\src\com\google\zxing\qrcode\encoder\QRCode.java,QRCode,206,11,24,10,10,False,False,3,False,False,3,13,2,6,False,False,False,True,False,public,24,0,0,False,Information Holder
+73,\src\com\google\zxing\qrcode\encoder\Encoder.java,Encoder,505,2,21,0,2,False,False,1,True,False,33,57,13,38,False,False,False,True,False,public,4,5,0,False,Service Provider
+74,\src\com\google\zxing\qrcode\encoder\MatrixUtil.java,MatrixUtil,479,9,20,0,0,False,False,2,False,False,27,43,3,26,False,False,False,True,False,public,10,10,0,False,Service Provider
+75,\src\com\google\zxing\qrcode\detector\AlignmentPatternFinder.java,AlignmentPatternFinder,259,9,5,0,0,False,False,3,True,False,18,10,5,4,False,False,False,True,False,default,0,4,0,False,Service Provider
+76,\src\com\google\zxing\qrcode\detector\FinderPattern.java,FinderPattern,53,2,4,0,2,False,False,2,False,False,1,3,1,1,False,False,False,True,False,public,1,0,0,False,Information Holder
+77,\src\com\google\zxing\qrcode\detector\FinderPatternFinder.CenterComparator.java,CenterComparator,40,1,1,0,0,False,False,2,True,False,1,2,1,4,True,False,True,True,False,private,1,0,0,False,Service Provider
+78,\src\com\google\zxing\qrcode\detector\FinderPatternFinder.FurthestFromAverageComparator.java,FurthestFromAverageComparator,36,1,1,0,0,False,False,4,True,False,0,2,1,2,True,False,True,True,False,private,1,0,0,False,Service Provider
+79,\src\com\google\zxing\qrcode\detector\Detector.java,Detector,362,2,14,0,2,False,False,1,True,False,19,32,11,43,False,False,False,True,False,public,3,5,6,False,Service Provider
+80,\src\com\google\zxing\qrcode\detector\FinderPatternInfo.java,FinderPatternInfo,41,3,3,0,3,False,False,3,False,False,0,0,0,0,False,False,False,True,False,public,3,0,0,False,Information Holder
+81,\src\com\google\zxing\qrcode\decoder\DataMask.DataMask000.java,DataMask000,32,0,1,0,0,False,False,2,False,False,0,2,0,0,True,False,True,True,False,private,0,0,0,False,Service Provider
+82,\src\com\google\zxing\qrcode\decoder\BitMatrixParser.java,BitMatrixParser,178,3,4,0,0,False,False,3,True,False,12,3,2,14,False,False,False,True,False,default,0,1,0,False,Service Provider
+83,\src\com\google\zxing\qrcode\decoder\DataBlock.java,DataBlock,109,2,3,0,3,False,False,2,False,False,2,3,0,7,False,False,False,True,False,default,0,0,0,False,Service Provider
+84,\src\com\google\zxing\qrcode\decoder\DataMask.DataMask001.java,DataMask001,32,0,1,0,0,False,False,2,False,False,0,2,0,0,True,False,True,True,False,private,0,0,0,False,Service Provider
+85,\src\com\google\zxing\qrcode\detector\FinderPatternFinder.java,FinderPatternFinder,509,9,12,0,3,False,False,3,True,False,42,15,8,24,False,False,False,True,False,public,0,7,4,False,Service Provider
+86,\src\com\google\zxing\qrcode\decoder\DataMask.DataMask010.java,DataMask010,32,0,1,0,0,False,False,2,False,False,0,2,0,0,True,False,True,True,False,private,0,0,0,False,Service Provider
+87,\src\com\google\zxing\qrcode\decoder\DataMask.DataMask011.java,DataMask011,32,0,1,0,0,False,False,2,False,False,0,2,0,0,True,False,True,True,False,private,0,0,0,False,Service Provider
+88,\src\com\google\zxing\qrcode\decoder\DataMask.DataMask100.java,DataMask100,32,0,1,0,0,False,False,2,False,False,0,2,0,0,True,False,True,True,False,private,0,0,0,False,Service Provider
+89,\src\com\google\zxing\qrcode\decoder\DataMask.DataMask101.java,DataMask101,33,0,1,0,0,False,False,2,False,False,0,2,0,0,True,False,True,True,False,private,0,0,0,False,Service Provider
+90,\src\com\google\zxing\qrcode\decoder\DataMask.DataMask110.java,DataMask110,33,0,1,0,0,False,False,2,False,False,0,2,0,0,True,False,True,True,False,private,0,0,0,False,Service Provider
+91,\src\com\google\zxing\qrcode\decoder\DataMask.DataMask111.java,DataMask111,32,0,1,0,0,False,False,2,False,False,0,2,0,0,True,False,True,True,False,private,0,0,0,False,Service Provider
+92,\src\com\google\zxing\qrcode\decoder\DataMask.java,DataMask,97,1,2,0,0,False,False,2,False,False,2,3,1,0,False,False,False,True,False,default,0,0,0,True,Service Provider
+93,\src\com\google\zxing\qrcode\decoder\ErrorCorrectionLevel.java,ErrorCorrectionLevel,72,8,5,0,2,False,False,3,False,False,1,1,0,0,False,False,False,True,False,public,5,0,0,False,Information Holder
+94,\src\com\google\zxing\qrcode\decoder\Decoder.java,Decoder,127,1,5,0,0,False,False,1,True,False,1,8,8,7,False,False,False,True,False,public,4,1,0,False,Service Provider
+95,\src\com\google\zxing\qrcode\decoder\FormatInformation.java,FormatInformation,156,5,7,0,2,False,False,2,False,False,7,7,0,1,False,False,False,True,False,default,2,1,0,False,Service Provider
+96,\src\com\google\zxing\qrcode\decoder\Version.ECB.java,ECB,35,2,2,0,2,False,False,3,False,False,0,0,0,0,True,False,True,True,False,public,2,0,0,False,Information Holder
+97,\src\com\google\zxing\qrcode\decoder\DecodedBitStreamParser.java,DecodedBitStreamParser,302,2,8,0,0,False,False,4,True,False,23,25,8,24,False,False,False,True,False,default,0,7,0,False,Service Provider
+98,\src\com\google\zxing\qrcode\decoder\Mode.java,Mode,105,13,5,0,3,False,False,1,False,False,3,2,0,1,False,False,False,True,False,public,5,0,0,False,Information Holder
+99,\src\com\google\zxing\qrcode\decoder\Version.ECBlocks.java,ECBlocks,49,2,4,0,4,False,False,3,False,False,0,0,0,1,True,False,True,True,False,public,4,0,0,False,Information Holder
+100,\src\com\google\zxing\multi\ByQuadrantReader.java,ByQuadrantReader,80,1,3,0,0,False,False,3,True,False,0,3,7,3,False,False,False,True,False,public,3,0,0,False,Service Provider
+101,\src\com\google\zxing\multi\MultipleBarcodeReader.java,MultipleBarcodeReader,30,0,0,0,0,False,False,3,True,False,0,0,4,0,False,True,False,False,False,public,0,0,0,False,Service Provider
+102,\src\com\google\zxing\multi\GenericMultipleBarcodeReader.java,GenericMultipleBarcodeReader,143,2,4,0,0,False,False,4,True,False,12,11,8,14,False,False,False,True,False,public,2,2,0,False,Service Provider
+103,\src\com\google\zxing\multi\qrcode\QRCodeMultiReader.java,QRCodeMultiReader,72,1,2,0,0,False,False,5,True,False,3,3,14,11,False,False,False,True,False,public,2,0,0,False,Service Provider
+104,\src\com\google\zxing\multi\qrcode\detector\MultiFinderPatternFinder.ModuleSizeComparator.java,ModuleSizeComparator,39,0,1,0,0,False,False,3,True,False,0,2,2,2,True,False,True,True,False,private,1,0,0,False,Service Provider
+105,\src\com\google\zxing\multi\qrcode\detector\MultiDetector.java,MultiDetector,62,1,1,0,0,False,False,2,True,False,2,1,8,4,False,False,False,True,False,public,1,0,0,False,Service Provider
+106,\src\com\google\zxing\common\BitArray.java,BitArray,222,2,18,2,4,False,False,2,False,False,11,19,0,2,False,False,False,True,False,public,16,2,0,False,Information Holder
+107,\src\com\google\zxing\qrcode\decoder\Version.java,Version,509,6,11,0,7,False,False,1,False,False,7,4,2,6,False,False,False,True,False,public,8,1,0,False,Information Holder
+108,\src\com\google\zxing\multi\qrcode\detector\MultiFinderPatternFinder.java,MultiFinderPatternFinder,277,5,2,0,0,False,False,4,True,False,20,1,11,22,False,False,False,True,False,default,1,1,0,False,Service Provider
+109,\src\com\google\zxing\common\BitSource.java,BitSource,85,3,2,0,0,False,False,2,False,False,5,1,0,0,False,False,False,True,False,public,2,0,0,False,Information Holder
+110,\src\com\google\zxing\common\BitMatrix.java,BitMatrix,225,4,13,2,6,False,False,2,False,False,10,13,0,2,False,False,False,True,False,public,13,0,0,False,Information Holder
+111,\src\com\google\zxing\common\CharacterSetECI.java,CharacterSetECI,97,3,6,0,3,False,False,5,False,False,3,6,1,0,False,False,False,True,False,public,3,3,0,False,Information Holder
+112,\src\com\google\zxing\common\Collections.java,Collections,47,0,1,0,0,False,False,1,False,False,0,2,1,1,False,False,False,True,False,public,1,0,0,False,Service Provider
+113,\src\com\google\zxing\common\Comparator.java,Comparator,23,0,0,0,0,False,False,1,True,False,0,0,0,0,False,True,False,False,False,public,0,0,0,False,Service Provider
+114,\src\com\google\zxing\common\DecoderResult.java,DecoderResult,51,4,4,0,4,False,False,2,False,False,1,0,1,0,False,False,False,True,False,public,4,0,0,False,Information Holder
+115,\src\com\google\zxing\common\DefaultGridSampler.java,DefaultGridSampler,78,0,2,0,0,False,False,3,True,False,2,23,1,2,False,False,False,True,False,public,2,0,0,False,Service Provider
+116,\src\com\google\zxing\common\DetectorResult.java,DetectorResult,38,2,2,0,2,False,False,2,False,False,0,0,1,0,False,False,False,True,False,public,2,0,0,False,Information Holder
+117,\src\com\google\zxing\common\ECI.java,ECI,45,1,2,0,2,False,False,3,False,False,2,1,0,0,False,False,False,True,False,public,2,0,0,True,Information Holder
+118,\src\com\google\zxing\common\GlobalHistogramBinarizer.java,GlobalHistogramBinarizer,172,5,5,0,2,False,False,3,True,False,11,5,3,7,False,False,False,True,False,public,3,2,0,False,Service Provider
+119,\src\com\google\zxing\common\GridSampler.java,GridSampler,146,1,3,1,1,False,False,2,True,False,7,3,1,4,False,False,False,True,False,public,2,0,1,True,Service Provider
+120,\src\com\google\zxing\common\HybridBinarizer.java,HybridBinarizer,170,2,6,0,1,False,False,2,True,False,12,19,3,5,False,False,False,True,False,public,2,4,0,False,Service Provider
+121,\src\com\google\zxing\common\PerspectiveTransform.java,PerspectiveTransform,134,1,7,0,0,False,False,2,False,False,1,36,0,1,False,False,False,True,False,public,5,0,0,False,Service Provider
+122,\src\com\google\zxing\common\StringUtils.java,StringUtils,176,7,1,0,0,False,False,2,False,False,22,2,2,0,False,False,False,True,False,public,1,0,0,False,Service Provider
+123,\src\com\google\zxing\common\reedsolomon\GenericGF.java,GenericGF,160,15,11,0,3,False,False,3,False,False,9,9,0,0,False,False,False,True,False,public,1,2,0,False,Information Holder
+124,\src\com\google\zxing\common\reedsolomon\ReedSolomonEncoder.java,ReedSolomonEncoder,67,2,2,0,0,False,False,3,True,False,4,3,1,5,False,False,False,True,False,public,1,1,0,False,Service Provider
+125,\src\com\google\zxing\common\reedsolomon\GenericGFPoly.java,GenericGFPoly,240,2,11,0,3,False,False,4,False,False,24,8,0,14,False,False,False,True,False,default,1,0,0,False,Service Provider
+126,\src\com\google\zxing\common\reedsolomon\ReedSolomonException.java,ReedSolomonException,27,0,0,0,0,False,False,3,False,False,0,0,0,0,False,False,False,True,False,public,0,0,0,False,Service Provider
+127,\src\com\google\zxing\common\reedsolomon\ReedSolomonDecoder.java,ReedSolomonDecoder,179,1,4,0,0,False,False,3,True,False,11,9,0,14,False,False,False,True,False,public,1,3,0,False,Service Provider
+128,\src\com\google\zxing\common\detector\MonochromeRectangleDetector.java,MonochromeRectangleDetector,192,2,3,0,0,False,False,3,True,False,12,14,3,8,False,False,False,True,False,public,1,2,0,False,Service Provider
+129,\src\com\google\zxing\common\detector\WhiteRectangleDetector.java,WhiteRectangleDetector,302,9,6,0,1,False,False,3,True,False,25,17,3,20,False,False,False,True,False,public,1,5,0,False,Service Provider
