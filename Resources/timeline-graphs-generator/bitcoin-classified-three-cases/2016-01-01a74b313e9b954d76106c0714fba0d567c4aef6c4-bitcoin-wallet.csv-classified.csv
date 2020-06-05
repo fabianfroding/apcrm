@@ -1,0 +1,158 @@
+index,fullpathname,classname,loc,numAttr,numMethod,setters,getters,isPersist,isCollection,numWordName,isOrEr,isController,numIfs,numParameters,numImports,numOutboundInvocation,isStaticClass,isInterface,isInnerClass,isClass,isEnum,classPublicity,numPublicMethods,numPrivateMethods,numProtectedMethods,isAbstract,pred_label
+4,\wallet\src\de\schildbach\wallet\AddressBookProvider.Helper.java,Helper,67,3,3,0,0,True,False,1,True,False,1,6,3,3,True,False,True,True,False,private,2,1,0,False,Service Provider
+6,\wallet\src\de\schildbach\wallet\AddressBookProvider.java,AddressBookProvider,151,8,9,0,1,True,False,3,True,False,10,20,7,32,False,False,False,True,False,public,8,1,0,False,Service Provider
+7,\wallet\src\de\schildbach\wallet\Constants.Files.java,Files,45,10,0,0,0,False,False,1,False,False,0,0,3,2,True,False,True,True,False,public,0,0,0,False,Information Holder
+8,\wallet\src\de\schildbach\wallet\ExchangeRatesProvider.ExchangeRate.java,ExchangeRate,41,2,2,0,1,False,False,2,False,False,0,0,1,1,True,False,True,True,False,public,2,0,0,False,Information Holder
+9,\wallet\src\de\schildbach\wallet\Constants.java,Constants,88,42,0,0,0,False,False,1,False,False,0,0,8,5,False,False,False,True,False,public,0,0,0,False,Information Holder
+10,\wallet\src\de\schildbach\wallet\Configuration.java,Configuration,250,26,31,3,18,False,False,1,False,False,7,11,14,16,False,False,False,True,False,public,30,1,0,False,Information Holder
+11,\wallet\src\de\schildbach\wallet\WalletApplication.WalletAutosaveEventListener.java,WalletAutosaveEventListener,37,0,2,0,0,False,False,4,True,False,1,2,3,0,True,False,True,True,False,private,2,0,0,False,Service Provider
+12,\wallet\src\de\schildbach\wallet\FileAttachmentProvider.java,FileAttachmentProvider,101,0,8,0,1,False,False,3,True,False,5,19,10,10,False,False,False,True,False,public,8,0,0,False,Service Provider
+13,\wallet\src\de\schildbach\wallet\ExchangeRatesProvider.java,ExchangeRatesProvider,306,18,11,0,2,False,False,3,True,False,20,23,34,32,False,False,False,True,False,public,8,3,0,False,Service Provider
+14,\wallet\src\de\schildbach\wallet\util\BitmapFragment.java,BitmapFragment,123,5,5,0,0,False,False,2,False,False,4,11,16,3,False,False,False,True,False,public,4,1,0,False,Interfacer
+15,\wallet\src\de\schildbach\wallet\util\Base43.java,Base43,137,2,5,0,0,False,False,1,False,False,6,9,1,5,False,False,False,True,False,public,2,3,0,False,Service Provider
+16,\wallet\src\de\schildbach\wallet\WalletBalanceWidgetProvider.java,WalletBalanceWidgetProvider,169,1,6,0,1,False,False,4,True,False,6,20,29,15,False,False,False,True,False,public,3,3,0,False,Interfacer
+17,\wallet\src\de\schildbach\wallet\util\Bluetooth.java,Bluetooth,70,6,5,0,2,False,False,1,False,False,4,5,1,3,False,False,False,True,False,public,5,0,0,False,Information Holder
+18,\wallet\src\de\schildbach\wallet\WalletApplication.java,WalletApplication,451,12,26,0,2,False,False,2,False,False,15,8,44,59,False,False,False,True,False,public,18,8,0,False,Interfacer
+19,\wallet\src\de\schildbach\wallet\util\CrashReporter.ExceptionHandler.java,ExceptionHandler,53,1,2,0,0,False,False,2,True,False,0,3,5,1,True,False,True,True,False,private,1,1,0,False,Service Provider
+20,\wallet\src\de\schildbach\wallet\util\CircularProgressView.java,CircularProgressView,142,9,10,5,1,False,False,3,False,False,3,15,10,4,False,False,False,True,False,public,6,1,3,False,Interfacer
+21,\wallet\src\de\schildbach\wallet\util\GenericUtils.java,GenericUtils,40,0,2,0,0,False,False,2,False,False,0,3,1,2,False,False,False,True,False,public,2,0,0,False,Service Provider
+22,\wallet\src\de\schildbach\wallet\util\Formats.java,Formats,57,6,2,0,0,False,False,1,False,False,3,2,4,4,False,False,False,True,False,public,2,0,0,False,Service Provider
+23,\wallet\src\de\schildbach\wallet\util\CrashReporter.java,CrashReporter,268,6,13,0,0,False,False,2,True,False,6,19,29,40,False,False,False,True,False,public,9,4,0,False,Service Provider
+24,\wallet\src\de\schildbach\wallet\util\Crypto.java,Crypto,296,12,8,0,1,False,False,1,False,False,4,16,20,6,False,False,False,True,False,public,4,4,0,False,Service Provider
+25,\wallet\src\de\schildbach\wallet\util\HttpGetThread.java,HttpGetThread,98,4,1,0,0,False,False,3,False,False,4,0,15,13,False,False,False,True,False,public,1,0,0,True,Interfacer
+26,\wallet\src\de\schildbach\wallet\util\Io.java,Io,76,1,4,0,0,False,False,1,False,False,1,9,8,1,False,False,False,True,False,public,4,0,0,False,Service Provider
+27,\wallet\src\de\schildbach\wallet\util\Iso8601Format.java,Iso8601Format,68,1,8,0,0,False,False,2,False,False,0,4,6,0,False,False,False,True,False,public,8,0,0,False,Service Provider
+28,\wallet\src\de\schildbach\wallet\util\Nfc.java,Nfc,45,0,2,0,0,False,False,1,False,False,1,4,5,3,False,False,False,True,False,public,2,0,0,False,Service Provider
+29,\wallet\src\de\schildbach\wallet\util\MonetarySpannable.java,MonetarySpannable,103,4,3,0,0,False,False,2,False,False,12,9,11,2,False,False,False,True,False,public,2,1,0,False,Service Provider
+30,\wallet\src\de\schildbach\wallet\util\Toast.java,Toast,53,1,6,0,0,False,False,1,False,False,0,11,1,1,False,False,False,True,False,public,4,2,0,False,Service Provider
+31,\wallet\src\de\schildbach\wallet\util\ThrottlingWalletChangeListener.java,ThrottlingWalletChangeListener,123,9,8,0,0,False,False,4,True,False,6,16,10,3,False,False,False,True,False,public,8,0,0,True,Service Provider
+32,\wallet\src\de\schildbach\wallet\util\Qr.java,Qr,115,2,5,0,0,False,False,1,False,False,1,6,17,8,False,False,False,True,False,public,5,0,0,False,Service Provider
+33,\wallet\src\de\schildbach\wallet\util\WholeStringBuilder.java,WholeStringBuilder,35,0,1,0,0,False,False,3,True,False,0,1,3,1,False,False,False,True,False,public,1,0,0,False,Service Provider
+34,\wallet\src\de\schildbach\wallet\util\ViewPagerTabs.java,ViewPagerTabs,168,6,9,0,1,False,False,3,False,False,4,10,14,10,False,False,False,True,False,public,6,0,3,False,Interfacer
+35,\wallet\src\de\schildbach\wallet\ui\AbstractBindServiceActivity.java,AbstractBindServiceActivity,62,2,3,0,1,False,False,4,False,False,0,0,8,3,False,False,False,True,False,public,0,0,3,True,Information Holder
+36,\wallet\src\de\schildbach\wallet\ui\AbstractWalletActivity.java,AbstractWalletActivity,40,2,2,0,1,False,False,3,False,False,0,1,5,0,False,False,False,True,False,public,0,0,2,True,Service Provider
+37,\wallet\src\de\schildbach\wallet\ui\AddressAndLabel.java,AddressAndLabel,89,3,4,0,0,False,False,3,False,False,2,3,10,5,False,False,False,True,False,public,4,0,0,False,Coordinator
+38,\wallet\src\de\schildbach\wallet\ui\AddressBookActivity.TwoFragmentAdapter.java,TwoFragmentAdapter,99,5,6,1,1,False,False,3,True,False,6,11,6,5,True,False,True,True,False,private,6,0,0,False,Information Holder
+39,\wallet\src\de\schildbach\wallet\util\WalletUtils.java,WalletUtils,339,2,16,0,2,False,False,2,False,False,11,35,37,30,False,False,False,True,False,public,16,0,0,False,Service Provider
+40,\wallet\src\de\schildbach\wallet\ui\AddressBookActivity.java,AddressBookActivity,117,4,4,0,0,False,False,3,False,False,5,3,18,11,False,False,False,True,False,public,2,0,1,False,Interfacer
+41,\wallet\src\de\schildbach\wallet\ui\ArchiveBackupDialogFragment.java,ArchiveBackupDialogFragment,108,4,5,0,0,False,False,4,False,False,1,6,16,7,False,False,False,True,False,public,3,2,0,False,Interfacer
+42,\wallet\src\de\schildbach\wallet\ui\BlockListAdapter.BlockViewHolder.java,BlockViewHolder,43,5,0,0,0,False,False,3,True,False,0,0,6,0,True,False,True,True,False,public,0,0,0,False,Information Holder
+43,\wallet\src\de\schildbach\wallet\ui\BlockListAdapter.OnClickListener.java,OnClickListener,26,0,0,0,0,False,False,3,True,False,0,0,2,0,False,True,True,False,False,public,0,0,0,False,Service Provider
+44,\wallet\src\de\schildbach\wallet\ui\BackupWalletDialogFragment.java,BackupWalletDialogFragment,268,12,9,0,0,False,False,4,False,False,6,5,40,33,False,False,False,True,False,public,4,5,0,False,Interfacer
+45,\wallet\src\de\schildbach\wallet\ui\BlockListFragment.BlockLoader.java,BlockLoader,74,3,3,0,0,False,False,2,True,False,0,0,10,4,True,False,True,True,False,private,1,0,2,False,Service Provider
+46,\wallet\src\de\schildbach\wallet\ui\BlockListAdapter.java,BlockListAdapter,203,11,11,1,3,False,True,3,True,False,9,11,24,18,False,False,False,True,False,public,11,0,0,False,Structurer
+47,\wallet\src\de\schildbach\wallet\ui\BlockListFragment.TransactionsLoader.java,TransactionsLoader,50,1,1,0,0,False,False,2,True,False,1,0,8,3,True,False,True,True,False,private,1,0,0,False,Service Provider
+48,\wallet\src\de\schildbach\wallet\ui\CurrencyAmountView.Listener.java,Listener,25,0,0,0,0,False,False,1,True,False,0,0,0,0,True,True,True,False,False,public,0,0,0,False,Service Provider
+49,\wallet\src\de\schildbach\wallet\ui\BlockListFragment.java,BlockListFragment,221,18,8,0,0,False,False,3,False,False,3,8,35,20,False,False,False,True,False,public,8,0,0,False,Interfacer
+50,\wallet\src\de\schildbach\wallet\ui\CurrencyAmountView.TextViewListener.java,TextViewListener,69,1,5,1,0,False,False,3,True,False,5,12,5,3,False,False,True,True,False,private,5,0,0,False,Service Provider
+51,\wallet\src\de\schildbach\wallet\ui\CurrencySymbolDrawable.java,CurrencySymbolDrawable,62,3,5,2,2,False,False,3,False,False,0,3,5,0,False,False,False,True,False,public,5,0,0,False,Information Holder
+52,\wallet\src\de\schildbach\wallet\ui\CurrencyCalculatorLink.java,CurrencyCalculatorLink,201,8,13,6,3,False,False,3,False,False,12,6,6,13,False,False,False,True,False,public,12,1,0,False,Information Holder
+53,\wallet\src\de\schildbach\wallet\ui\CurrencyTextView.java,CurrencyTextView,114,7,9,7,0,False,False,3,False,False,3,7,12,1,False,False,False,True,False,public,7,1,1,False,Interfacer
+54,\wallet\src\de\schildbach\wallet\ui\EncryptKeysDialogFragment.State.java,State,24,3,0,0,0,False,False,1,False,False,0,0,0,0,False,False,True,False,True,private,0,0,0,False,Information Holder
+55,\wallet\src\de\schildbach\wallet\ui\CurrencyAmountView.java,CurrencyAmountView,298,15,21,13,2,False,False,3,False,False,11,18,22,23,False,False,False,True,False,public,15,3,3,False,Interfacer
+56,\wallet\src\de\schildbach\wallet\ui\DialogBuilder.java,DialogBuilder,111,3,8,6,0,False,False,2,True,False,4,9,12,0,False,False,False,True,False,public,8,0,0,False,Service Provider
+57,\wallet\src\de\schildbach\wallet\ui\EditAddressBookEntryFragment.java,EditAddressBookEntryFragment,146,6,6,0,0,False,False,5,False,False,5,11,21,12,False,False,False,True,False,public,5,1,0,False,Interfacer
+58,\wallet\src\de\schildbach\wallet\ui\ExchangeRateLoader.java,ExchangeRateLoader,61,1,4,0,0,False,False,3,True,False,1,2,6,4,False,False,False,True,False,public,1,1,2,False,Service Provider
+59,\wallet\src\de\schildbach\wallet\ui\ExchangeRatesActivity.java,ExchangeRatesActivity,43,0,2,0,0,False,False,3,False,False,1,2,3,1,False,False,False,True,False,public,1,0,1,False,Service Provider
+60,\wallet\src\de\schildbach\wallet\ui\EncryptKeysDialogFragment.java,EncryptKeysDialogFragment,307,19,10,0,0,False,False,4,False,False,6,5,34,33,False,False,False,True,False,public,7,3,0,False,Interfacer
+61,\wallet\src\de\schildbach\wallet\ui\ExchangeRatesFragment.ExchangeRatesAdapter.java,ExchangeRatesAdapter,70,1,2,1,0,False,False,3,True,False,1,4,10,3,False,False,True,True,False,private,2,0,0,False,Service Provider
+62,\wallet\src\de\schildbach\wallet\ui\FancyListFragment.java,FancyListFragment,41,0,2,1,0,False,False,3,False,False,0,4,7,0,False,False,False,True,False,public,2,0,0,False,Interfacer
+63,\wallet\src\de\schildbach\wallet\ui\ExchangeRatesFragment.java,ExchangeRatesFragment,280,17,10,0,0,False,False,3,False,False,8,12,31,28,False,False,False,True,False,public,9,1,0,False,Interfacer
+64,\wallet\src\de\schildbach\wallet\ui\FileAdapter.java,FileAdapter,56,2,2,1,1,False,False,2,True,False,1,4,9,1,False,False,False,True,False,public,2,0,0,True,Structurer
+65,\wallet\src\de\schildbach\wallet\ui\HelpDialogFragment.java,HelpDialogFragment,61,3,4,0,0,False,False,3,False,False,0,5,6,2,False,False,False,True,False,public,3,1,0,False,Coordinator
+66,\wallet\src\de\schildbach\wallet\ui\ImportDialogButtonEnablerListener.java,ImportDialogButtonEnablerListener,79,2,8,0,0,False,False,5,True,False,0,14,9,1,False,False,False,True,False,public,6,0,2,False,Service Provider
+67,\wallet\src\de\schildbach\wallet\ui\InputParser.StreamInputParser.java,StreamInputParser,97,2,2,0,0,False,False,3,True,False,2,1,9,8,True,False,True,True,False,public,1,0,1,True,Service Provider
+68,\wallet\src\de\schildbach\wallet\ui\InputParser.BinaryInputParser.java,BinaryInputParser,79,2,2,0,0,False,False,3,True,False,1,1,6,3,True,False,True,True,False,public,1,0,1,True,Service Provider
+69,\wallet\src\de\schildbach\wallet\ui\NetworkMonitorActivity.PagerAdapter.java,PagerAdapter,43,0,2,0,2,False,False,2,True,False,1,1,3,0,False,False,True,True,False,private,2,0,0,False,Service Provider
+70,\wallet\src\de\schildbach\wallet\ui\InputParser.StringInputParser.java,StringInputParser,153,1,2,0,0,False,False,3,True,False,2,1,15,13,True,False,True,True,False,public,1,0,1,True,Service Provider
+71,\wallet\src\de\schildbach\wallet\ui\MaybeMaintenanceFragment.java,MaybeMaintenanceFragment,109,5,6,0,0,False,False,3,False,False,2,3,18,9,False,False,False,True,False,public,5,1,0,False,Interfacer
+72,\wallet\src\de\schildbach\wallet\ui\PeerListFragment.PeerLoader.java,PeerLoader,74,3,3,0,0,False,False,2,True,False,0,0,10,5,True,False,True,True,False,private,1,0,2,False,Service Provider
+73,\wallet\src\de\schildbach\wallet\ui\NetworkMonitorActivity.java,NetworkMonitorActivity,67,2,2,0,0,False,False,3,False,False,2,2,6,1,False,False,False,True,False,public,1,0,1,False,Coordinator
+74,\wallet\src\de\schildbach\wallet\ui\PeerListFragment.PeerViewAdapter.java,PeerViewAdapter,89,2,7,0,3,False,False,3,True,False,0,7,10,10,False,False,True,True,False,private,7,0,0,False,Information Holder
+75,\wallet\src\de\schildbach\wallet\ui\PeerListFragment.PeerViewHolder.java,PeerViewHolder,41,5,0,0,0,False,False,3,True,False,0,0,4,0,True,False,True,True,False,private,0,0,0,False,Information Holder
+76,\wallet\src\de\schildbach\wallet\ui\InputParser.java,InputParser,141,6,4,0,0,False,False,2,True,False,6,8,27,16,False,False,False,True,False,public,1,0,3,True,Service Provider
+77,\wallet\src\de\schildbach\wallet\ui\PeerListFragment.ReverseDnsLoader.java,ReverseDnsLoader,37,1,1,0,0,False,False,3,True,False,0,0,3,1,True,False,True,True,False,private,1,0,0,False,Information Holder
+78,\wallet\src\de\schildbach\wallet\ui\ProgressDialogFragment.java,ProgressDialogFragment,69,3,6,0,0,False,False,3,False,False,0,7,6,2,False,False,False,True,False,public,5,1,0,False,Coordinator
+79,\wallet\src\de\schildbach\wallet\ui\PeerListFragment.java,PeerListFragment,199,15,7,0,0,False,False,3,False,False,3,6,29,14,False,False,False,True,False,public,7,0,0,False,Interfacer
+80,\wallet\src\de\schildbach\wallet\ui\RequestCoinsActivity.java,RequestCoinsActivity,53,0,3,0,0,False,False,3,False,False,1,3,4,2,False,False,False,True,False,public,2,0,1,False,Service Provider
+81,\wallet\src\de\schildbach\wallet\ui\ReportIssueDialogBuilder.java,ReportIssueDialogBuilder,240,7,2,0,0,False,False,4,True,False,10,5,29,25,False,False,False,True,False,public,1,1,0,True,Service Provider
+82,\wallet\src\de\schildbach\wallet\ui\RestoreWalletActivity.FinishListener.java,FinishListener,34,0,2,0,0,False,False,2,True,False,0,3,1,0,False,False,True,True,False,private,2,0,0,False,Service Provider
+83,\wallet\src\de\schildbach\wallet\ui\ScanActivity.AutoFocusRunnable.java,AutoFocusRunnable,42,1,1,0,0,False,False,3,False,False,0,0,1,1,False,False,True,True,False,private,1,0,0,False,Information Holder
+84,\wallet\src\de\schildbach\wallet\ui\RestoreWalletActivity.java,RestoreWalletActivity,199,7,7,0,0,False,False,3,False,False,2,8,27,18,False,False,False,True,False,public,0,4,3,False,Interfacer
+85,\wallet\src\de\schildbach\wallet\ui\RequestCoinsFragment.java,RequestCoinsFragment,407,22,22,0,0,False,False,3,False,False,16,19,59,41,False,False,False,True,False,public,12,10,0,False,Interfacer
+86,\wallet\src\de\schildbach\wallet\ui\SendCoinsQrActivity.java,SendCoinsQrActivity,90,1,2,0,0,False,False,4,False,False,1,4,13,5,False,False,False,True,False,public,1,0,1,False,Interfacer
+87,\wallet\src\de\schildbach\wallet\ui\ScanActivity.java,ScanActivity,317,15,10,0,0,False,False,2,False,False,4,13,38,26,False,False,False,True,False,public,7,0,3,False,Interfacer
+88,\wallet\src\de\schildbach\wallet\ui\ScannerView.java,ScannerView,134,12,4,1,0,False,False,2,False,False,3,5,14,12,False,False,False,True,False,public,4,0,0,False,Interfacer
+89,\wallet\src\de\schildbach\wallet\ui\ShowPasswordCheckListener.java,ShowPasswordCheckListener,40,1,1,0,0,False,False,4,True,False,0,2,5,1,False,False,False,True,False,public,1,0,0,False,Service Provider
+90,\wallet\src\de\schildbach\wallet\ui\TransactionsAdapter.OnClickListener.java,OnClickListener,27,0,0,0,0,False,False,3,True,False,0,0,2,0,False,True,True,False,False,public,0,0,0,False,Service Provider
+91,\wallet\src\de\schildbach\wallet\ui\SendingAddressesFragment.java,SendingAddressesFragment,395,9,22,1,1,False,False,3,False,False,12,24,47,46,False,False,False,True,False,public,15,7,0,False,Interfacer
+92,\wallet\src\de\schildbach\wallet\ui\TransactionsAdapter.TransactionCacheEntry.java,TransactionCacheEntry,42,5,0,0,0,False,False,3,False,False,0,0,3,0,True,False,True,True,False,private,0,0,0,False,Information Holder
+93,\wallet\src\de\schildbach\wallet\ui\TransactionsAdapter.Warning.java,Warning,24,2,0,0,0,False,False,1,False,False,0,0,0,0,False,False,True,False,True,public,0,0,0,False,Information Holder
+94,\wallet\src\de\schildbach\wallet\ui\TransactionsAdapter.WarningViewHolder.java,WarningViewHolder,44,1,0,0,0,False,False,3,True,False,1,0,4,2,False,False,True,True,False,private,0,0,0,False,Information Holder
+95,\wallet\src\de\schildbach\wallet\ui\TransactionsAdapter.TransactionViewHolder.java,TransactionViewHolder,334,15,1,0,0,False,False,3,True,False,11,1,24,36,False,False,True,True,False,private,0,1,0,False,Service Provider
+96,\wallet\src\de\schildbach\wallet\ui\WalletActionsFragment.java,WalletActionsFragment,87,1,4,0,0,False,False,3,False,False,0,4,10,8,False,False,False,True,False,public,3,1,0,False,Coordinator
+97,\wallet\src\de\schildbach\wallet\ui\TransactionsAdapter.java,TransactionsAdapter,237,21,13,3,3,False,False,2,True,False,11,12,20,12,False,False,False,True,False,public,13,0,0,False,Structurer
+98,\wallet\src\de\schildbach\wallet\ui\WalletAddressFragment.CurrentAddressLoader.java,CurrentAddressLoader,119,7,5,0,0,False,False,3,True,False,1,0,17,8,True,False,True,True,False,public,1,1,3,False,Service Provider
+99,\wallet\src\de\schildbach\wallet\ui\WalletAddressDialogFragment.java,WalletAddressDialogFragment,103,4,4,0,0,False,False,4,False,False,0,7,16,5,False,False,False,True,False,public,3,1,0,False,Interfacer
+100,\wallet\src\de\schildbach\wallet\ui\WalletAddressFragment.java,WalletAddressFragment,150,11,8,0,0,False,False,3,False,False,3,6,26,12,False,False,False,True,False,public,6,2,0,False,Interfacer
+101,\wallet\src\de\schildbach\wallet\ui\WalletAddressesAdapter.java,WalletAddressesAdapter,158,8,11,0,6,False,False,3,True,False,7,11,17,10,False,False,False,True,False,public,9,2,0,False,Structurer
+102,\wallet\src\de\schildbach\wallet\ui\WalletAddressesFragment.java,WalletAddressesFragment,241,11,8,0,0,False,False,3,False,False,4,10,40,28,False,False,False,True,False,public,7,1,0,False,Interfacer
+103,\wallet\src\de\schildbach\wallet\ui\WalletBalanceLoader.java,WalletBalanceLoader,103,5,5,0,0,False,False,3,True,False,0,0,15,7,False,False,False,True,False,public,1,1,3,False,Service Provider
+104,\wallet\src\de\schildbach\wallet\ui\WalletTransactionsFragment.Direction.java,Direction,24,2,0,0,0,False,False,1,False,False,0,0,0,0,False,False,True,False,True,public,0,0,0,False,Information Holder
+105,\wallet\src\de\schildbach\wallet\ui\WalletActivity.java,WalletActivity,745,9,27,0,0,False,False,2,False,False,25,20,63,72,False,False,False,True,False,public,9,12,6,False,Interfacer
+106,\wallet\src\de\schildbach\wallet\ui\WalletBalanceFragment.java,WalletBalanceFragment,321,24,11,0,0,False,False,3,False,False,11,11,32,20,False,False,False,True,False,public,9,2,0,False,Interfacer
+107,\wallet\src\de\schildbach\wallet\ui\WalletDisclaimerFragment.java,WalletDisclaimerFragment,144,7,6,0,0,False,False,3,False,False,7,6,25,11,False,False,False,True,False,public,5,1,0,False,Interfacer
+108,\wallet\src\de\schildbach\wallet\ui\WalletTransactionsFragment.TransactionsLoader.java,TransactionsLoader,145,6,6,0,1,False,False,2,True,False,3,0,21,17,True,False,True,True,False,private,2,1,3,False,Service Provider
+109,\wallet\src\de\schildbach\wallet\ui\send\DecodePrivateKeyTask.java,DecodePrivateKeyTask,69,2,1,0,0,False,False,4,False,False,0,2,4,4,False,False,False,True,False,public,1,0,0,True,Service Provider
+110,\wallet\src\de\schildbach\wallet\ui\send\DeriveKeyTask.java,DeriveKeyTask,54,2,1,0,0,False,False,3,False,False,0,2,4,3,False,False,False,True,False,public,1,0,0,True,Service Provider
+111,\wallet\src\de\schildbach\wallet\ui\send\FeeCategory.java,FeeCategory,42,4,0,0,0,False,False,2,False,False,0,0,1,0,False,False,False,False,True,public,0,0,0,False,Information Holder
+112,\wallet\src\de\schildbach\wallet\ui\send\MaintenanceDialogFragment.State.java,State,24,3,0,0,0,False,False,1,False,False,0,0,0,0,False,False,True,False,True,private,0,0,0,False,Information Holder
+113,\wallet\src\de\schildbach\wallet\ui\WalletTransactionsFragment.java,WalletTransactionsFragment,352,21,16,0,0,False,False,3,False,False,12,18,55,39,False,False,False,True,False,public,14,2,0,False,Interfacer
+114,\wallet\src\de\schildbach\wallet\ui\send\RaiseFeeDialogFragment.State.java,State,24,3,0,0,0,False,False,1,False,False,0,0,0,0,False,False,True,False,True,private,0,0,0,False,Information Holder
+115,\wallet\src\de\schildbach\wallet\ui\send\MaintenanceDialogFragment.java,MaintenanceDialogFragment,313,15,13,0,0,False,False,3,False,False,4,6,38,26,False,False,False,True,False,public,7,6,0,False,Interfacer
+116,\wallet\src\de\schildbach\wallet\ui\send\RaiseFeeDialogFragment.java,RaiseFeeDialogFragment,292,18,13,0,0,False,False,4,False,False,7,12,40,23,False,False,False,True,False,public,7,6,0,False,Interfacer
+117,\wallet\src\de\schildbach\wallet\ui\send\RequestPaymentRequestTask.BluetoothRequestTask.java,BluetoothRequestTask,136,1,1,0,0,False,False,3,False,False,4,1,14,12,True,False,True,True,False,public,1,0,0,False,Interfacer
+118,\wallet\src\de\schildbach\wallet\ui\send\RequestPaymentRequestTask.HttpRequestTask.java,HttpRequestTask,116,1,1,0,0,False,False,3,False,False,4,1,11,11,True,False,True,True,False,public,1,0,0,False,Interfacer
+119,\wallet\src\de\schildbach\wallet\ui\send\RequestPaymentRequestTask.ResultCallback.java,ResultCallback,26,0,0,0,0,False,False,2,False,False,0,0,1,0,False,True,True,False,False,public,0,0,0,False,Service Provider
+120,\wallet\src\de\schildbach\wallet\ui\send\RequestPaymentRequestTask.java,RequestPaymentRequestTask,61,4,2,0,0,False,False,4,False,False,0,3,5,3,False,False,False,True,False,public,0,0,2,True,Service Provider
+121,\wallet\src\de\schildbach\wallet\ui\send\RequestWalletBalanceTask.FakeTransaction.java,FakeTransaction,37,1,1,0,1,False,False,2,False,False,0,0,3,0,True,False,True,True,False,private,1,0,0,False,Information Holder
+122,\wallet\src\de\schildbach\wallet\ui\send\RequestWalletBalanceTask.ResultCallback.java,ResultCallback,27,0,0,0,0,False,False,2,False,False,0,0,2,0,False,True,True,False,False,public,0,0,0,False,Service Provider
+123,\wallet\src\de\schildbach\wallet\ui\send\SendCoinsActivity.java,SendCoinsActivity,66,1,4,0,0,False,False,3,False,False,1,5,9,2,False,False,False,True,False,public,3,0,1,False,Coordinator
+124,\wallet\src\de\schildbach\wallet\ui\send\SendCoinsFragment.ReceivingAddressListener.java,ReceivingAddressListener,52,0,4,0,0,False,False,3,True,False,2,11,4,1,False,False,True,True,False,private,4,0,0,False,Service Provider
+125,\wallet\src\de\schildbach\wallet\ui\send\RequestWalletBalanceTask.java,RequestWalletBalanceTask,194,5,3,0,0,False,False,4,False,False,8,4,27,22,False,False,False,True,False,public,1,0,2,False,Interfacer
+126,\wallet\src\de\schildbach\wallet\ui\send\SendCoinsFragment.State.java,State,26,7,0,0,0,False,False,1,False,False,0,0,0,0,False,False,True,False,True,private,0,0,0,False,Information Holder
+127,\wallet\src\de\schildbach\wallet\ui\send\SendCoinsFragment.ReceivingAddressViewAdapter.java,ReceivingAddressViewAdapter,72,0,4,0,0,False,False,4,True,False,1,8,13,1,False,False,True,True,False,private,4,0,0,False,Service Provider
+128,\wallet\src\de\schildbach\wallet\ui\send\SweepWalletFragment.State.java,State,26,6,0,0,0,False,False,1,False,False,0,0,0,0,False,False,True,False,True,private,0,0,0,False,Information Holder
+129,\wallet\src\de\schildbach\wallet\ui\send\SweepWalletActivity.java,SweepWalletActivity,59,1,4,0,0,False,False,3,False,False,1,5,7,1,False,False,False,True,False,public,4,0,0,False,Service Provider
+130,\wallet\src\de\schildbach\wallet\ui\send\SendCoinsOfflineTask.java,SendCoinsOfflineTask,128,3,2,0,0,False,False,4,False,False,0,1,11,8,False,False,False,True,False,public,1,0,1,True,Coordinator
+131,\wallet\src\de\schildbach\wallet\ui\preference\AboutFragment.java,AboutFragment,59,6,2,0,0,False,False,2,False,False,1,2,10,5,False,False,False,True,False,public,2,0,0,False,Coordinator
+132,\wallet\src\de\schildbach\wallet\ui\preference\DiagnosticsFragment.java,DiagnosticsFragment,143,6,6,0,0,False,False,2,False,False,1,4,18,12,False,False,False,True,False,public,3,3,0,False,Interfacer
+133,\wallet\src\de\schildbach\wallet\ui\preference\ExtendedPublicKeyFragment.java,ExtendedPublicKeyFragment,85,3,4,0,0,False,False,4,False,False,0,5,15,4,False,False,False,True,False,public,3,1,0,False,Interfacer
+134,\wallet\src\de\schildbach\wallet\ui\preference\PreferenceActivity.java,PreferenceActivity,48,0,3,0,0,False,False,2,False,False,1,3,3,3,False,False,False,True,False,public,2,0,1,False,Service Provider
+135,\wallet\src\de\schildbach\wallet\service\AutosyncReceiver.java,AutosyncReceiver,45,1,1,0,0,False,False,2,True,False,2,2,6,2,False,False,False,True,False,public,1,0,0,False,Service Provider
+136,\wallet\src\de\schildbach\wallet\service\BlockchainService.java,BlockchainService,38,7,0,0,0,False,False,2,False,False,0,0,4,5,False,True,False,False,False,public,0,0,0,False,Information Holder
+137,\wallet\src\de\schildbach\wallet\ui\preference\SettingsFragment.java,SettingsFragment,114,7,5,0,0,False,False,2,False,False,2,5,12,11,False,False,False,True,False,public,4,1,0,False,Interfacer
+138,\wallet\src\de\schildbach\wallet\service\BlockchainServiceImpl.ActivityHistoryEntry.java,ActivityHistoryEntry,35,2,1,0,0,False,False,3,False,False,0,0,0,0,True,False,True,True,False,private,1,0,0,False,Information Holder
+139,\wallet\src\de\schildbach\wallet\service\BlockchainServiceImpl.LocalBinder.java,LocalBinder,28,0,1,0,1,False,False,2,True,False,0,0,1,0,False,False,True,True,False,public,1,0,0,False,Information Holder
+140,\wallet\src\de\schildbach\wallet\service\BlockchainServiceImpl.PeerConnectivityListener.java,PeerConnectivityListener,95,2,5,0,0,False,False,3,True,False,3,7,11,5,False,False,True,True,False,private,4,1,0,False,Service Provider
+141,\wallet\src\de\schildbach\wallet\ui\send\SweepWalletFragment.java,SweepWalletFragment,573,29,20,1,0,False,False,3,False,False,26,16,59,45,False,False,False,True,False,public,9,11,0,False,Interfacer
+142,\wallet\src\de\schildbach\wallet\service\BlockchainState.Impediment.java,Impediment,24,2,0,0,0,False,False,1,False,False,0,0,0,0,False,False,True,False,True,public,0,0,0,False,Information Holder
+143,\wallet\src\de\schildbach\wallet\service\BlockchainState.java,BlockchainState,57,8,2,0,0,False,False,2,False,False,0,2,4,0,False,False,False,True,False,public,2,0,0,False,Information Holder
+144,\wallet\src\de\schildbach\wallet\service\BlockchainStateLoader.java,BlockchainStateLoader,93,5,3,0,0,False,False,3,True,False,0,0,12,6,False,False,False,True,False,public,1,0,2,False,Service Provider
+145,\wallet\src\de\schildbach\wallet\service\UpgradeWalletService.java,UpgradeWalletService,79,2,4,0,0,False,False,3,False,False,1,3,7,4,False,False,False,True,False,public,2,1,1,False,Coordinator
+146,\wallet\src\de\schildbach\wallet\offline\AcceptBluetoothThread.ClassicBluetoothThread.java,ClassicBluetoothThread,116,0,1,0,0,False,False,3,False,False,4,0,9,9,True,False,True,True,False,public,1,0,0,True,Service Provider
+147,\wallet\src\de\schildbach\wallet\offline\AcceptBluetoothThread.PaymentProtocolThread.java,PaymentProtocolThread,109,0,1,0,0,False,False,3,False,False,4,0,11,7,True,False,True,True,False,public,1,0,0,True,Service Provider
+148,\wallet\src\de\schildbach\wallet\offline\AcceptBluetoothService.java,AcceptBluetoothService,167,11,5,0,0,False,False,3,False,False,2,5,21,21,False,False,False,True,False,public,4,1,0,False,Interfacer
+149,\wallet\src\de\schildbach\wallet\offline\AcceptBluetoothThread.java,AcceptBluetoothThread,50,3,1,0,0,False,False,3,False,False,0,0,6,1,False,False,False,True,False,public,1,0,0,True,Coordinator
+150,\wallet\src\de\schildbach\wallet\offline\DirectPaymentTask.BluetoothPaymentTask.java,BluetoothPaymentTask,118,2,1,0,0,False,False,3,False,False,4,1,12,11,True,False,True,True,False,public,1,0,0,False,Interfacer
+151,\wallet\src\de\schildbach\wallet\offline\DirectPaymentTask.HttpPaymentTask.java,HttpPaymentTask,128,2,1,0,0,False,False,3,False,False,5,1,12,14,True,False,True,True,False,public,1,0,0,False,Interfacer
+152,\wallet\src\de\schildbach\wallet\offline\DirectPaymentTask.ResultCallback.java,ResultCallback,25,0,0,0,0,False,False,2,False,False,0,0,0,0,False,True,True,False,False,public,0,0,0,False,Service Provider
+153,\wallet\src\de\schildbach\wallet\offline\DirectPaymentTask.java,DirectPaymentTask,61,4,2,0,0,False,False,3,False,False,0,3,5,3,False,False,False,True,False,public,0,0,2,True,Service Provider
+154,\wallet\src\de\schildbach\wallet\data\PaymentIntent.Standard.java,Standard,24,2,0,0,0,False,False,1,False,False,0,0,0,0,False,False,True,False,True,public,0,0,0,False,Information Holder
+155,\wallet\src\de\schildbach\wallet\data\PaymentIntent.Output.java,Output,107,3,5,0,0,False,False,1,False,False,1,3,8,12,True,False,True,True,False,public,5,0,0,False,Coordinator
+156,\wallet\src\de\schildbach\wallet\service\BlockchainServiceImpl.java,BlockchainServiceImpl,594,32,12,0,3,False,False,3,False,False,30,10,69,90,False,False,False,True,False,public,9,3,0,False,Interfacer
+157,\wallet\src\de\schildbach\wallet\ui\send\SendCoinsFragment.java,SendCoinsFragment,1264,55,36,1,0,False,False,3,False,False,65,28,93,154,False,False,False,True,False,public,13,23,0,False,Interfacer
+158,\sample-integration-android\src\de\schildbach\wallet\integration\sample\SampleActivity.java,SampleActivity,139,7,5,0,0,False,False,2,False,False,4,4,19,17,False,False,False,True,False,public,0,3,2,False,Interfacer
+159,\wallet\src\de\schildbach\wallet\camera\CameraManager.java,CameraManager,246,10,12,3,3,False,False,2,True,False,19,15,15,27,False,False,False,True,False,public,7,5,0,False,Service Provider
+160,\wallet\src\de\schildbach\wallet\data\PaymentIntent.java,PaymentIntent,404,12,30,0,2,False,False,2,False,False,26,15,20,27,False,False,False,True,False,public,28,2,0,False,Structurer
+161,\integration-android\src\de\schildbach\wallet\integration\android\BitcoinIntegration.java,BitcoinIntegration,249,5,16,0,0,False,False,2,False,False,5,33,6,11,False,False,False,True,False,public,11,5,0,False,Controller

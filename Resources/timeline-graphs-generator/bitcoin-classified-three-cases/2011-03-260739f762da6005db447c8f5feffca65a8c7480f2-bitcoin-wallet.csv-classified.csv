@@ -1,0 +1,7 @@
+index,fullpathname,classname,loc,numAttr,numMethod,setters,getters,isPersist,isCollection,numWordName,isOrEr,isController,numIfs,numParameters,numImports,numOutboundInvocation,isStaticClass,isInterface,isInnerClass,isClass,isEnum,classPublicity,numPublicMethods,numPrivateMethods,numProtectedMethods,isAbstract,pred_label
+0,\src\de\schildbach\wallet\ActionBar.java,ActionBar,87,6,8,3,3,False,False,2,False,False,2,3,10,1,False,False,False,True,False,public,8,0,0,False,Structurer
+1,\src\de\schildbach\wallet\Application.java,Application,94,2,6,0,2,False,False,1,False,False,0,0,8,4,False,False,False,True,False,public,4,2,0,False,Information Holder
+2,\src\de\schildbach\wallet\Constants.java,Constants,67,13,0,0,0,False,False,1,False,False,0,0,1,1,False,False,False,True,False,public,0,0,0,False,Information Holder
+3,\src\de\schildbach\wallet\FilesBlockStore.java,FilesBlockStore,87,2,2,0,1,False,False,3,False,False,1,2,13,10,False,False,False,True,False,public,2,0,0,False,Coordinator
+4,\src\de\schildbach\wallet\PreferencesActivity.java,PreferencesActivity,110,9,3,0,0,False,False,2,False,False,1,3,7,5,False,False,False,True,False,public,1,1,1,False,Coordinator
+5,\src\de\schildbach\wallet\WalletActivity.java,WalletActivity,519,8,12,0,2,False,False,2,False,False,11,11,51,72,False,False,False,True,False,public,2,7,3,False,Interfacer
